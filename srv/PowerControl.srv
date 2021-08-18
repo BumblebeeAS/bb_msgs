@@ -1,0 +1,6 @@
+bool thrusters
+bool ST
+bool DNA
+bool sonar
+---
+bool done

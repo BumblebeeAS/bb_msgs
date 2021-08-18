@@ -1,0 +1,38 @@
+float32 roll_setpoint
+float32 pitch_setpoint
+float32 yaw_setpoint
+float32 depth_setpoint
+float32 forward_setpoint
+float32 sidemove_setpoint
+float32 surge_speed_setpoint
+float32 sidemove_speed_setpoint
+float32 forward_tolerance
+float32 sidemove_tolerance
+float32 yaw_tolerance
+bool movement_rel
+bool yaw_rel
+bool yaw_auto            # yaw is automatically calculated from the final pose. Only used with yaw_rel false
+                             # Ignores the value of yaw_setpoint
+
+uint8   controller_state     # 0: Position Controller (Absolute X, Y, yaw position control) 
+                             # 1: Velocity Control (X velocity and absolute yaw control)
+---
+float32 roll_final
+float32 pitch_final
+float32 yaw_final
+float32 depth_final
+float32 forward_final
+float32 sidemove_final
+float32 surge_speed_final
+float32 sidemove_speed_final
+uint8   controller_state_final
+---
+float32 roll_error
+float32 pitch_error
+float32 yaw_error
+float32 depth_error
+float32 forward_error
+float32 sidemove_error
+float32 surge_speed_error
+float32 sidemove_speed_error
+uint8   controller_state_current

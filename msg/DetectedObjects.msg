@@ -1,0 +1,2 @@
+DetectedObject[] detected
+string nodeName

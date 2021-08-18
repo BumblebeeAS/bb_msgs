@@ -1,0 +1,18 @@
+# goal definition
+nav_msgs/Path waypoints
+---
+# result definition 
+bool goal_reached
+int8 waypoints_reached
+int8 waypoints_notReached
+float64 x_final
+float64 y_final
+float64 heading_final
+float64 time_elapsed
+---
+# feedback definition 
+int8 waypoints_reached
+int8 waypoints_notReached
+int8 waypoints_remaining
+float64 x_next
+float64 y_next

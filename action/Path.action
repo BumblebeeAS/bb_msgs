@@ -1,0 +1,15 @@
+# goal definition
+nav_msgs/Path path
+---
+# result definition 
+bool goal_reached
+bool replanNeeded
+float64 x_final
+float64 y_final
+float64 heading_final
+---
+# feedback definition 
+float64 pathCompletionPercent
+float64 distToEnd
+float64 distToObs
+float64 xTrack_error

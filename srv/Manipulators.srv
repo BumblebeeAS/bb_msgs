@@ -1,0 +1,8 @@
+bool top_torpedo
+bool bottom_torpedo
+bool dropper
+bool grabber
+bool extend_linear
+bool retract_linear
+---
+bool done

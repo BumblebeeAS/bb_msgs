@@ -1,0 +1,6 @@
+int32 sx
+int32 sy
+int32 x
+int32 y
+---
+bool path_found

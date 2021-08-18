@@ -1,0 +1,9 @@
+std_msgs/Header header
+uint8 red
+uint8 green
+uint8 blue
+bool screen
+uint8 sensor_rate
+uint8 mag_rate
+uint8 acc_rate
+uint8 gyro_rate
