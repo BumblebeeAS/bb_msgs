@@ -1,0 +1,29 @@
+name: CI/CD
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Setup ROS
+        uses: ros-tooling/setup-ros@v0.2
+        with:
+          required-ros-distributions: melodic
+
+      - name: Install packages
+        run: sudo apt-get install python-catkin-tools
+
+      - name: Setup catkin workspace
+        run: source /opt/ros/melodic/setup.bash && catkin init
+
+      - name: Check out repo
+        uses: actions/checkout@v2
+        with:
+          path: src
+
+      - name: Install dependencies
+        run: source /opt/ros/melodic/setup.bash && rosdep update && rosdep install --from-paths src -i -r -y
+
+      - name: Build
+        run: source /opt/ros/melodic/setup.bash && catkin build
