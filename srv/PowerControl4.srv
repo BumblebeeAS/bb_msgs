@@ -1,0 +1,10 @@
+bool ethernet_switch
+bool acoustics
+bool xavier
+bool STB
+bool thruster_board
+bool DVL
+bool sonar
+bool SBC
+---
+bool done

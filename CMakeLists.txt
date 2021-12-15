@@ -67,6 +67,7 @@ add_service_files(
   # CAN
   Manipulators.srv
   PowerControl.srv
+  PowerControl4.srv
 
   # Controls
   Controller.srv
