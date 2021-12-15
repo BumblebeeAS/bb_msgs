@@ -46,6 +46,7 @@ add_message_files(
   raw_magnetics.msg
 
   # Sonar
+  SurveyorInfo.msg
   SonarInfo.msg
   SonarWorld.msg
 
@@ -74,6 +75,7 @@ add_service_files(
   navigate2d.srv
 
   # Sonar
+  SonarRange.srv
   toggle.srv
 
   # Vision
