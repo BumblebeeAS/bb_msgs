@@ -17,20 +17,13 @@ add_message_files(
   Ping.msg
   
   # CAN
-  ActuationStatus.msg
   Battery.msg
   CPUTemp.msg
-  DNAStats.msg
+  Environment.msg
   Heartbeat.msg
   LED.msg
-  PCBStats.msg
+  PowerStatus.msg
   PMB.msg
-  STBConfig.msg
-  STBImu.msg
-  STBSensor.msg
-  STBStatus.msg
-  STStats.msg
-  TABStatus.msg
 
   # Conrols
   Status.msg
@@ -53,8 +46,6 @@ add_message_files(
   # Vision
   DetectedObject.msg
   DetectedObjects.msg
-  MLDetectedObject.msg
-  MLDetectedObjects.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -65,9 +56,8 @@ add_service_files(
   AcousticsControl.srv
 
   # CAN
-  Manipulators.srv
+  Actuation.srv
   PowerControl.srv
-  PowerControl4.srv
 
   # Controls
   Controller.srv

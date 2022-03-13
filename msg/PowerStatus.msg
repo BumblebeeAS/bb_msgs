@@ -7,5 +7,3 @@ bool sonar
 bool stb
 bool thrusters
 bool xavier
----
-bool success

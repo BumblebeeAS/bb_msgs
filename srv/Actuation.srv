@@ -1,0 +1,7 @@
+bool dropper
+bool open_grabber
+bool close_grabber
+bool top_torpedo
+bool bottom_torpedo
+---
+bool success

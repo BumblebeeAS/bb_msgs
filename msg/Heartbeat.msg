@@ -1,8 +1,8 @@
 bool sbc
-bool sbccan
+bool sbc_can
 bool pcb
 bool thrusters
 bool stb
-bool manipulator
-bool pmb1
-bool pmb2
+bool actuation
+bool pmb_1
+bool pmb_2

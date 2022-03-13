@@ -1,8 +1,7 @@
-std_msgs/Header header
 bool off
-bool red
-bool purple
-bool blue
-bool green
 bool white
+bool red
+bool green
+bool blue
 bool yellow
+bool purple

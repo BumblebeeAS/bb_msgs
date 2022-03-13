@@ -25,7 +25,12 @@ float32[] real_dims         # sonar: Major axis, minor axis    lidar: x, y ,z   
 #---  general info   ---#
 int8 angle                  # wrt to horizontal, clockwise positive
 uint8 color                 # Hue if from cameras, Intensity if from sonar
-uint8 extra_codex           # 0: None, 1: ML Confidence, 2: Sequence
+
+uint8 extra_codex           # 0: None,
+                            # 1: ML Confidence - 2 value (confidence percentage, detection bbox type)
+                            # 2: Sequence Data - TODO
+                            # 3: Traditional detector - 1 value (detection bbox type),
+                            # 4: PF info - 3 values (secs from last suveryor detection, lifespan (in secs), confidence percentage)
 uint16[] extra              # Extra information that is needed
 
 #---  tracker info   ---#
