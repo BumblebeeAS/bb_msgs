@@ -26,4 +26,4 @@ jobs:
         run: source /opt/ros/melodic/setup.bash && rosdep update && rosdep install --from-paths src -i -r -y
 
       - name: Build
-        run: source /opt/ros/melodic/setup.bash && catkin build
+        run: source /opt/ros/melodic/setup.bash && catkin build --no-status
