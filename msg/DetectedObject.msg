@@ -15,11 +15,13 @@ uint16 image_height
 #---  legacy - pixel wise   ---#
 int16[] bbox                # centre_x, centre_y, w, h
                             # 3d contour information, if source annotation bit is set
+                            # DO NOT USE THIS VARIABLE. ONLY FOR LEGACY USE OF VISION v1
 
 #---  real distance  ---#
 uint8 move_coords           # 1: [dx dy]  2: [dx dy dz]  3: [r t]  4: [theta phi]
-float32[] rel_coords        # setpoints towards target, depending on move_coords
-float32[] world_coords      # setpoints towards target, wrt to world
+float32[] rel_coords        # setpoints towards target, wrt to base_link, depending on move_coords
+float32[] world_coords      # setpoints towards target, wrt to world, depending on move_coords
+float32[] closest_coords    # setpoints towards closest pt of target, wrt to base_link, depending on move_coords
 float32[] real_dims         # sonar: Major axis, minor axis    lidar: x, y ,z    Cam: HOV, VOV
 
 #---  general info   ---#
@@ -31,6 +33,7 @@ uint8 extra_codex           # 0: None,
                             # 2: Sequence Data - TODO
                             # 3: Traditional detector - 1 value (detection bbox type),
                             # 4: PF info - 3 values (secs from last suveryor detection, lifespan (in secs), confidence percentage)
+                            # 5: Polar Ranges - Pixel distance from sensor origin in polar form (left to right)
 uint16[] extra              # Extra information that is needed
 
 #---  tracker info   ---#
