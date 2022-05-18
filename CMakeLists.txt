@@ -80,6 +80,9 @@ add_action_files(
   Locomotion.action
   Path.action
   Waypoints.action
+
+  # Mission Planner
+  Mission.action
 )
 
 generate_messages(
