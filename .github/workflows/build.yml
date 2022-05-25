@@ -20,7 +20,7 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v3
         with:
-          path: src
+          path: src/bb_msgs
 
       - name: Install dependencies
         run: source /opt/ros/melodic/setup.bash && rosdep update && rosdep install --from-paths src -i -r -y
