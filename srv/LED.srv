@@ -4,4 +4,7 @@ bool red
 bool green
 bool blue
 bool yellow
-bool purple
+bool magenta
+bool cyan
+---
+bool success

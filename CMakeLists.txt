@@ -21,11 +21,10 @@ add_message_files(
   CPUTemp.msg
   Environment.msg
   Heartbeat.msg
-  LED.msg
   PowerStatus.msg
   PMB.msg
 
-  # Conrols
+  # Controls
   Status.msg
   Thrusters.msg
 
@@ -57,6 +56,7 @@ add_service_files(
 
   # CAN
   Actuation.srv
+  LED.srv
   PowerControl.srv
 
   # Controls
