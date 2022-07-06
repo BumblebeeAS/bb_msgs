@@ -15,18 +15,46 @@ add_message_files(
 
   # Acoustics
   Ping.msg
-  
-  # CAN
-  Battery.msg
-  CPUTemp.msg
-  Environment.msg
-  Heartbeat.msg
-  PowerStatus.msg
-  PMB.msg
 
   # Controls
   Status.msg
   Thrusters.msg
+
+  # ASV2 
+  LARS.msg
+  LARSStat.msg
+
+  # ASV3
+  AcousticsActuationStatus.msg
+  ASV3Heartbeat.msg
+  ControlLink.msg
+  ESC.msg
+  POPB.msg
+  POSBStat.msg
+
+  # AUV3
+  AUV3PowerStatus.msg
+  AUV3Heartbeat.msg
+
+  # AUV4
+  AUV4Heartbeat.msg
+  AUV4PowerStatus.msg
+
+  # robotX
+  LightSequence.msg
+  LightTower.msg
+  Shape.msg
+
+  # Sensors
+  Battery.msg
+  CPUTemp.msg
+  SBCTemp.msg
+  Environment.msg
+  WindSpeed.msg
+
+  # Lidar
+  LidarBoundingBox.msg
+  LidarBoundingBoxes.msg
 
   # DVL
   beam.msg
@@ -45,6 +73,9 @@ add_message_files(
   # Vision
   DetectedObject.msg
   DetectedObjects.msg
+  MLDetectedObject.msg
+  MLDetectedObjects.msg
+
 )
 
 ## Generate services in the 'srv' folder
@@ -55,15 +86,28 @@ add_service_files(
   AcousticsControl.srv
 
   # CAN
-  Actuation.srv
   LED.srv
-  PowerControl.srv
 
   # Controls
   Controller.srv
   ResetPose.srv
   destination.srv
   navigate2d.srv
+
+  # ASV2
+  LARSControl.srv
+
+  # ASV3
+  AcousticsActuation.srv
+  POPBControl.srv
+  Shooter.srv
+
+  # AUV3
+  AUV3PowerControl.srv
+
+  # AUV4
+  AUV4Actuation.srv
+  AUV4PowerControl.srv
 
   # Sonar
   SonarRange.srv

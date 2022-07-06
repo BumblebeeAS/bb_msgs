@@ -1,10 +1,13 @@
-bool off
-bool white
-bool red
-bool green
-bool blue
-bool yellow
-bool magenta
-bool cyan
+# Set a desired rgb value by specifying a RGB hex string in the color field.
+# specify any commonly used colors as constants 
+string OFF=000000
+string WHITE=ffffff
+string RED=ff0000
+string GREEN=00ff00
+string BLUE=0000ff
+string YELLOW=ffff00
+string MAGENTA=ff00ff
+string CYAN=00ffff
+string color
 ---
 bool success

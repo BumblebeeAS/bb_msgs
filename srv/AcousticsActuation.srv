@@ -1,0 +1,6 @@
+# Retract/Extend Hydrophones
+bool enable
+bool extend
+bool retract
+---
+bool done

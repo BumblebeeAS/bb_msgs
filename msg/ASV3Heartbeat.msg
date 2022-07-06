@@ -1,0 +1,16 @@
+bool posb
+bool popb
+bool pokb
+bool telemetry
+bool dtls
+bool sbc
+bool ocs
+bool frsky
+bool logic_backplane
+bool shooter
+bool actuated_acoustics
+bool actuated_thrusters
+bool battery_1
+bool battery_2
+bool esc_1
+bool esc_2
