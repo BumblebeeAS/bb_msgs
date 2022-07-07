@@ -1,6 +1,7 @@
 # Retract/Extend Hydrophones
-bool enable
-bool extend
-bool retract
+int8 extended=1
+int8 retracted=2
+bool enabled
+int8 target_state # extended or retracted
 ---
 bool done

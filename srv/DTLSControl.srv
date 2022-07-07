@@ -1,0 +1,7 @@
+# Control the state of the Drone Takeoff Landing System
+int8 closed=1
+int8 opened=2
+bool armed
+int8 target_state # the new desired state of the DTLS: closed or opened
+---
+bool sent

@@ -25,12 +25,14 @@ add_message_files(
   LARSStat.msg
 
   # ASV3
-  AcousticsActuationStatus.msg
+  AcousticsActuationState.msg
   ASV3Heartbeat.msg
   ControlLink.msg
   ESC.msg
   POPB.msg
   POSBStat.msg
+  ShooterState.msg
+  DTLSState.msg
 
   # AUV3
   AUV3PowerStatus.msg
@@ -101,6 +103,7 @@ add_service_files(
   AcousticsActuation.srv
   POPBControl.srv
   Shooter.srv
+  DTLSControl.srv
 
   # AUV3
   AUV3PowerControl.srv
@@ -113,6 +116,9 @@ add_service_files(
   SonarRange.srv
   toggle.srv
 
+  # UAV
+  FlightState.srv
+
   # Vision
   MLDetector.srv
 )
@@ -124,6 +130,11 @@ add_action_files(
   Locomotion.action
   Path.action
   Waypoints.action
+
+  # UAV Controls
+  Gimbal.action
+  MoveToCartesianCoordinates.action
+  MoveToGPSCoordinates.action
 
   # Mission Planner
   Mission.action

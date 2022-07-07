@@ -1,7 +1,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package bb_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-0.0.1 (2022-07-06)
+0.0.1 (2022-07-07)
 ------------------
 - Merge asv_msgs into bb_msgs (Copy relevant messages to bb_msgs)
 - Remove unused PMB.msg (can use Environment.msg instead)

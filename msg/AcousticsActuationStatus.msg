@@ -1,2 +1,0 @@
-bool limit_min
-bool limit_max

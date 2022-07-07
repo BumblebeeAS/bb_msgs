@@ -1,6 +1,7 @@
+int8 cock=1
+int8 load_ball=2
+int8 fire=3
 bool arm
-bool cock
-bool load_ball
-bool fire
+int8 action
 ---
 bool done
