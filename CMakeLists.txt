@@ -17,31 +17,35 @@ add_message_files(
   Ping.msg
 
   # Controls
+  Heartbeat.msg
   Status.msg
   Thrusters.msg
+  PowerStatus.msg
+  ActuationState.msg
 
   # ASV2 
   LARS.msg
   LARSStat.msg
 
   # ASV3
-  AcousticsActuationState.msg
+  AcousticsActuationState.msg # ActuationState.msg + consts
   ASV3Heartbeat.msg
   ControlLink.msg
   ESC.msg
-  POPB.msg
+  POPB.msg          # PowerStatus.msg + consts for ASV
   POSBStat.msg
-  ShooterState.msg
-  DTLSState.msg
+  ShooterState.msg  # ActuationState.msg + consts
+  DTLSState.msg     # ActuationState.msg + consts
 
   # AUV3
-  AUV3PowerStatus.msg
+  AUV3PowerStatus.msg # same as PowerStatus.msg
   AUV3Heartbeat.msg
 
   # AUV4
   AUV4Heartbeat.msg
-  AUV4PowerStatus.msg
-
+  AUV4ActuationState.msg  # ActuationState.msg + consts
+  AUV4PowerStatus.msg     # PowerStatus.msg + consts for AUV4
+  
   # robotX
   LightSequence.msg
   LightTower.msg
@@ -57,6 +61,8 @@ add_message_files(
   # Lidar
   LidarBoundingBox.msg
   LidarBoundingBoxes.msg
+  ClusteredCloud.msg
+  ClusteredClouds.msg
 
   # DVL
   beam.msg
@@ -99,18 +105,10 @@ add_service_files(
   # ASV2
   LARSControl.srv
 
-  # ASV3
-  AcousticsActuation.srv
-  POPBControl.srv
-  Shooter.srv
-  DTLSControl.srv
+  # Service for messages derived from ActuationState.msg
+  Actuation.srv
 
-  # AUV3
-  AUV3PowerControl.srv
-
-  # AUV4
-  AUV4Actuation.srv
-  AUV4PowerControl.srv
+  PowerControl.srv
 
   # Sonar
   SonarRange.srv

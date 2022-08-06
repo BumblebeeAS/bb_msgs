@@ -1,6 +1,13 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package bb_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0.2.0 (2022-08-06)
+------------------
+- Combine ASV3Heartbeat, AUV4Heartbeat etc into single Heartbeat message with a uint32 field.
+- Add a ActuationState message to replace AUV4Actuation, DTLS, AcousticsActuation, BallShooter.
+- Replace the different Actuation services with a single Actuation.srv
+- Add PowerStatus message to replace AUV4PowerStatus and POPB.
+
 0.0.1 (2022-07-07)
 ------------------
 - Merge asv_msgs into bb_msgs (Copy relevant messages to bb_msgs)

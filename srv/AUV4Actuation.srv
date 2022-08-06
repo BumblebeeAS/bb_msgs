@@ -1,7 +1,0 @@
-bool dropper
-bool top_torpedo
-bool bottom_torpedo
-bool open_grabber
-bool close_grabber
----
-bool success

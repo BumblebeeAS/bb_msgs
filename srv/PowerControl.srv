@@ -1,0 +1,3 @@
+PowerStatus power_status
+---
+bool done

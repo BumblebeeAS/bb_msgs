@@ -1,8 +1,9 @@
-bool sbc
-bool sbc_can
-bool pcb
-bool thrusters
-bool stb
-bool actuation
-bool pmb_1
-bool pmb_2
+uint8 sbc=0
+uint8 sbc_can=1
+uint8 pcb=2
+uint8 thrusters=3
+uint8 stb=4
+uint8 actuation=5
+uint8 pmb_1=6
+uint8 pmb_2=7
+uint32 heartbeat
