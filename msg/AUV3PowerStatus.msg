@@ -1,5 +1,6 @@
-uint8 thrusters=0
-uint8 stb=1
-uint8 dna=2
-uint8 sonar=3
-uint32 power_status
+# UInt16 with auv3 power status constants
+uint8 THRUSTERS=0
+uint8 STB=1
+uint8 DNA=2
+uint8 SONAR=3
+uint16 data

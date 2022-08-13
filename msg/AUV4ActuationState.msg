@@ -1,8 +1,7 @@
-# ActuationState with auv4 constants
-int8 close_grabber=0
-int8 open_grabber=1
-int8 top_torpedo=2
-int8 bottom_torpedo=4
-int8 dropper=6
-bool enabled
-int8 state # number from 0 to 6.
+# UInt16 with auv4 actuation constants
+uint8 CLOSE_GRABBER=0
+uint8 OPEN_GRABBER=1
+uint8 TOP_TORPEDO=2
+uint8 BOTTOM_TORPEDO=4
+uint8 DROPPER=6
+uint16 data

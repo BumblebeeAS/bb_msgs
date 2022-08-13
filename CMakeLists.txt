@@ -17,34 +17,31 @@ add_message_files(
   Ping.msg
 
   # Controls
-  Heartbeat.msg
   Status.msg
   Thrusters.msg
-  PowerStatus.msg
-  ActuationState.msg
 
   # ASV2 
   LARS.msg
   LARSStat.msg
 
   # ASV3
-  AcousticsActuationState.msg # ActuationState.msg + consts
-  ASV3Heartbeat.msg
+  AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
+  ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
   ControlLink.msg
   ESC.msg
-  POPB.msg          # PowerStatus.msg + consts for ASV
+  POPB.msg          # UInt16.msg + consts for asv power status
   POSBStat.msg
-  ShooterState.msg  # ActuationState.msg + consts
-  DTLSState.msg     # ActuationState.msg + consts
+  ShooterState.msg  # UInt8.msg + consts for ball shooter
+  DTLSState.msg     # UInt8.msg + consts for dtls
 
   # AUV3
-  AUV3PowerStatus.msg # same as PowerStatus.msg
-  AUV3Heartbeat.msg
+  AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
+  AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
 
   # AUV4
-  AUV4Heartbeat.msg
-  AUV4ActuationState.msg  # ActuationState.msg + consts
-  AUV4PowerStatus.msg     # PowerStatus.msg + consts for AUV4
+  AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
+  AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
+  AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
   
   # robotX
   LightSequence.msg
@@ -81,9 +78,6 @@ add_message_files(
   # Vision
   DetectedObject.msg
   DetectedObjects.msg
-  MLDetectedObject.msg
-  MLDetectedObjects.msg
-
 )
 
 ## Generate services in the 'srv' folder

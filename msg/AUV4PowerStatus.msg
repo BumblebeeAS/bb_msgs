@@ -1,10 +1,10 @@
 # variant of PowerStatus with AUV4 constants
-uint8 ethernet_switch=0
-uint8 acoustics=1
-uint8 xavier=2
-uint8 stb=3
-uint8 thrusters=4
-uint8 dvl=5
-uint8 sonar=6
-uint8 sbc=7
-uint16 power_status
+uint8 ETHERNET_SWITCH=0
+uint8 ACOUSTICS=1
+uint8 XAVIER=2
+uint8 STB=3
+uint8 THRUSTERS=4
+uint8 DVL=5
+uint8 SONAR=6
+uint8 SBC=7
+uint16 data

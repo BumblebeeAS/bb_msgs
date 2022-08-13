@@ -1,1 +1,0 @@
-uint32 heartbeat # bitmask with bit i representing beat i.

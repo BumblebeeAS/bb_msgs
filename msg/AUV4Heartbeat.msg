@@ -1,9 +1,10 @@
-uint8 sbc=0
-uint8 sbc_can=1
-uint8 pcb=2
-uint8 thrusters=3
-uint8 stb=4
-uint8 actuation=5
-uint8 pmb_1=6
-uint8 pmb_2=7
-uint32 heartbeat
+# UInt32 with auv4 heartbeat constants
+uint8 SBC=0
+uint8 SBC_CAN=1
+uint8 PCB=2
+uint8 THRUSTERS=3
+uint8 STB=4
+uint8 ACTUATION=5
+uint8 PMB1=6
+uint8 PMB2=7
+uint32 data

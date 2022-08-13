@@ -1,6 +1,13 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package bb_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0.2.1 (2022-08-06)
+------------------
+- Replace Heartbeat.msg with UInt32.msg
+- Replace PowerStatus.msg with UInt16.msg
+- Replace ActuationState.msg with UInt8.msg, remove the enable bool field from derived messages.
+- Remove unused MLDetectedObject* message
+
 0.2.0 (2022-08-06)
 ------------------
 - Combine ASV3Heartbeat, AUV4Heartbeat etc into single Heartbeat message with a uint32 field.

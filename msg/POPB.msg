@@ -1,7 +1,8 @@
-uint8 velodyne2=0
-uint8 velodyne=1
-uint8 sick=2
-uint8 nav=3
-uint8 datalink=4
-uint8 spare=5
-uint16 power_status
+# variant of PowerStatus with ASV constants
+uint8 RADAR=0
+uint8 VELODYNE=1
+uint8 SICK=2
+uint8 NAVTICS=3
+uint8 DATALINK=4
+uint8 SPARE_E1=5
+uint16 data # bitmask of above devices
