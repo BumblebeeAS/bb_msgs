@@ -19,6 +19,7 @@ add_message_files(
   # Controls
   Status.msg
   Thrusters.msg
+  ActuationState.msg
 
   # ASV2 
   LARS.msg
