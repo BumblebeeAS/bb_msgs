@@ -1,11 +1,24 @@
 #goal
-float32 x_goal # x position in ENU frame
-float32 y_goal # y position in ENU frame
-float32 z_goal # z position in ENU frame
-float32 yaw_goal # yaw angle(radians) in ENU frame
-string pose_topic # Topic to subscribe to for pose
+float32 x_goal          # x position in ENU frame
+float32 y_goal          # y position in ENU frame
+float32 z_goal          # z position in ENU frame
+float32 yaw_goal        # yaw angle(radians) in ENU frame
+bool movement_rel       # whether the x-y goal is relative to current position. In relative movement, we assume the drone to be facing North (i.e. East is sidemove)
+bool z_rel              # whether the z goal is relative to current position
+bool yaw_rel            # whether the yaw goal is relative to current position
+bool movement_global    # if True, uses global ENU frame. If False and movement_rel is also false, uses frame (and orientation) where ref was last set
+bool yaw_global         # if True, sets to global ENU yaw. If False, sets to offset from ref_yaw. Ignored if yaw_rel is True.
+string pose_topic       # Topic to subscribe to for pose
+
+float32 movement_tolerance
+float32 z_tolerance
+float32 yaw_tolerance
 ---
 #result
+float32 x_final
+float32 y_final
+float32 z_final
+float32 yaw_final
 uint8 success
 ---
 #feedback

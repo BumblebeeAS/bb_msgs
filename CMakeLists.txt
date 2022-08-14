@@ -46,6 +46,9 @@ add_message_files(
   # Vision
   DetectedObject.msg
   DetectedObjects.msg
+
+  # RobotX 
+  Wildlife.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -85,7 +88,6 @@ add_action_files(
   Waypoints.action
 
   # UAV Controls
-  Gimbal.action
   MoveToCartesianCoordinates.action
   MoveToGPSCoordinates.action
 
