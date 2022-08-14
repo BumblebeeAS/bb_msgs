@@ -109,9 +109,6 @@ add_service_files(
   SonarRange.srv
   toggle.srv
 
-  # UAV
-  FlightState.srv
-
   # Vision
   MLDetector.srv
 )
@@ -123,11 +120,6 @@ add_action_files(
   Locomotion.action
   Path.action
   Waypoints.action
-
-  # UAV Controls
-  Gimbal.action
-  MoveToCartesianCoordinates.action
-  MoveToGPSCoordinates.action
 
   # Mission Planner
   Mission.action
