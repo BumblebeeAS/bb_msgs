@@ -19,7 +19,6 @@ add_message_files(
   # Controls
   Status.msg
   Thrusters.msg
-  ActuationState.msg
 
   # ASV2 
   LARS.msg
@@ -100,7 +99,7 @@ add_service_files(
   # ASV2
   LARSControl.srv
 
-  # Service for messages derived from ActuationState.msg
+  # Service for Actuation related msgs
   Actuation.srv
 
   PowerControl.srv

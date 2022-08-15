@@ -2,5 +2,4 @@
 uint8 COCKED=1
 uint8 LOADED=2
 uint8 FIRED=3
-bool armed
 uint8 data
