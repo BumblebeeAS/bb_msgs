@@ -8,7 +8,8 @@ bool z_rel              # whether the z goal is relative to current position
 bool yaw_rel            # whether the yaw goal is relative to current position
 bool movement_global    # if True, uses global ENU frame. If False and movement_rel is also false, uses frame (and orientation) where ref was last set
 bool yaw_global         # if True, sets to global ENU yaw. If False, sets to offset from ref_yaw. Ignored if yaw_rel is True.
-string pose_topic       # Topic to subscribe to for pose
+string position_topic   # Topic to subscribe to for position
+string attitude_topic   # Topic to subscribe to for attitude
 
 float32 movement_tolerance
 float32 z_tolerance
