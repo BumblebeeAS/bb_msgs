@@ -27,6 +27,7 @@ add_message_files(
   # ASV3
   AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
   ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
+  ASVEStopState.msg            # UInt8.msg + consts for asv estop
   ControlLink.msg
   ESC.msg
   POPB.msg          # UInt16.msg + consts for asv power status
