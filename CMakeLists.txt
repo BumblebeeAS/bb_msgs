@@ -117,7 +117,7 @@ add_service_files(
   toggle.srv
 
   # UAV
-  FlightState.srv
+  # FlightState.srv
 
   # Vision
   MLDetector.srv
@@ -132,9 +132,9 @@ add_action_files(
   Waypoints.action
 
   # UAV Controls
-  Gimbal.action
-  MoveToCartesianCoordinates.action
-  MoveToGPSCoordinates.action
+  # Gimbal.action
+  # MoveToCartesianCoordinates.action
+  # MoveToGPSCoordinates.action
 
   # Mission Planner
   Mission.action
