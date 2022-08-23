@@ -46,8 +46,11 @@ add_message_files(
   DetectedObject.msg
   DetectedObjects.msg
 
-  # RobotX 
+  # RobotX
   Wildlife.msg
+
+  # Jellyfish
+  JellyfishHeartbeat.msg
 )
 
 ## Generate services in the 'srv' folder
