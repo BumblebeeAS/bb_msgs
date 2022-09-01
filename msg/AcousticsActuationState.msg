@@ -1,6 +1,4 @@
-int8 extended=1
-int8 retracted=2
-int8 extending=3
-int8 retracting=4
-bool enabled
-int8 state # The latest known state of the acoustics actuation above.
+# derived from UInt8 with acoustics actuation constants
+uint8 EXTENDED=1
+uint8 RETRACTED=2
+uint8 data

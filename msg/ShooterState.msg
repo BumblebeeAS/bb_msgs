@@ -1,5 +1,5 @@
-int8 cocked=1
-int8 loaded=2
-int8 fired=3
-bool armed
-int8 state
+# UInt8 with constants for the state of the Ball shooter
+uint8 COCKED=1
+uint8 LOADED=2
+uint8 FIRED=3
+uint8 data

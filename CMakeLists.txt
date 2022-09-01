@@ -25,23 +25,25 @@ add_message_files(
   LARSStat.msg
 
   # ASV3
-  AcousticsActuationState.msg
-  ASV3Heartbeat.msg
+  AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
+  ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
+  ASVEStopState.msg            # UInt8.msg + consts for asv estop
   ControlLink.msg
   ESC.msg
-  POPB.msg
+  POPB.msg          # UInt16.msg + consts for asv power status
   POSBStat.msg
-  ShooterState.msg
-  DTLSState.msg
+  ShooterState.msg  # UInt8.msg + consts for ball shooter
+  DTLSState.msg     # UInt8.msg + consts for dtls
 
   # AUV3
-  AUV3PowerStatus.msg
-  AUV3Heartbeat.msg
+  AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
+  AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
 
   # AUV4
-  AUV4Heartbeat.msg
-  AUV4PowerStatus.msg
-
+  AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
+  AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
+  AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
+  
   # robotX
   LightSequence.msg
   LightTower.msg
@@ -57,6 +59,8 @@ add_message_files(
   # Lidar
   LidarBoundingBox.msg
   LidarBoundingBoxes.msg
+  ClusteredCloud.msg
+  ClusteredClouds.msg
 
   # DVL
   beam.msg
@@ -75,9 +79,6 @@ add_message_files(
   # Vision
   DetectedObject.msg
   DetectedObjects.msg
-  MLDetectedObject.msg
-  MLDetectedObjects.msg
-
 )
 
 ## Generate services in the 'srv' folder
@@ -99,25 +100,14 @@ add_service_files(
   # ASV2
   LARSControl.srv
 
-  # ASV3
-  AcousticsActuation.srv
-  POPBControl.srv
-  Shooter.srv
-  DTLSControl.srv
+  # Service for Actuation related msgs
+  Actuation.srv
 
-  # AUV3
-  AUV3PowerControl.srv
-
-  # AUV4
-  AUV4Actuation.srv
-  AUV4PowerControl.srv
+  PowerControl.srv
 
   # Sonar
   SonarRange.srv
   toggle.srv
-
-  # UAV
-  # FlightState.srv
 
   # Vision
   MLDetector.srv
@@ -130,11 +120,6 @@ add_action_files(
   Locomotion.action
   Path.action
   Waypoints.action
-
-  # UAV Controls
-  # Gimbal.action
-  # MoveToCartesianCoordinates.action
-  # MoveToGPSCoordinates.action
 
   # Mission Planner
   Mission.action
