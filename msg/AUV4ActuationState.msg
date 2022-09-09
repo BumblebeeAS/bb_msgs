@@ -4,5 +4,4 @@ uint8 OPEN_GRABBER=1
 uint8 TOP_TORPEDO=2
 uint8 BOTTOM_TORPEDO=4
 uint8 DROPPER=6
-bool armed
 uint8 data
