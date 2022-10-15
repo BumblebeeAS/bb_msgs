@@ -1,9 +1,13 @@
 std_msgs/Header header
-uint16 motor_1_current
-uint16 motor_2_current
+int16 motor_1_current # (in 0.01 Amps)
+int16 motor_2_current # (in 0.01 Amps)
 uint8 status_flag_1
 uint8 status_flag_2
 uint8 fault_flag
+
+int16 motor_1_power
+int16 motor_2_power
+uint8 mcu_temp
 
 # Status flags bitmask
 # Bit 0 - Amps Limit currently active 
