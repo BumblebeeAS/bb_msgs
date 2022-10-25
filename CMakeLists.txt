@@ -80,6 +80,7 @@ add_service_files(
 
   # Vision
   MLDetector.srv
+  ArucoActivation.srv
 )
 
 add_action_files(
