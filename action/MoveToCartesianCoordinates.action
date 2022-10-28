@@ -1,13 +1,26 @@
 #goal
+uint8 controller_state  # 0: Position controller, 1: Velocity and yawrate controller 
+
 float32 x_goal          # x position in ENU frame
 float32 y_goal          # y position in ENU frame
 float32 z_goal          # z position in ENU frame
-float32 yaw_goal        # yaw angle(radians) in ENU frame
+float32 yaw_goal        # yaw angle (degrees) in ENU frame
+
+float32 vx_target         # x velocity target for velocity control
+float32 vy_target         # y velocity target for velocity control
+float32 vz_target         # z velocity target for velocity control
+float32 yawrate_target    # yaw rate (degrees per s) target for velocity control
+
 bool movement_rel       # whether the x-y goal is relative to current position. In relative movement, we assume the drone to be facing North (i.e. East is sidemove)
 bool z_rel              # whether the z goal is relative to current position
+                        # Not applicable to velocity control
 bool yaw_rel            # whether the yaw goal is relative to current position
-bool movement_global    # if True, uses global ENU frame. If False and movement_rel is also false, uses frame (and orientation) where ref was last set
+                        # Not applicable to velocity control
+bool movement_global    # if True, uses global ENU frame. If False, uses frame (and orientation) where ref was last set
+                        # No effect in velocity control if movement_rel is True
 bool yaw_global         # if True, sets to global ENU yaw. If False, sets to offset from ref_yaw. Ignored if yaw_rel is True.
+                        # Not applicable for velocity control.
+
 string position_topic   # Topic to subscribe to for position
 string attitude_topic   # Topic to subscribe to for attitude
 
