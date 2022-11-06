@@ -49,9 +49,6 @@ add_message_files(
   # RobotX
   Wildlife.msg
   BasicGPS.msg
-
-  # Jellyfish
-  JellyfishHeartbeat.msg
 )
 
 ## Generate services in the 'srv' folder
