@@ -48,6 +48,7 @@ add_message_files(
 
   # RobotX
   Wildlife.msg
+  BasicGPS.msg
 
   # Jellyfish
   JellyfishHeartbeat.msg
@@ -77,6 +78,9 @@ add_service_files(
 
   # UAV
   FlightState.srv
+  SetUInt8Status.srv
+  SetWildlifeStatus.srv
+  SetGPIO.srv
 
   # Vision
   MLDetector.srv

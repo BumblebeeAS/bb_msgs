@@ -1,0 +1,4 @@
+bool publish_status
+std_msgs/UInt8 status
+---
+bool success
