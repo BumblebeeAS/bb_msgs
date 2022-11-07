@@ -20,8 +20,6 @@ add_message_files(
   Battery.msg
   CPUTemp.msg
   Environment.msg
-  PowerStatus.msg
-  PMB.msg
 
   # Controls
   Status.msg
