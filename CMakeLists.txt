@@ -15,18 +15,59 @@ add_message_files(
 
   # Acoustics
   Ping.msg
-  
+
   # CAN
   Battery.msg
   CPUTemp.msg
   Environment.msg
-  Heartbeat.msg
   PowerStatus.msg
   PMB.msg
 
   # Controls
   Status.msg
   Thrusters.msg
+
+  # ASV2
+  LARS.msg
+  LARSStat.msg
+
+  # ASV3
+  AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
+  ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
+  ASVEStopState.msg            # UInt8.msg + consts for asv estop
+  ControlLink.msg
+  ESC.msg
+  POPB.msg          # UInt16.msg + consts for asv power status
+  POSBStat.msg
+  ShooterState.msg  # UInt8.msg + consts for ball shooter
+  DTLSState.msg     # UInt8.msg + consts for dtls
+
+  # AUV3
+  AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
+  AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
+
+  # AUV4
+  AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
+  AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
+  AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
+
+  # robotX
+  LightSequence.msg
+  LightTower.msg
+  Shape.msg
+
+  # Sensors
+  Battery.msg
+  CPUTemp.msg
+  SBCTemp.msg
+  Environment.msg
+  WindSpeed.msg
+
+  # Lidar
+  LidarBoundingBox.msg
+  LidarBoundingBoxes.msg
+  ClusteredCloud.msg
+  ClusteredClouds.msg
 
   # DVL
   beam.msg
@@ -68,6 +109,14 @@ add_service_files(
   ResetPose.srv
   destination.srv
   navigate2d.srv
+
+  # ASV2
+  LARSControl.srv
+
+  # Service for Actuation related msgs
+  Actuation.srv
+
+  PowerControl.srv
 
   # Sonar
   SonarRange.srv

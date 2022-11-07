@@ -1,0 +1,8 @@
+bool kill
+bool unkill
+bool launch
+bool recover
+bool step
+float32 tether
+---
+bool sent

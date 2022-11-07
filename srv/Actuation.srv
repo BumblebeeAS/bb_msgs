@@ -1,7 +1,3 @@
-bool dropper
-bool top_torpedo
-bool bottom_torpedo
-bool open_grabber
-bool close_grabber
+std_msgs/UInt8 target_state
 ---
 bool success
