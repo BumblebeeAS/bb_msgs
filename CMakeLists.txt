@@ -47,6 +47,7 @@ add_message_files(
   DetectedObjects.msg
 
   # RobotX
+  SearchAndReport.msg
   Wildlife.msg
   BasicGPS.msg
 )
@@ -75,6 +76,7 @@ add_service_files(
 
   # UAV
   FlightState.srv
+  SetSearchAndReportStatus.srv
   SetUInt8Status.srv
   SetWildlifeStatus.srv
   SetGPIO.srv
