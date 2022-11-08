@@ -1,2 +1,3 @@
 std_msgs/Header header
-int16[] values
+int32 x
+int32 y
