@@ -131,6 +131,9 @@ add_service_files(
   # Vision
   MLDetector.srv
   ArucoActivation.srv
+
+  # RobotX specific
+  RobotxTaskStatus.srv
 )
 
 add_action_files(
