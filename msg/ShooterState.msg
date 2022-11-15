@@ -2,4 +2,8 @@
 uint8 COCKED=1
 uint8 LOADED=2
 uint8 FIRED=3
+uint8 COCKING=4
+uint8 LOADING=5
+uint8 FIRING=6
 uint8 data
+
