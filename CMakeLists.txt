@@ -15,18 +15,57 @@ add_message_files(
 
   # Acoustics
   Ping.msg
-  
+
   # CAN
   Battery.msg
   CPUTemp.msg
   Environment.msg
-  Heartbeat.msg
-  PowerStatus.msg
-  PMB.msg
 
   # Controls
   Status.msg
   Thrusters.msg
+
+  # ASV2
+  LARS.msg
+  LARSStat.msg
+
+  # ASV3
+  AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
+  ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
+  ASVEStopState.msg            # UInt8.msg + consts for asv estop
+  ControlLink.msg
+  ESC.msg
+  POPB.msg          # UInt16.msg + consts for asv power status
+  POSBStat.msg
+  ShooterState.msg  # UInt8.msg + consts for ball shooter
+  DTLSState.msg     # UInt8.msg + consts for dtls
+
+  # AUV3
+  AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
+  AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
+
+  # AUV4
+  AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
+  AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
+  AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
+
+  # robotX
+  LightSequence.msg
+  LightTower.msg
+  Shape.msg
+
+  # Sensors
+  Battery.msg
+  CPUTemp.msg
+  SBCTemp.msg
+  Environment.msg
+  WindSpeed.msg
+
+  # Lidar
+  LidarBoundingBox.msg
+  LidarBoundingBoxes.msg
+  ClusteredCloud.msg
+  ClusteredClouds.msg
 
   # DVL
   beam.msg
@@ -45,6 +84,11 @@ add_message_files(
   # Vision
   DetectedObject.msg
   DetectedObjects.msg
+
+  # RobotX
+  SearchAndReport.msg
+  Wildlife.msg
+  BasicGPS.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -65,12 +109,31 @@ add_service_files(
   destination.srv
   navigate2d.srv
 
+  # ASV2
+  LARSControl.srv
+
+  # Service for Actuation related msgs
+  Actuation.srv
+
+  PowerControl.srv
+
   # Sonar
   SonarRange.srv
   toggle.srv
 
+  # UAV
+  FlightState.srv
+  SetSearchAndReportStatus.srv
+  SetUInt8Status.srv
+  SetWildlifeStatus.srv
+  SetGPIO.srv
+
   # Vision
   MLDetector.srv
+  ArucoActivation.srv
+
+  # RobotX specific
+  RobotxTaskStatus.srv
 )
 
 add_action_files(
@@ -80,6 +143,10 @@ add_action_files(
   Locomotion.action
   Path.action
   Waypoints.action
+
+  # UAV Controls
+  MoveToCartesianCoordinates.action
+  MoveToGPSCoordinates.action
 
   # Mission Planner
   Mission.action

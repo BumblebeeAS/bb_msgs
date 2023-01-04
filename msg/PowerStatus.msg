@@ -1,9 +1,0 @@
-bool acoustics
-bool dna
-bool dvl
-bool ethernet_switch
-bool sbc
-bool sonar
-bool stb
-bool thrusters
-bool xavier
