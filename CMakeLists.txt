@@ -85,6 +85,10 @@ add_message_files(
   DetectedObject.msg
   DetectedObjects.msg
 
+  # Image Matching
+  Keypoint.msg
+  KeypointsDict.msg
+
   # RobotX
   SearchAndReport.msg
   Wildlife.msg
@@ -131,6 +135,12 @@ add_service_files(
   # Vision
   MLDetector.srv
   ArucoActivation.srv
+
+  # Image Matching
+  ClearBuffer.srv
+  MatchImages.srv
+  MatchToTemplate.srv
+  RegisterImage.srv  
 
   # RobotX specific
   RobotxTaskStatus.srv

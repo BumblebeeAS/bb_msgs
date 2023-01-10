@@ -1,0 +1,6 @@
+int64 numKeypoints
+string template_name
+
+---
+int64 result
+bb_msgs/KeypointsDict keypoints_dict
