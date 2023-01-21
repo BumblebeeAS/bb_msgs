@@ -4,26 +4,23 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
+    container: 
+      image: ros:humble-ros-base
     steps:
-      - name: Setup ROS
-        uses: ros-tooling/setup-ros@v0.3
-        with:
-          required-ros-distributions: melodic
-
-      - name: Install packages
-        run: sudo apt-get install python-catkin-tools
-
-      - name: Setup catkin workspace
-        run: source /opt/ros/melodic/setup.bash && catkin init
-
+      - run: sudo chown -R `whoami`:`whoami` .
       - name: Check out repo
         uses: actions/checkout@v3
         with:
           path: src/bb_msgs
-
-      - name: Install dependencies
-        run: source /opt/ros/melodic/setup.bash && rosdep update && rosdep install --from-paths src -i -r -y
-
+          branch: humble
+      - name: Set up workspace
+        run: |
+          mkdir -p /tmp/ws/src;
+          ln -s `pwd` /tmp/ws/src;
       - name: Build
-        run: source /opt/ros/melodic/setup.bash && catkin build --no-status
+        shell: bash
+        run: |
+          cd /tmp/ws;
+          source /opt/ros/humble/setup.bash;
+          colcon build --merge-install;

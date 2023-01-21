@@ -1,6 +1,14 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package bb_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1.2.2 (2023-01-09)
+------------------
+- Migration to ROS2 following [ROS2 interface definition](https://design.ros2.org/articles/interface_definition.html)
+- Constants all uppercase, fields all snake case, messages all PascalCase
+- Change all std_msgs/FloatXX etc in services to builtins. Either stick with this or create new message types
+- Remove duplicate entries in CMakeLists.txt e.g. srv/Actuation etc.
+
 0.2.2 (2023-01-09)
 ------------------
 - Minor fixes

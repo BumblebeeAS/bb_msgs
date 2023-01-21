@@ -1,10 +1,10 @@
-bool dryRun # If True, ignores the string[] detectors field and queries for the status of the ML detector
-bool enableServiceOnlyMode  # Used for rosbag previewer (a vision2 extension) 
+bool dry_run # If True, ignores the string[] detectors field and queries for the status of the ML detector
+bool enable_service_only_mode  # Used for rosbag previewer (a vision2 extension) 
 string[] detectors # list of ML detectors to launch (kills existing models that are not listed)
 
 ---
 
 bool success   # indicate successful execution of triggered service
 string message # informational, e.g. for error messages
-string[] runningDetectors # list of running ML detectors
-string[] availableDetectors # list of available ML detectors
+string[] running_detectors # list of running ML detectors
+string[] available_detectors # list of available ML detectors

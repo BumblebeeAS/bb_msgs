@@ -1,2 +1,2 @@
-BasicGPS robot_R
-BasicGPS robot_N
+BasicGPS robot_r
+BasicGPS robot_n

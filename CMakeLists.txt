@@ -1,175 +1,172 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(bb_msgs)
 
-find_package(catkin REQUIRED COMPONENTS
-  message_generation
-  actionlib_msgs
-  geometry_msgs
-  nav_msgs
-  sensor_msgs
-  std_msgs
-)
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 
-add_message_files(
-  FILES
+find_package(ament_cmake REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(action_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
+set(message_files
   # Acoustics
-  Ping.msg
+  msg/Ping.msg
 
-  # CAN
-  Battery.msg
-  CPUTemp.msg
-  Environment.msg
-
-  # Controls
-  Status.msg
-  Thrusters.msg
-
-  # ASV2
-  LARS.msg
-  LARSStat.msg
-
-  # ASV3
-  AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
-  ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
-  ASVEStopState.msg            # UInt8.msg + consts for asv estop
-  ControlLink.msg
-  ESC.msg
-  POPB.msg          # UInt16.msg + consts for asv power status
-  POSBStat.msg
-  ShooterState.msg  # UInt8.msg + consts for ball shooter
-  DTLSState.msg     # UInt8.msg + consts for dtls
-
-  # AUV3
-  AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
-  AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
-
-  # AUV4
-  AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
-  AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
-  AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
-
-  # robotX
-  LightSequence.msg
-  LightTower.msg
-  Shape.msg
-
-  # Sensors
-  Battery.msg
-  CPUTemp.msg
-  SBCTemp.msg
-  Environment.msg
-  WindSpeed.msg
-
-  # Lidar
-  LidarBoundingBox.msg
-  LidarBoundingBoxes.msg
-  ClusteredCloud.msg
-  ClusteredClouds.msg
-
-  # DVL
-  beam.msg
-  beamMatrixStamped.msg
-
-  # IMU
-  compass_data.msg
-  imu_data.msg
-  raw_magnetics.msg
-
-  # Sonar
-  SurveyorInfo.msg
-  SonarInfo.msg
-  SonarWorld.msg
-
-  # Vision
-  DetectedObject.msg
-  DetectedObjects.msg
-
-  # Image Matching
-  Keypoint.msg
-  KeypointsDict.msg
-
-  # RobotX
-  SearchAndReport.msg
-  Wildlife.msg
-  BasicGPS.msg
+   # Controls
+   msg/Status.msg
+   msg/Thrusters.msg
+ 
+   # ASV2
+   msg/LARS.msg
+   msg/LARSStat.msg
+ 
+   # ASV3
+   msg/AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
+   msg/ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
+   msg/ASVEStopState.msg            # UInt8.msg + consts for asv estop
+   msg/ControlLink.msg
+   msg/ESC.msg
+   msg/POPB.msg          # UInt16.msg + consts for asv power status
+   msg/POSBStat.msg
+   msg/ShooterState.msg  # UInt8.msg + consts for ball shooter
+   msg/DTLSState.msg     # UInt8.msg + consts for dtls
+ 
+   # AUV3
+   msg/AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
+   msg/AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
+ 
+   # AUV4
+   msg/AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
+   msg/AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
+   msg/AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
+ 
+   # robotX
+   msg/LightSequence.msg
+   msg/LightTower.msg
+   msg/Shape.msg
+ 
+   # Sensors
+   msg/Battery.msg
+   msg/CPUTemp.msg
+   msg/SBCTemp.msg
+   msg/Environment.msg
+   msg/WindSpeed.msg
+ 
+   # Lidar
+   msg/LidarBoundingBox.msg
+   msg/LidarBoundingBoxes.msg
+   msg/ClusteredCloud.msg
+   msg/ClusteredClouds.msg
+ 
+   # DVL
+   msg/Beam.msg
+   msg/BeamMatrixStamped.msg
+ 
+   # IMU
+   msg/CompassData.msg
+   msg/ImuData.msg
+   msg/RawMagnetics.msg
+ 
+   # Sonar
+   msg/SurveyorInfo.msg
+   msg/SonarInfo.msg
+   msg/SonarWorld.msg
+ 
+   # Vision
+   msg/DetectedObject.msg
+   msg/DetectedObjects.msg
+ 
+   # Image Matching
+   msg/Keypoint.msg
+   msg/KeypointsDict.msg
+ 
+   # RobotX
+   msg/SearchAndReport.msg
+   msg/Wildlife.msg
+   msg/BasicGPS.msg
 )
 
+set(service_files
 ## Generate services in the 'srv' folder
-add_service_files(
-  FILES
-
   # Acoustics
-  AcousticsControl.srv
+  srv/AcousticsControl.srv
 
   # CAN
-  Actuation.srv
-  LED.srv
-  PowerControl.srv
+  srv/Actuation.srv
+  srv/LED.srv
+  srv/PowerControl.srv
 
   # Controls
-  Controller.srv
-  ResetPose.srv
-  destination.srv
-  navigate2d.srv
+  srv/Controller.srv
+  srv/ResetPose.srv
+  srv/Destination.srv
+  srv/Navigate2d.srv
 
   # ASV2
-  LARSControl.srv
-
-  # Service for Actuation related msgs
-  Actuation.srv
-
-  PowerControl.srv
+  srv/LARSControl.srv
 
   # Sonar
-  SonarRange.srv
-  toggle.srv
+  srv/SonarRange.srv
+  srv/Toggle.srv
 
   # UAV
-  FlightState.srv
-  SetSearchAndReportStatus.srv
-  SetUInt8Status.srv
-  SetWildlifeStatus.srv
-  SetGPIO.srv
+  srv/FlightState.srv
+  srv/SetSearchAndReportStatus.srv
+  srv/SetUInt8Status.srv
+  srv/SetWildlifeStatus.srv
+  srv/SetGPIO.srv
 
   # Vision
-  MLDetector.srv
-  ArucoActivation.srv
+  srv/MLDetector.srv
+  srv/ArucoActivation.srv
 
   # Image Matching
-  ClearBuffer.srv
-  MatchImages.srv
-  MatchToTemplate.srv
-  RegisterImage.srv  
+  srv/ClearBuffer.srv
+  srv/MatchImages.srv
+  srv/MatchToTemplate.srv
+  srv/RegisterImage.srv  
 
   # RobotX specific
-  RobotxTaskStatus.srv
+  srv/RobotxTaskStatus.srv
 )
 
-add_action_files(
-  FILES
-
+set(action_files
   # Controls
-  Locomotion.action
-  Path.action
-  Waypoints.action
+  action/Locomotion.action
+  action/Path.action
+  action/Waypoints.action
 
   # UAV Controls
-  MoveToCartesianCoordinates.action
-  MoveToGPSCoordinates.action
+  action/MoveToCartesianCoordinates.action
+  action/MoveToGPSCoordinates.action
 
   # Mission Planner
-  Mission.action
+  action/Mission.action
 )
 
-generate_messages(
-  DEPENDENCIES
-  geometry_msgs
-  nav_msgs
-  sensor_msgs
-  std_msgs
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${message_files}
+  ${service_files}
+  ${action_files}
+  
+  DEPENDENCIES builtin_interfaces std_msgs action_msgs nav_msgs geometry_msgs sensor_msgs
+  ADD_LINTER_TESTS
 )
 
-catkin_package(
-  CATKIN_DEPENDS message_runtime actionlib_msgs geometry_msgs nav_msgs sensor_msgs std_msgs
-)
+
+ament_export_dependencies(rosidl_default_runtime)
+ament_package()

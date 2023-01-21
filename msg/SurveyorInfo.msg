@@ -38,4 +38,4 @@ float32 fov_max             # The upper/right bound of the sensor's FOV (in degs
 uint8 temperature           # Temperature of sensor (in degs C)
 uint8 gain                  # Gain setting of sensor
 uint8 gamma                 # Gamma setting of sensor
-uint8 clusterSuppression    # Only used for Radar. IGNORE for sonar.
+uint8 cluster_suppression    # Only used for Radar. IGNORE for sonar.

@@ -1,4 +1,4 @@
-Header header
+std_msgs/Header header
 bool enable_acoustics
 bool enable_shooter
 bool enable_servo
@@ -10,7 +10,7 @@ bool shooter_1
 bool shooter_2
 bool shooter_3
 bool shooter_4
-bool X
+bool x
 uint8 servo
 uint8 stepper
 uint8 ack_checksum

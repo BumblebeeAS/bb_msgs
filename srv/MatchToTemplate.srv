@@ -1,6 +1,6 @@
-int64 numKeypoints
+int64 num_keypoints
 string template_name
 
 ---
 int64 result
-bb_msgs/KeypointsDict keypoints_dict
+KeypointsDict keypoints_dict

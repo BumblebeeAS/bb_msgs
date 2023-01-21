@@ -3,13 +3,13 @@ nav_msgs/Path path
 ---
 # result definition 
 bool goal_reached
-bool replanNeeded
+bool replan_needed
 float64 x_final
 float64 y_final
 float64 heading_final
 ---
 # feedback definition 
-float64 pathCompletionPercent
-float64 distToEnd
-float64 distToObs
-float64 xTrack_error
+float64 path_completion_percent
+float64 dist_to_end
+float64 dist_to_obs
+float64 x_track_error

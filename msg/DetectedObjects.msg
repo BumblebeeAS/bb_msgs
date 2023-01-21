@@ -1,2 +1,2 @@
 DetectedObject[] detected
-string nodeName
+string node_name
