@@ -1,6 +1,10 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package bb_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0.2.3 (2023-01-25)
+------------------
+- Removed `data` field from enum messages
+
 0.2.2 (2023-01-09)
 ------------------
 - Minor fixes
