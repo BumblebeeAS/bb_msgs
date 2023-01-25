@@ -1,7 +1,8 @@
-# derived from ActuationState with AUV4 actuation constants
+#
+#  Enums only -- to be used with std_msgs/UInt8
+#
 uint8 CLOSE_GRABBER=0
 uint8 OPEN_GRABBER=1
 uint8 TOP_TORPEDO=2
 uint8 BOTTOM_TORPEDO=4
 uint8 DROPPER=6
-uint8 data
