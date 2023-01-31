@@ -106,6 +106,7 @@ add_service_files(
   Actuation.srv
   LED.srv
   PowerControl.srv
+  TareAtmosphericPressure.srv
 
   # Controls
   Controller.srv
