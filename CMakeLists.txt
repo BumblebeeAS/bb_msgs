@@ -104,6 +104,7 @@ set(service_files
   srv/Actuation.srv
   srv/LED.srv
   srv/PowerControl.srv
+  srv/TareAtmosphericPressure.srv
 
   # Controls
   srv/Controller.srv

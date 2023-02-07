@@ -1,4 +1,6 @@
-# UInt32 with asv heartbeat constants
+#
+#  Enums only -- to be used with std_msgs/UInt32
+#
 uint8 POSB=0
 uint8 POPB=1
 uint8 POKB=2
@@ -15,4 +17,3 @@ uint8 BATTERY1=12
 uint8 BATTERY2=13
 uint8 ESC1=14
 uint8 ESC2=15
-uint32 data
