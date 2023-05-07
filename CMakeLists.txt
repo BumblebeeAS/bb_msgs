@@ -22,7 +22,8 @@ add_message_files(
   Environment.msg
 
   # Controls
-  Status.msg
+  ControllerStatus.msg
+  Status.msg # Old controls
   Thrusters.msg
 
   # ASV2
@@ -109,10 +110,15 @@ add_service_files(
   TareAtmosphericPressure.srv
 
   # Controls
+  Autotuner.srv
   Controller.srv
   ResetPose.srv
   destination.srv
   navigate2d.srv
+  EncircleTraj.srv
+  Limits.srv
+  Speed.srv
+  SplineTraj.srv
 
   # ASV2
   LARSControl.srv
