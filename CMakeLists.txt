@@ -161,6 +161,8 @@ add_action_files(
   Path.action
   Waypoints.action
 
+  ControlsInterface.action # GoTo with support for dynamic frames
+
   # UAV Controls
   MoveToCartesianCoordinates.action
   MoveToGPSCoordinates.action
