@@ -12,7 +12,7 @@ jobs:
           required-ros-distributions: noetic
 
       - name: Install packages
-        run: sudo apt-get install python-catkin-tools
+        run: sudo apt-get install python3-catkin-tools
 
       - name: Setup catkin workspace
         run: source /opt/ros/noetic/setup.bash && catkin init
