@@ -1,6 +1,16 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package bb_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+0.2.5 (2023-05-14)
+------------------
+- Adds messages from [controls repo](https://github.com/BumblebeeAS/controls)
+- Adds `ControlsInterface.action`
+- Updates `AUV4Heartbeat.msg` constants based on AUV4.1 can standards
+
+0.2.4 (2023-01-31)
+------------------
+- Adds `TareAtmosphericPressure.srv`
+
 0.2.3 (2023-01-25)
 ------------------
 - Removed `data` field from enum messages
