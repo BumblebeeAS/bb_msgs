@@ -1,0 +1,7 @@
+# Service to toggle pose estimator for specified template.
+string template_name
+string camera_frame_id # e.g. frame_id in camera header'auv4/front_cam_optical', 'auv4/bot_cam_optical'
+bool enabled
+---
+bool new_state
+string error_message

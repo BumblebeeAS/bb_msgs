@@ -147,7 +147,10 @@ add_service_files(
   ClearBuffer.srv
   MatchImages.srv
   MatchToTemplate.srv
-  RegisterImage.srv  
+  RegisterImage.srv
+  IMPoseEstimatorGetTemplates.srv
+  IMPoseEstimatorRegisterTemplate.srv
+  IMPoseEstimatorToggleTemplate.srv
 
   # RobotX specific
   RobotxTaskStatus.srv
