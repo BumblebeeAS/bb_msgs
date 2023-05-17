@@ -152,6 +152,7 @@ add_service_files(
   IMPoseEstimatorRegisterTemplate.srv
   IMPoseEstimatorToggleTemplate.srv
   IMPoseEstimatorConfig.srv
+  IMPoseEstimatorUpdateKeypointMatches.srv
 
   # RobotX specific
   RobotxTaskStatus.srv
