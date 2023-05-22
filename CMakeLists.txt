@@ -148,6 +148,7 @@ add_service_files(
   MatchImages.srv
   MatchToTemplate.srv
   RegisterImage.srv
+  IMPoseEstimatorGetStatus.srv
   IMPoseEstimatorGetTemplates.srv
   IMPoseEstimatorRegisterTemplate.srv
   IMPoseEstimatorToggleTemplate.srv

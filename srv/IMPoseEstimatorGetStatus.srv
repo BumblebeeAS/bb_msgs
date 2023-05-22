@@ -1,0 +1,5 @@
+string template_name
+---
+geometry_msgs/PoseStamped pose
+bool is_valid
+int16 num_poses
