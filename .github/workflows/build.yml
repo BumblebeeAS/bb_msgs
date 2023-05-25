@@ -1,19 +1,16 @@
 name: CI/CD
 
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: [self-hosted, ros-noetic]
     steps:
-      - name: Setup ROS
-        uses: ros-tooling/setup-ros@v0.3
-        with:
-          required-ros-distributions: noetic
-
-      - name: Install packages
-        run: sudo apt-get install python3-catkin-tools
-
       - name: Setup catkin workspace
         run: source /opt/ros/noetic/setup.bash && catkin init
 
