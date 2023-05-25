@@ -4,7 +4,8 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: [self-hosted, ros-noetic]
+    steps:
       - name: Setup catkin workspace
         run: source /opt/ros/noetic/setup.bash && catkin init
 
