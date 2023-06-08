@@ -4,6 +4,9 @@ uint8 MODE_3D = 2
 
 geometry_msgs/PoseStamped pose
 uint8   mode                        # 0: depth, 1: 2d (x, y, yaw), 2: 3d (x, y, z, roll, pitch, yaw)
+uint8 yaw_mode              # 0: target_yaw (default): assumes target yaw is accurate and moves relative to frame in pose
+                            # 1: uses position of target relative to vehicle as frame yaw, and moves to given position facing the target
+                            # 2: uses current vehicle yaw relative to world as frame yaw and moves to given position facing the same yaw.
 ---
 bool success
 ---
