@@ -6,5 +6,6 @@ int16 min_matches
 int16 max_history
 string matcher
 bool reset
+string object_name
 ---
 bool success
