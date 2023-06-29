@@ -113,6 +113,7 @@ add_service_files(
   Autotuner.srv
   Controller.srv
   ResetPose.srv
+  SetPose.srv
   destination.srv
   navigate2d.srv
   EncircleTraj.srv
