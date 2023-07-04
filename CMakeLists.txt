@@ -159,6 +159,9 @@ add_service_files(
 
   # RobotX specific
   RobotxTaskStatus.srv
+
+  # relocalize
+  RelocalizeToObjectPosition.srv
 )
 
 add_action_files(
