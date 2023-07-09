@@ -2,7 +2,7 @@ uint8 MODE_DEPTH = 0
 uint8 MODE_2D = 1
 uint8 MODE_3D = 2
 
-geometry_msgs/PoseStamped pose
+nav_msgs/Path   path
 uint8   mode                # 0: depth, 1: 2d (x, y, yaw), 2: 3d (x, y, z, roll, pitch, yaw)
 uint8 yaw_mode              # 0: target_yaw (default): uses target_frame_position and 
                             # 1: uses target_frame position and direction of approach as reference frame.
