@@ -94,6 +94,9 @@ add_message_files(
   SearchAndReport.msg
   Wildlife.msg
   BasicGPS.msg
+
+  # Gazebo
+  GazeboModelState.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -162,6 +165,9 @@ add_service_files(
 
   # relocalize
   RelocalizeToObjectPosition.srv
+
+  # Gazebo
+  GazeboSetModelState.srv
 )
 
 add_action_files(
