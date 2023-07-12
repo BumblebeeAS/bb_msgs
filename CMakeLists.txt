@@ -103,6 +103,9 @@ add_message_files(
 add_service_files(
   FILES
 
+  # Generic
+  SetCovariance.srv
+
   # Acoustics
   AcousticsControl.srv
 
