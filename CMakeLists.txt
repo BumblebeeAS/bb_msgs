@@ -25,6 +25,7 @@ add_message_files(
   ControllerStatus.msg
   Status.msg # Old controls
   Thrusters.msg
+  ButtonStatus.msg
 
   # ASV2
   LARS.msg
