@@ -1,4 +1,4 @@
 bool pressed
-time stamp
-time latest_stamp
-duration duration
+time stamp        # stamp of msg
+time latest_stamp # when it was last released
+duration duration # duration of last press
