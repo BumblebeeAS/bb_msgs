@@ -112,7 +112,6 @@ add_service_files(
 
   # CAN
   Actuation.srv
-  ActuationTime.srv
   LED.srv
   PowerControl.srv
   TareAtmosphericPressure.srv
