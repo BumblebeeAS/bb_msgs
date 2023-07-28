@@ -1,3 +1,5 @@
+# FIXME: roscan reverted to one byte bitmask for target_state
+#        not reverting this yet until after Robosub 23
 std_msgs/UInt16 target_state
 # These default to 0 for back-compatibility
 std_msgs/UInt16 time_ms
