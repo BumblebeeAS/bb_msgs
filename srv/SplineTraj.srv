@@ -1,0 +1,13 @@
+geometry_msgs/Vector3[] position_poses      # XYZ: Must be the same length as orientationRPY
+geometry_msgs/Vector3[] orientation_rpy     # RPY in degs. If absolute orientation, Yaw is (0 to 360) degs, otherwise, all are (-180 to 180) degs. Must be the same length as positionPoses
+bool relative_xy_position_goal  # Assume Roll and Pitch are zero. If True, position XY Poses are wrt base_link, otherwise, are wrt to world frame
+bool relative_z_position_goal   # Assume Roll and Pitch are zero. If True, position Z Poses are wrt base_link, otherwise, are wrt to world frame
+bool relative_orientation_goal # Assume Roll and Pitch are zero. If True, relativeOrientationGoal are wrt current heading, otherwise, are wrt to world frame. Mutually exclusive with specifiedHeading
+bool set_faster_limits         # Faster velocity, acceleration and jerk limits
+bool is_altitude_tracking      # If true, use altitude tracking
+bool specified_heading        # If true, use heading references in orientationRPY, else, yaw is calculated from curve tangent. Mutually exclusive with relativeOrientationGoal
+
+### relativeOrientationGoal mutually exclusive with specifiedHeading, behaviour undefined ###
+
+---
+int32 trajectory_id              # Returns a non-negative id if successful, otherwise, returns -1

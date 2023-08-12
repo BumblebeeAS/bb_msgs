@@ -11,6 +11,15 @@ Changelog for package bb_msgs
 - Constants all uppercase, fields all snake case, messages all PascalCase
 - Change all std_msgs/FloatXX etc in services to builtins. Either stick with this or create new message types
 - Remove duplicate entries in CMakeLists.txt e.g. srv/Actuation etc.
+0.2.5 (2023-05-14)
+------------------
+- Adds messages from [controls repo](https://github.com/BumblebeeAS/controls)
+- Adds `ControlsInterface.action`
+- Updates `AUV4Heartbeat.msg` constants based on AUV4.1 can standards
+
+0.2.4 (2023-01-31)
+------------------
+- Adds `TareAtmosphericPressure.srv`
 
 0.2.3 (2023-01-25)
 ------------------

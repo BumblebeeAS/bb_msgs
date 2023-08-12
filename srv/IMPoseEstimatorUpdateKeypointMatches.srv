@@ -1,0 +1,7 @@
+# Service to update keypoints in Image matching pose estimator
+std_msgs/Header header
+string template_name
+bb_msgs/KeypointsDict keypoints
+---
+bool success
+string error_message

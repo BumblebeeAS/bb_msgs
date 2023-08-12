@@ -21,78 +21,84 @@ set(message_files
   # Acoustics
   msg/Ping.msg
 
-   # Controls
-   msg/Status.msg
-   msg/Thrusters.msg
+  # Controls
+  msg/Status.msg
+  msg/Thrusters.msg
+  msg/ControllerStatus.msg
+
+  # ASV2
+  msg/LARS.msg
+  msg/LARSStat.msg
+
+  # ASV3
+  msg/AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
+  msg/ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
+  msg/ASVEStopState.msg            # UInt8.msg + consts for asv estop
+  msg/ControlLink.msg
+  msg/ESC.msg
+  msg/POPB.msg          # UInt16.msg + consts for asv power status
+  msg/POSBStat.msg
+  msg/ShooterState.msg  # UInt8.msg + consts for ball shooter
+  msg/DTLSState.msg     # UInt8.msg + consts for dtls
+
+  # AUV3
+  msg/AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
+  msg/AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
+
+  # AUV4
+  msg/AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
+  msg/AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
+  msg/AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
+
+  # robotX
+  msg/LightSequence.msg
+  msg/LightTower.msg
+  msg/Shape.msg
  
-   # ASV2
-   msg/LARS.msg
-   msg/LARSStat.msg
+  # Sensors
+  msg/Battery.msg
+  msg/CPUTemp.msg
+  msg/SBCTemp.msg
+  msg/Environment.msg
+  msg/WindSpeed.msg
+
+  msg/ButtonStatus.msg
  
-   # ASV3
-   msg/AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
-   msg/ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
-   msg/ASVEStopState.msg            # UInt8.msg + consts for asv estop
-   msg/ControlLink.msg
-   msg/ESC.msg
-   msg/POPB.msg          # UInt16.msg + consts for asv power status
-   msg/POSBStat.msg
-   msg/ShooterState.msg  # UInt8.msg + consts for ball shooter
-   msg/DTLSState.msg     # UInt8.msg + consts for dtls
+  # Lidar
+  msg/LidarBoundingBox.msg
+  msg/LidarBoundingBoxes.msg
+  msg/ClusteredCloud.msg
+  msg/ClusteredClouds.msg
+
+  # DVL
+  msg/Beam.msg
+  msg/BeamMatrixStamped.msg
  
-   # AUV3
-   msg/AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
-   msg/AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
+  # IMU
+  msg/CompassData.msg
+  msg/ImuData.msg
+  msg/RawMagnetics.msg
  
-   # AUV4
-   msg/AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
-   msg/AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
-   msg/AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
+  # Sonar
+  msg/SurveyorInfo.msg
+  msg/SonarInfo.msg
+  msg/SonarWorld.msg
  
-   # robotX
-   msg/LightSequence.msg
-   msg/LightTower.msg
-   msg/Shape.msg
+  # Vision
+  msg/DetectedObject.msg
+  msg/DetectedObjects.msg
+
+  # Image Matching
+  msg/Keypoint.msg
+  msg/KeypointsDict.msg
  
-   # Sensors
-   msg/Battery.msg
-   msg/CPUTemp.msg
-   msg/SBCTemp.msg
-   msg/Environment.msg
-   msg/WindSpeed.msg
- 
-   # Lidar
-   msg/LidarBoundingBox.msg
-   msg/LidarBoundingBoxes.msg
-   msg/ClusteredCloud.msg
-   msg/ClusteredClouds.msg
- 
-   # DVL
-   msg/Beam.msg
-   msg/BeamMatrixStamped.msg
- 
-   # IMU
-   msg/CompassData.msg
-   msg/ImuData.msg
-   msg/RawMagnetics.msg
- 
-   # Sonar
-   msg/SurveyorInfo.msg
-   msg/SonarInfo.msg
-   msg/SonarWorld.msg
- 
-   # Vision
-   msg/DetectedObject.msg
-   msg/DetectedObjects.msg
- 
-   # Image Matching
-   msg/Keypoint.msg
-   msg/KeypointsDict.msg
- 
-   # RobotX
-   msg/SearchAndReport.msg
-   msg/Wildlife.msg
-   msg/BasicGPS.msg
+  # RobotX
+  msg/SearchAndReport.msg
+  msg/Wildlife.msg
+  msg/BasicGPS.msg
+
+  # Gazebo
+  msg/GazeboModelState.msg
 )
 
 set(service_files
@@ -107,10 +113,17 @@ set(service_files
   srv/TareAtmosphericPressure.srv
 
   # Controls
+  srv/Autotuner.srv
   srv/Controller.srv
   srv/ResetPose.srv
+  srv/SetPose.srv
   srv/Destination.srv
   srv/Navigate2d.srv
+  srv/SetCovariance.srv
+  srv/EncircleTraj.srv
+  srv/Limits.srv
+  srv/Speed.srv
+  srv/SplineTraj.srv
 
   # ASV2
   srv/LARSControl.srv
@@ -134,7 +147,18 @@ set(service_files
   srv/ClearBuffer.srv
   srv/MatchImages.srv
   srv/MatchToTemplate.srv
-  srv/RegisterImage.srv  
+  srv/RegisterImage.srv
+  srv/IMPoseEstimatorGetStatus.srv
+  srv/IMPoseEstimatorGetTemplates.srv
+  srv/IMPoseEstimatorRegisterTemplate.srv
+  srv/IMPoseEstimatorToggleTemplate.srv
+  srv/IMPoseEstimatorConfig.srv
+  srv/IMPoseEstimatorUpdateKeypointMatches.srv
+
+  srv/RelocalizeToObjectPosition.srv
+
+  # Gazebo
+  srv/GazeboSetModelState.srv
 
   # RobotX specific
   srv/RobotxTaskStatus.srv
@@ -145,6 +169,8 @@ set(action_files
   action/Locomotion.action
   action/Path.action
   action/Waypoints.action
+
+  action/ControlsInterface.action # GoTo with support for dynamic frames
 
   # UAV Controls
   action/MoveToCartesianCoordinates.action
