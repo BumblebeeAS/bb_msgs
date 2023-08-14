@@ -25,6 +25,7 @@ set(message_files
   msg/Status.msg
   msg/Thrusters.msg
   msg/ControllerStatus.msg
+  msg/ModelControllerConfig.msg
 
   # ASV2
   msg/LARS.msg

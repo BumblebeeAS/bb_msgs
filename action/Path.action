@@ -1,15 +1,15 @@
-# goal definition
-nav_msgs/Path path
+float64 easting
+float64 northing
+float64 heading
+float64 depth
+float64 radius
+bool is_circle
+bool is_clockwise
 ---
-# result definition 
-bool goal_reached
-bool replan_needed
-float64 x_final
-float64 y_final
+float64 easting_final
+float64 northing_final
 float64 heading_final
 ---
-# feedback definition 
-float64 path_completion_percent
-float64 dist_to_end
-float64 dist_to_obs
-float64 x_track_error
+float64 easting_error
+float64 northing_error
+float64 heading_error
