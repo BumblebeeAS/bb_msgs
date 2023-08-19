@@ -25,6 +25,7 @@ add_message_files(
   ControllerStatus.msg
   Status.msg # Old controls
   Thrusters.msg
+  ButtonStatus.msg
 
   # ASV2
   LARS.msg
@@ -94,11 +95,17 @@ add_message_files(
   SearchAndReport.msg
   Wildlife.msg
   BasicGPS.msg
+
+  # Gazebo
+  GazeboModelState.msg
 )
 
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
+
+  # Generic
+  SetCovariance.srv
 
   # Acoustics
   AcousticsControl.srv
@@ -113,6 +120,7 @@ add_service_files(
   Autotuner.srv
   Controller.srv
   ResetPose.srv
+  SetPose.srv
   destination.srv
   navigate2d.srv
   EncircleTraj.srv
@@ -147,10 +155,22 @@ add_service_files(
   ClearBuffer.srv
   MatchImages.srv
   MatchToTemplate.srv
-  RegisterImage.srv  
+  RegisterImage.srv
+  IMPoseEstimatorGetStatus.srv
+  IMPoseEstimatorGetTemplates.srv
+  IMPoseEstimatorRegisterTemplate.srv
+  IMPoseEstimatorToggleTemplate.srv
+  IMPoseEstimatorConfig.srv
+  IMPoseEstimatorUpdateKeypointMatches.srv
 
   # RobotX specific
   RobotxTaskStatus.srv
+
+  # relocalize
+  RelocalizeToObjectPosition.srv
+
+  # Gazebo
+  GazeboSetModelState.srv
 )
 
 add_action_files(

@@ -2,10 +2,16 @@ uint8 MODE_DEPTH = 0
 uint8 MODE_2D = 1
 uint8 MODE_3D = 2
 
-geometry_msgs/PoseStamped pose
-uint8   mode                        # 0: depth, 1: 2d (x, y, yaw), 2: 3d (x, y, z, roll, pitch, yaw)
+nav_msgs/Path   path
+uint8   mode                # 0: depth, 1: 2d (x, y, yaw), 2: 3d (x, y, z, roll, pitch, yaw)
+uint8 yaw_mode              # 0: target_yaw (default): uses target_frame_position and 
+                            # 1: uses target_frame position and direction of approach as reference frame.
+                            # 2: uses target_frame position and starting vehicle yaw as reference frame.
+                            # 3: uses target_frame position and world_ned (if pose is in ned) yaw as reference frame.
+bool face_target            # if true, final yaw will be calculated to face target origin.
+
 ---
-geometry_msgs/PoseStamped final_pose
+bool success
 ---
 float32 yaw_error                   # degrees
 float32 depth_error

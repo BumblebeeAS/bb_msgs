@@ -1,0 +1,5 @@
+string name # name of object
+geometry_msgs/PoseWithCovarianceStamped position # estimate position of object in odom_ned frame
+bool relocalize # false to reset object position to position
+---
+bool status
