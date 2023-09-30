@@ -88,6 +88,7 @@ set(message_files
   # Vision
   msg/DetectedObject.msg
   msg/DetectedObjects.msg
+  msg/DetectedObjectsStamped.msg
 
   # Image Matching
   msg/Keypoint.msg
