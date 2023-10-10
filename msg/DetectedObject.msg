@@ -23,6 +23,7 @@ float32[] rel_coords        # setpoints towards target, wrt to base_link, depend
 float32[] world_coords      # setpoints towards target, wrt to world, depending on move_coords
 float32[] closest_coords    # setpoints towards closest pt of target, wrt to base_link, depending on move_coords
 float32[] real_dims         # sonar: Major axis, minor axis    lidar: x, y ,z    Cam: HOV, VOV
+float32[6] object_ray       # x y z direction of ray, x y z of sensor in world frame
 
 #---  general info   ---#
 int8 angle                  # wrt to horizontal, clockwise positive
