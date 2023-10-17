@@ -159,6 +159,8 @@ set(service_files
 
   srv/RelocalizeToObjectPosition.srv
 
+  srv/ObstacleStorageQuery.srv
+
   # Gazebo
   srv/GazeboSetModelState.srv
 
