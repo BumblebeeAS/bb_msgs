@@ -1,6 +1,7 @@
 # query objects based on various criteria
 string name                     # object name to query
 geometry_msgs/Point point       # point to calculate distance from
+float32 min_confidence 0.0      # min confidence to be accepted
 float32 max_distance 100        # max distance from point (m)
 int32 max_count 20              # number of objects to query
 float32 max_duration_secs 100   # query objects from current_time - max_duration_secs seconds
