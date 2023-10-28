@@ -89,6 +89,7 @@ set(message_files
   msg/DetectedObject.msg
   msg/DetectedObjects.msg
   msg/DetectedObjectsStamped.msg
+  msg/PolygonArray.msg
 
   # Image Matching
   msg/Keypoint.msg
