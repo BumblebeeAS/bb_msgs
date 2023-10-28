@@ -160,6 +160,8 @@ set(service_files
   srv/RelocalizeToObjectPosition.srv
 
   srv/ObstacleStorageQuery.srv
+  srv/GetPlanToPose.srv
+  srv/GetPlanThroughPoses.srv
 
   # Gazebo
   srv/GazeboSetModelState.srv
