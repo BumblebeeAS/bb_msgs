@@ -41,6 +41,9 @@ set(message_files
   msg/POSBStat.msg
   msg/ShooterState.msg  # UInt8.msg + consts for ball shooter
   msg/DTLSState.msg     # UInt8.msg + consts for dtls
+  msg/ASVMainHullStatus.msg # main hull temperature / humidity
+  msg/ASVMHPBStatus.msg
+  msg/ASVLogicStatus.msg          # UInt16.msg + consts for asv logic control
 
   # AUV3
   msg/AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
@@ -58,6 +61,7 @@ set(message_files
  
   # Sensors
   msg/Battery.msg
+  msg/BatteryHealth.msg
   msg/CPUTemp.msg
   msg/SBCTemp.msg
   msg/Environment.msg

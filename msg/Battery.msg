@@ -1,4 +1,4 @@
-float32 voltage         # Voltage in mV (Mandatory)
+float32 voltage         # Voltage in V (Mandatory)
 float32 current
 float32 capacity
 float32 consumption     # Range from 0 to 100 (If unmeasured NaN)
