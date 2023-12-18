@@ -106,6 +106,9 @@ set(message_files
 
   # Gazebo
   msg/GazeboModelState.msg
+
+  # ControlsInterface
+  msg/PlannerFeedback.msg
 )
 
 set(service_files
@@ -181,7 +184,8 @@ set(action_files
   action/Path.action
   action/Waypoints.action
 
-  action/ControlsInterface.action # GoTo with support for dynamic frames
+  action/ControlsInterface.action
+  action/Planner.action # GoTo with support for dynamic frames
 
   # UAV Controls
   action/MoveToCartesianCoordinates.action

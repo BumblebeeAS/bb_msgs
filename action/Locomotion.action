@@ -2,13 +2,14 @@ bool move_rel
 bool depth_rel
 bool heading_rel
 int8 depth_ctrl
-float32 roll_setpoint
-float32 pitch_setpoint
-float32 heading_setpoint
-float32 depth_setpoint
-float32 altitude_setpoint
-float32 forward_setpoint
-float32 sidemove_setpoint
+bool specified_heading true
+float32[] roll_setpoints
+float32[] pitch_setpoints
+float32[] heading_setpoints
+float32[] depth_setpoints
+float32[] altitude_setpoints
+float32[] forward_setpoints
+float32[] sidemove_setpoints
 float32 forward_tolerance
 float32 sidemove_tolerance
 float32 heading_tolerance
