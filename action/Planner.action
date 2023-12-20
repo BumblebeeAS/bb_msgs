@@ -25,5 +25,6 @@ uint8 global_planner_period 10 # seconds
 uint8 local_planner_period 5 # seconds
 ---
 bool success
+string message
 ---
 PlannerFeedback feedback

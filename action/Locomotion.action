@@ -1,3 +1,5 @@
+int8 DEPTH_MODE_DEPTH = 0
+int8 DEPTH_MODE_ALTITUDE = 1
 bool move_rel
 bool depth_rel
 bool heading_rel
@@ -13,7 +15,11 @@ float32[] sidemove_setpoints
 float32 forward_tolerance
 float32 sidemove_tolerance
 float32 heading_tolerance
+float32 depth_tolerance
 ---
+uint8 STATUS_SUCCESS = 0
+uint8 STATUS_FAILURE = 1
+uint8 STATUS_ABORTED = 2
 float32 roll_final
 float32 pitch_final
 float32 heading_final
@@ -21,6 +27,8 @@ float32 depth_final
 float32 altitude_final
 float32 forward_final
 float32 sidemove_final
+uint8 status
+int32 trajectory_id # latest trajectory id
 ---
 float32 roll_error
 float32 pitch_error
@@ -29,3 +37,7 @@ float32 depth_error
 float32 altitude_error
 float32 forward_error
 float32 sidemove_error
+float32 progress                # 0 to n for trajectory progress (n = number of waypoints), -1 for error
+float32 overall_progress         # 0 to 1 for trajectory progress
+uint8   risk_factor     # Risk (Slack) Factor in percentage. On a scale of 0% to 100%, representing norminal to "We are screwed"
+int32   trajectory_id   # current trajectory id
