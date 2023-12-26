@@ -108,7 +108,7 @@ set(message_files
   msg/GazeboModelState.msg
 
   # ControlsInterface
-  msg/PlannerFeedback.msg
+  msg/PlannerFeedbackMsg.msg
 )
 
 set(service_files

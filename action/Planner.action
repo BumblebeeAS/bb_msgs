@@ -27,4 +27,4 @@ uint8 local_planner_period 5 # seconds
 bool success
 string message
 ---
-PlannerFeedback feedback
+PlannerFeedbackMsg feedback
