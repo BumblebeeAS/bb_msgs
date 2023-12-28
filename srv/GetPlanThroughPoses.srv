@@ -1,5 +1,5 @@
 geometry_msgs/PoseStamped start
 geometry_msgs/PoseArray goal
 ---
-nav_msgs/Path plan
+bb_msgs/SetPoints plan
 bool success

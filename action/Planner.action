@@ -21,7 +21,8 @@ uint8[] yaw_modes   # which yaw mode to use for particular setpoint
 
 string global_planner_service ""
 string local_planner_service ""
-uint8 global_planner_period 10 # seconds
+uint8 tf_check_period 2 # seconds to recheck tf jumps
+uint8 global_planner_retry_count 0 # times to requery global planner if local planner fails
 uint8 local_planner_period 5 # seconds
 ---
 bool success

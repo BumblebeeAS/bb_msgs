@@ -109,6 +109,8 @@ set(message_files
 
   # ControlsInterface
   msg/PlannerFeedbackMsg.msg
+  msg/SetPoint.msg
+  msg/SetPoints.msg
 )
 
 set(service_files
