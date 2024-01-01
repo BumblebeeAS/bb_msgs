@@ -9,7 +9,7 @@ uint8 yaw_mode              # 0: target_yaw (default): uses target_frame_positio
                             # 2: uses target_frame position and starting vehicle yaw as reference frame.
                             # 3: uses target_frame position and world_ned (if pose is in ned) yaw as reference frame.
 bool face_target            # if true, final yaw will be calculated to face target origin.
-bool use_collision_avoidance true
+bool use_collision_avoidance false
 
 ---
 bool success

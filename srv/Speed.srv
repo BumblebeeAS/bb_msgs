@@ -3,6 +3,11 @@
 # 1 = Normal
 # 2 = Fast
 # 3 = Super Fast
+# Sensor
+# 0 No payload
+# 39 Imagenex
+# 65 R2 Sonic
 uint8 speed
+uint8 payload
 ---
 bool status
