@@ -98,6 +98,9 @@ add_message_files(
 
   # Gazebo
   GazeboModelState.msg
+
+  SetPoint.msg
+  SetPoints.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -171,6 +174,9 @@ add_service_files(
 
   # Gazebo
   GazeboSetModelState.srv
+
+  GetPlanToPose.srv
+  GetPlanThroughPoses.srv
 )
 
 add_action_files(

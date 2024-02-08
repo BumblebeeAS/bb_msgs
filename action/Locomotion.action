@@ -1,37 +1,44 @@
-float32 roll_setpoint
-float32 pitch_setpoint
-float32 yaw_setpoint
-float32 depth_setpoint
-float32 forward_setpoint
-float32 sidemove_setpoint
-float32 surge_speed_setpoint
-float32 sidemove_speed_setpoint
+int8 DEPTH_MODE_DEPTH = 0
+int8 DEPTH_MODE_ALTITUDE = 1
+bool move_rel
+bool depth_rel
+bool heading_rel
+int8 depth_ctrl
+bool specified_heading
+string planner
+float32[] roll_setpoints
+float32[] pitch_setpoints
+float32[] heading_setpoints
+float32[] depth_setpoints
+float32[] altitude_setpoints
+float32[] forward_setpoints
+float32[] sidemove_setpoints
 float32 forward_tolerance
 float32 sidemove_tolerance
-float32 yaw_tolerance
-bool    movement_rel
-bool    yaw_rel
-bool    yaw_auto             # yaw is automatically calculated from the final pose. Only used with yaw_rel false
-                             # Ignores the value of yaw_setpoint
-uint8   controller_state     # 0: Position Controller (Absolute X, Y, yaw position control) 
-                             # 1: Velocity Control (X velocity and absolute yaw control)
+float32 heading_tolerance
+float32 depth_tolerance
 ---
+uint8 STATUS_SUCCESS = 0
+uint8 STATUS_FAILURE = 1
+uint8 STATUS_ABORTED = 2
 float32 roll_final
 float32 pitch_final
-float32 yaw_final
+float32 heading_final
 float32 depth_final
+float32 altitude_final
 float32 forward_final
 float32 sidemove_final
-float32 surge_speed_final
-float32 sidemove_speed_final
-uint8   controller_state_final
+uint8 status
+int32 trajectory_id # latest trajectory id
 ---
 float32 roll_error
 float32 pitch_error
-float32 yaw_error
+float32 heading_error
 float32 depth_error
+float32 altitude_error
 float32 forward_error
 float32 sidemove_error
-float32 surge_speed_error
-float32 sidemove_speed_error
-uint8   controller_state_current
+float32 progress                # 0 to n for trajectory progress (n = number of waypoints), -1 for error
+float32 overall_progress         # 0 to 1 for trajectory progress
+uint8   risk_factor     # Risk (Slack) Factor in percentage. On a scale of 0% to 100%, representing norminal to "We are screwed"
+int32   trajectory_id   # current trajectory id

@@ -3,6 +3,7 @@ float32 turnAngle               # The desired angle of turn (degs), +ve cw, -ve 
 float32 standoff                # In Metres from the center Pt
 float32 tangentOffset           # Angle offset for facing direction relative to facing the centre, in degs, +ve cw, -ve ccw
 bool isAltitudeTracking         # If true, use altitude tracking
+bool allow_ellipsoid_movement     # If true, moves in an ellipsoid, otherwise, move to the closest point on the arc before encircling the centroid.
 
 ---
 int32 trajectoryId              # Returns a non-negative id if successful, otherwise, returns -1

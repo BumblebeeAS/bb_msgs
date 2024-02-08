@@ -6,7 +6,7 @@ bool relativeOrientationGoal # Assume Roll and Pitch are zero. If True, relative
 bool setFasterLimits         # Faster velocity, acceleration and jerk limits
 bool isAltitudeTracking      # If true, use altitude tracking
 bool specifiedHeading        # If true, use heading references in orientationRPY, else, yaw is calculated from curve tangent. Mutually exclusive with relativeOrientationGoal
-
+string planner               # Planner to use to transform poses
 ### relativeOrientationGoal mutually exclusive with specifiedHeading, behaviour undefined ###
 
 ---
