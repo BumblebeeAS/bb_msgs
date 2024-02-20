@@ -1,14 +1,17 @@
-uint8 MODE_DEPTH = 0
+uint8 MODE_DEPTH = 0 # deprecated
 uint8 MODE_2D = 1
 uint8 MODE_3D = 2
 
 nav_msgs/Path   path
-uint8   mode                # 0: depth, 1: 2d (x, y, yaw), 2: 3d (x, y, z, roll, pitch, yaw)
+uint8   mode                # 1: 2d (x, y, yaw), 2: 3d (x, y, z, roll, pitch, yaw)
 uint8 yaw_mode              # 0: target_yaw (default): uses target_frame_position and 
                             # 1: uses target_frame position and direction of approach as reference frame.
                             # 2: uses target_frame position and starting vehicle yaw as reference frame.
                             # 3: uses target_frame position and world_ned (if pose is in ned) yaw as reference frame.
 bool face_target            # if true, final yaw will be calculated to face target origin.
+bool specified_heading      # flag to pass to controls, if false, will always face next waypoint
+string depth_frame          # take depth from depth frame in mode_2D
+float32 mode_2d_depth       # depth value when using mode_2d
 
 ---
 bool success
