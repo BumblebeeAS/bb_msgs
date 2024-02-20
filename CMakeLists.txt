@@ -96,6 +96,9 @@ add_message_files(
   Wildlife.msg
   BasicGPS.msg
 
+  # SAUVC 
+  FlareSequence.msg
+
   # Gazebo
   GazeboModelState.msg
 
