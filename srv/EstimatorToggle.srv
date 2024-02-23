@@ -1,0 +1,9 @@
+# Service to toggle estimator for specified object.
+string object_name
+bool enabled       # enable updating of object if true
+bool reset         # reset estimator for specified object if true
+---
+bool new_state
+int16 num_estimates   # number of estimator for specified object
+float32 stddev        # deviation of estimate
+string error_message

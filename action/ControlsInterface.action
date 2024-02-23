@@ -12,6 +12,7 @@ bool face_target            # if true, final yaw will be calculated to face targ
 bool specified_heading      # flag to pass to controls, if false, will always face next waypoint
 string depth_frame          # take depth from depth frame in mode_2D
 float32 mode_2d_depth       # depth value when using mode_2d
+string planner              # planner to be passed to controls
 
 ---
 bool success

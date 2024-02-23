@@ -180,6 +180,7 @@ add_service_files(
 
   GetPlanToPose.srv
   GetPlanThroughPoses.srv
+  EstimatorToggle.srv
 )
 
 add_action_files(
