@@ -111,6 +111,9 @@ set(message_files
   msg/PlannerFeedbackMsg.msg
   msg/SetPoint.msg
   msg/SetPoints.msg
+
+  # BehaviorTree
+  msg/BTNodeStatus.msg
 )
 
 set(service_files
