@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(bb_controls_msgs VERSION 0.0.1)
 
 if(NOT CMAKE_CXX_STANDARD)
