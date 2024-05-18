@@ -5,7 +5,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - humble
 
 jobs:
   build:
@@ -24,3 +24,10 @@ jobs:
 
       - name: Build
         run: source /opt/ros/humble/setup.bash && colcon build --merge-install --no-status
+      
+      - name: Test
+        run: source /opt/ros/humble/setup.bash && colcon test --merge-install --no-status
+      
+      - name: Log Tests if failed
+        if: failure()
+        run: colcon test-result --verbose
