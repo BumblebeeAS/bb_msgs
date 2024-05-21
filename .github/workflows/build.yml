@@ -5,14 +5,14 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - humble
 
 jobs:
   build:
-    runs-on: [self-hosted, ros-humble]
+    runs-on: [self-hosted, ros2-humble]
     steps:
       - name: Setup colcon workspace
-        run: source /opt/ros/colcon/setup.bash
+        run: source /opt/ros/humble/setup.bash
 
       - name: Check out repo
         uses: actions/checkout@v3
@@ -23,4 +23,11 @@ jobs:
         run: source /opt/ros/humble/setup.bash && rosdep update && rosdep install --from-paths src -i -r -y
 
       - name: Build
-        run: source /opt/ros/humble/setup.bash && colcon build --merge-install --no-status
+        run: source /opt/ros/humble/setup.bash && colcon build --merge-install
+      
+      - name: Test
+        run: source /opt/ros/humble/setup.bash && colcon test --merge-install
+      
+      - name: Log Tests if failed
+        if: failure()
+        run: colcon test-result --verbose
