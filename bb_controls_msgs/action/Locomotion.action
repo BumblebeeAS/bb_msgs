@@ -5,6 +5,7 @@ bool depth_rel
 bool heading_rel
 int8 depth_ctrl
 bool specified_heading true
+string planner ""              # Planner to use to transform poses
 float32[] roll_setpoints
 float32[] pitch_setpoints
 float32[] heading_setpoints

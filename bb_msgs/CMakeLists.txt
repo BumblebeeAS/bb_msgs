@@ -114,8 +114,8 @@ set(message_files
   msg/SetPoint.msg
   msg/SetPoints.msg
 
-  # Jellyfish2
-  msg/Jellyfish2Pose.msg
+  # BehaviorTree
+  msg/BTNodeStatus.msg
 )
 
 set(service_files

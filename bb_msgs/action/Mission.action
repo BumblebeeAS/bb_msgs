@@ -1,0 +1,20 @@
+#### Request ####
+
+# Name of the tree to execute
+string[] plugins
+string target_tree
+string tear_down_tree
+# Optional, implementation-dependent, payload.
+string payload
+geometry_msgs/PoseStamped[] poses
+---
+#### Result ####
+
+# Status of the tree
+BTNodeStatus node_status
+# result payload or error message
+string return_message
+---
+#### Feedback ####
+#This can be customized by the user
+string message
