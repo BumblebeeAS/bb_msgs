@@ -4,6 +4,7 @@ project(bb_msgs)
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
 endif()
+
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
@@ -18,6 +19,7 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
 set(message_files
+
   # Acoustics
   msg/Ping.msg
 
@@ -33,32 +35,32 @@ set(message_files
 
   # ASV3
   msg/AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
-  msg/ASVHeartbeat.msg            # UInt32.msg + consts for asv heartbeat
-  msg/ASVEStopState.msg            # UInt8.msg + consts for asv estop
+  msg/ASVHeartbeat.msg # UInt32.msg + consts for asv heartbeat
+  msg/ASVEStopState.msg # UInt8.msg + consts for asv estop
   msg/ControlLink.msg
   msg/ESC.msg
-  msg/POPB.msg          # UInt16.msg + consts for asv power status
+  msg/POPB.msg # UInt16.msg + consts for asv power status
   msg/POSBStat.msg
-  msg/ShooterState.msg  # UInt8.msg + consts for ball shooter
-  msg/DTLSState.msg     # UInt8.msg + consts for dtls
+  msg/ShooterState.msg # UInt8.msg + consts for ball shooter
+  msg/DTLSState.msg # UInt8.msg + consts for dtls
   msg/ASVMainHullStatus.msg # main hull temperature / humidity
   msg/ASVMHPBStatus.msg
-  msg/ASVLogicStatus.msg          # UInt16.msg + consts for asv logic control
+  msg/ASVLogicStatus.msg # UInt16.msg + consts for asv logic control
 
   # AUV3
   msg/AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
-  msg/AUV3Heartbeat.msg   # UInt32.msg + consts for auv3 heartbeat
+  msg/AUV3Heartbeat.msg # UInt32.msg + consts for auv3 heartbeat
 
   # AUV4
-  msg/AUV4Heartbeat.msg       # UInt32.msg + consts for auv4 heartbeat
-  msg/AUV4ActuationState.msg  # UInt8.msg + consts for auv4 actuation
-  msg/AUV4PowerStatus.msg     # UInt16.msg + consts for auv4 power status
+  msg/AUV4Heartbeat.msg # UInt32.msg + consts for auv4 heartbeat
+  msg/AUV4ActuationState.msg # UInt8.msg + consts for auv4 actuation
+  msg/AUV4PowerStatus.msg # UInt16.msg + consts for auv4 power status
 
   # robotX
   msg/LightSequence.msg
   msg/LightTower.msg
   msg/Shape.msg
- 
+
   # Sensors
   msg/Battery.msg
   msg/BatteryHealth.msg
@@ -68,7 +70,7 @@ set(message_files
   msg/WindSpeed.msg
 
   msg/ButtonStatus.msg
- 
+
   # Lidar
   msg/LidarBoundingBox.msg
   msg/LidarBoundingBoxes.msg
@@ -78,17 +80,17 @@ set(message_files
   # DVL
   msg/Beam.msg
   msg/BeamMatrixStamped.msg
- 
+
   # IMU
   msg/CompassData.msg
   msg/ImuData.msg
   msg/RawMagnetics.msg
- 
+
   # Sonar
   msg/SurveyorInfo.msg
   msg/SonarInfo.msg
   msg/SonarWorld.msg
- 
+
   # Vision
   msg/DetectedObject.msg
   msg/DetectedObjects.msg
@@ -98,7 +100,7 @@ set(message_files
   # Image Matching
   msg/Keypoint.msg
   msg/KeypointsDict.msg
- 
+
   # RobotX
   msg/SearchAndReport.msg
   msg/Wildlife.msg
@@ -117,7 +119,8 @@ set(message_files
 )
 
 set(service_files
-## Generate services in the 'srv' folder
+
+  # # Generate services in the 'srv' folder
   # Acoustics
   srv/AcousticsControl.srv
 
@@ -184,6 +187,7 @@ set(service_files
 )
 
 set(action_files
+
   # Controls
   action/Locomotion.action
   action/Path.action
@@ -209,11 +213,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   ${message_files}
   ${service_files}
   ${action_files}
-  
+
   DEPENDENCIES builtin_interfaces std_msgs action_msgs nav_msgs geometry_msgs sensor_msgs
   ADD_LINTER_TESTS
 )
-
 
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()
