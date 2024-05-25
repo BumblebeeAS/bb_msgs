@@ -1,6 +1,6 @@
 std_msgs/Header header
-float64 latitude
-float64 longitude
-float64 altitude
+float32 latitude
+float32 longitude
+float32 altitude
 #heading wrt to front of the drone
-float64 heading
+float32 heading # euler angle of desired attitude in radians -PI..+PI
