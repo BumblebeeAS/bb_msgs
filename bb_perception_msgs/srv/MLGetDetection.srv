@@ -1,0 +1,6 @@
+std_msgs/Header header # header representing sensor_frame_id and timestamp to query detected objects for.
+---
+uint8 SUCCESS=0
+uint8 FAILURE=1
+uint8 status
+DetectedObject2DArray objects

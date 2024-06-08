@@ -1,0 +1,10 @@
+string template_name
+float32 max_reprojection_threshold
+int16 min_buffer_size
+int16 max_buffer_size
+int16 min_matches
+int16 max_history
+string matcher
+bool reset
+---
+bool success
