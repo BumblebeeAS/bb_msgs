@@ -1,3 +1,4 @@
+# OLD VERSION OF Detection msgs for back compatibility
 std_msgs/Header header
 string name
 uint16 source               # Follows RosDetectorTypeEnum

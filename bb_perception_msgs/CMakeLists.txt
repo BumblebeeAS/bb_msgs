@@ -28,6 +28,11 @@ set(message_files
   msg/DetectedObject3D.msg
   msg/DetectedObject3DArray.msg
   msg/ObjectKinematics.msg
+
+  # old version of detected objects msgs for back compability
+  msg/DetectedObject.msg
+  msg/DetectedObjects.msg
+  msg/DetectedObjectsStamped.msg
 )
 
 set(service_files
