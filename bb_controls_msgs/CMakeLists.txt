@@ -29,6 +29,7 @@ set(service_files
   srv/Limits.srv
   srv/Speed.srv
   srv/SplineTraj.srv
+  srv/Pause.srv
 )
 
 set(action_files
