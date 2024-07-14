@@ -1,0 +1,4 @@
+string config_name         # config name to activate
+---
+bool success   # indicate successful execution of triggered service
+string active_config       # active config

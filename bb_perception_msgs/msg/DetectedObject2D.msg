@@ -9,6 +9,10 @@ ObjectHypothesis[] results
 
 # 2D bounding box or contour surrounding the object.
 uint16[] contour
+
+uint16 image_width  # to support different resolutions
+uint16 image_height
+
 # the following fields can be derived from contour, but added for convenience
 uint32 object_area
 uint16 centre_x
@@ -26,4 +30,3 @@ int8 angle_deg
 # messages should have the same id.
 # This field may be empty.
 string id
-

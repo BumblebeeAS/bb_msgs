@@ -37,6 +37,8 @@ set(message_files
 
 set(service_files
   srv/MLGetDetection.srv
+  srv/MLGetConfigs.srv
+  srv/MLSetConfig.srv
 )
 
 set(action_files
