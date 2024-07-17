@@ -20,6 +20,7 @@ set(message_files
 )
 
 set(service_files
+  srv/ArucoActivation.srv
 )
 
 set(action_files
