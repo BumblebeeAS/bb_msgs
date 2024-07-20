@@ -8,6 +8,6 @@ string name
 
 # The source of the detection. CAMERA/STEREO/SYNTHETIC_APERTURE
 DetectorSource source
-geometry_msgs/PoseStamped sensor_pose
+geometry_msgs/Pose sensor_pose
 
 DetectedObject3D[] objects

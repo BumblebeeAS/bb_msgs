@@ -1,5 +1,6 @@
 # This is a message to represent the predicted kinematics of an object.
 # All fields are optional.
+std_msgs/Header header
 
 geometry_msgs/PoseWithCovariance pose_with_covariance
 geometry_msgs/TwistWithCovariance twist_with_covariance

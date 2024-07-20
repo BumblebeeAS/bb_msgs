@@ -2,12 +2,8 @@
 #
 # This can be derived from all sensor detections with a 3d position estimate.
 
-ObjectKinematics kinematics
+ObjectHypothesis hypothesis
 
-# Class probabilities
-ObjectHypothesis[] results
-
-Shape shape
 uint8 color   # Hue if from cameras
               # Intensity if from sonar, Reflectivity if from ouster
               # 0 if unspecified

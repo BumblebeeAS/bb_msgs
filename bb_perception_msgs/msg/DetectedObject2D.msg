@@ -4,8 +4,7 @@
 #   allowing a classification result for a specific crop or image point to
 #   to be located in the larger image.
 
-# Classes with probabilities
-ObjectHypothesis[] results
+ObjectHypothesis hypothesis
 
 # 2D bounding box or contour surrounding the object.
 uint16[] contour
