@@ -19,6 +19,7 @@ set(message_files
   msg/Status.msg
   msg/Thrusters.msg
   msg/ControllerStatus.msg
+  msg/ControlLink.msg
   # msg/ModelControllerConfig.msg // Removed this message since it is not in any pub/sub
 )
 
