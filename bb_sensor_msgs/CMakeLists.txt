@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(bb_asv_msgs)
+project(bb_sensor_msgs)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -15,21 +15,18 @@ find_package(std_msgs REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 set(message_files
-  msg/ASVControlLink.msg
-  msg/ASVEStopState.msg
-  msg/ASVHeartbeat.msg
-  msg/ASVLogicStatus.msg
-  msg/ASVMainHullStatus.msg
-  msg/ASVMHPBStatus.msg
-  msg/MHPBControl.msg
-  msg/BatteryHealth.msg
-  msg/CalibrateActuators.msg
-  msg/ESC.msg
+  msg/Battery.msg
+  msg/CPUTemp.msg
+  msg/Environment.msg
+  msg/ElectricalStats.msg
+  msg/SBCTemp.msg
+  msg/WindSpeed.msg
+
+  msg/Beam.msg
+  msg/BeamMatrixStamped.msg
 )
 
 set(service_files
-  srv/MHPBChannelToggle.srv
-  srv/MHPBChannelTrigger.srv
 )
 
 set(action_files

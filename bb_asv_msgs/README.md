@@ -13,12 +13,8 @@ The following messages are defined in this package:
 - `ASVMainHullStatus`: A message used to indicate the status of the main hull of the ASV.
 - `ASVMHPBStatus`: A message used to indicate the status of the MHPB of the ASV (from can).
 - `MHPBControl`: A message used to control the MHPB (telecontrol -> can).
-- `Battery`: A message used to indicate the battery status.
 - `BatteryHealth`: A message used to indicate the health status of the Torqeedo battery.
 - `CalibrateActuators`: A message used to calibrate the 3 actuators.
-- `Environment`: A message used to indicate temp / humidity / pressure.
-- `CPUTemp`: A message used to indicate the CPU temperature.
-- `SBCTemp`: A message used to indicate the SBC temperature (cpu + gpu).
 
 ## Services
 
