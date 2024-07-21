@@ -27,6 +27,7 @@ set(message_files
   msg/CalibrateActuators.msg
   msg/CPUTemp.msg
   msg/Environment.msg
+  msg/ElectricalStats.msg
   msg/SBCTemp.msg
 )
 
