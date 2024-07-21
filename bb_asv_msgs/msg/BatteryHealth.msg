@@ -1,0 +1,56 @@
+uint16 TQ_WARN_D_OVERCURRENT=0
+string TQ_WARN_D_OVERCURRENT_MESSAGE="Discharge current too high" 
+uint16 TQ_WARN_D_OVERCOMPLICATE=1 # cell temperature too high
+string TQ_WARN_D_OVERCOMPLICATE_MESSAGE="Cell Temperature too high"
+uint16 TQ_WARN_D_OVERTEMPFET=2
+string TQ_WARN_D_OVERTEMPFET_MESSAGE="PCB/MOSFET Temperature too high"
+uint16 TQ_WARN_D_UNDERTEMPCELL=3
+string TQ_WARN_D_UNDERTEMPCELL_MESSAGE="Cell temperature too low"
+uint16 TQ_WARN_D_EOD=4
+string TQ_WARN_D_EOD_MESSAGE="End of discharge"
+uint16 TQ_WARN_D_BATTOFF=5
+string TQ_WARN_D_BATTOFF_MESSAGE="Battery nearly empty"
+uint16 TQ_WARN_C_OVERCURRENT=6
+string TQ_WARN_C_OVERCURRENT_MESSAGE="Charge current too high"
+uint16 TQ_WARN_C_OVERTEMPCELL=7
+string TQ_WARN_C_OVERTEMPCELL_MESSAGE="Cell temperature too high"
+uint16 TQ_WARN_C_UNDERTEMPCELL=8
+string TQ_WARN_UNDERTEMPCELL_MESSAGE="Cell temperature too low"
+uint16 TQ_WARN_CELLSUNBALANCED=9
+string TQ_WARN_CELLSUNBALANCED_MESSAGE="Single cell voltage difference too big"
+uint16 TQ_ERROR_D_OVERCURRENT=0
+string TQ_ERROR_D_OVERCURRENT_MESSAGE="Discharge current too high (>180A)" 
+uint16 TQ_ERROR_D_OVERCOMPLICATE=1 # cell temperature too high
+string TQ_ERROR_D_OVERCOMPLICATE_MESSAGE="Cell Temperature too high (>65C)"
+uint16 TQ_ERROR_D_OVERTEMPFET=2
+string TQ_ERROR_D_OVERTEMPFET_MESSAGE="PCB/MOSFET Temperature too high (>120C)"
+uint16 TQ_ERROR_D_UNDERTEMPCELL=3
+string TQ_ERROR_D_UNDERTEMPCELL_MESSAGE="Cell temperature too low (<-20C)"
+uint16 TQ_ERROR_D_EOD=4
+string TQ_ERROR_D_EOD_MESSAGE="End of discharge (<3V)"
+uint16 TQ_ERROR_D_BATTOFF=5
+string TQ_ERROR_D_BATTOFF_MESSAGE="Battery empty (<2.7V)"
+uint16 TQ_ERROR_C_OVERCURRENT=6
+string TQ_ERROR_C_OVERCURRENT_MESSAGE="Charge current too high (>108A)"
+uint16 TQ_ERROR_C_OVERTEMPCELL=7
+string TQ_ERROR_C_OVERTEMPCELL_MESSAGE="Cell temperature too high (>50C)"
+uint16 TQ_ERROR_C_UNDERTEMPCELL=8
+string TQ_ERROR_C_UNDERTEMPCELL_MESSAGE="Cell temperature too low (<0C)"
+uint16 TQ_ERROR_C_OVERVOLTAGE=9
+string TQ_ERROR_C_OVERVOLTAGE_MESSAGE="Charge voltage too high (>30V)"
+uint16 TQ_ERROR_C_OVERCHARGE=10
+string TQ_ERROR_C_OVERCHARGE_MESSAGE="UCell > 4.25V"
+uint16 TQ_ERROR_C_SECONDPROTECTION=11
+string TQ_ERROR_C_SECONDPROTECTION_MESSAGE="Second Level protection was activated"
+uint16 TQ_ERROR_ELECTRONICERR=12
+string TQ_ERROR_ELECTRONICERR_MESSAGE="General electronic failure"
+uint16 TQ_ERROR_NOPYROFUSE=13
+string TQ_ERROR_NOPYROFUSE_MESSAGE="Pyrofuse Connection lost"
+uint16 TQ_ERROR_LEAKCURRENT=14
+string TQ_ERROR_LEAKCURRENT_MESSAGE="Water Sensor"
+uint16 TQ_ERROR_DDCH=15
+string TQ_ERROR_DDCH_MESSAGE="Deep Discharge - no charge (<2V)"
+
+uint16 battery_warnings # bitmask of warning flags
+uint16 battery_errors   # bitmask of error flags
+string summary          # readable summary of warning/error flags

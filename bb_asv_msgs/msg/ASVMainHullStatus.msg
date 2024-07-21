@@ -1,0 +1,5 @@
+float32 pcb_temperature
+float32 pcb_humidity
+int32 temperature_probe_1
+int32 temperature_probe_2
+int32 temperature_probe_3
