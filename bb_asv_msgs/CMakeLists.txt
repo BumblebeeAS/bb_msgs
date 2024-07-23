@@ -15,12 +15,15 @@ find_package(std_msgs REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 set(message_files
+  msg/ASVActuationState.msg
   msg/ASVControlLink.msg
   msg/ASVEStopState.msg
   msg/ASVHeartbeat.msg
   msg/ASVLogicStatus.msg
   msg/ASVMainHullStatus.msg
   msg/ASVMHPBStatus.msg
+  msg/ASVShooterState.msg
+  msg/ASVThrusterAzimuth.msg
   msg/MHPBControl.msg
   msg/BatteryHealth.msg
   msg/CalibrateActuators.msg
