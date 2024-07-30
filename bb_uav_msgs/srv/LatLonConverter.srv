@@ -1,0 +1,6 @@
+geographic_msgs/GeoPointStamped input_converter #Input lat lon altitude of the converter
+geographic_msgs/GeoPointStamped lat_lon #Input lat lon to be converted to local coordinates
+---
+geometry_msgs/PoseStamped local_pose # Returns a cartesian pose in the same frame specified by converter 
+
+
