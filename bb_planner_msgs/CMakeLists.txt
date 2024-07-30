@@ -24,6 +24,7 @@ set(message_files
 set(service_files
   srv/GetPlanToPose.srv
   srv/GetPlanThroughPoses.srv
+  srv/GetPoseToDestFrame.srv
 )
 
 set(action_files

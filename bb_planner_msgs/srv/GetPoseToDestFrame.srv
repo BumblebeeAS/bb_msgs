@@ -1,0 +1,4 @@
+geometry_msgs/PoseStamped input_pose # input pose to be transformed
+string dest_frame_name # specified frame to transform pose into
+---
+geometry_msgs/PoseStamped output_pose # new pose transformed in the destination frame
