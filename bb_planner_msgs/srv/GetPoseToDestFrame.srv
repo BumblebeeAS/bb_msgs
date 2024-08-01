@@ -1,5 +1,6 @@
 geometry_msgs/PoseStamped input_pose # input pose to be transformed
 string dest_frame_name # specified frame to transform pose into
+float32 timeout 0.0 # timeout for tf lookup
 ---
 geometry_msgs/PoseStamped output_pose # new pose transformed in the destination frame
 bool tf_success # whether tf is successful
