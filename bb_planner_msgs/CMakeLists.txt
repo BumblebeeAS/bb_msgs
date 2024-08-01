@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(bb_planner_msgs VERSION 0.0.1)
+project(bb_planner_msgs VERSION 0.0.2)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)

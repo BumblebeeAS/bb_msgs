@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>bb_planner_msgs</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>The bb_planner_msgs package containing all interfaces relevant
     to creation of planners. This should be general enough to support both 2D and 3D planners.
   </description>
