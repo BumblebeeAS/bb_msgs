@@ -1,0 +1,6 @@
+uint8 DEFAULT=0
+uint8 FAST=1
+uint8 MANUAL=2
+uint8 mode
+---
+bool success
