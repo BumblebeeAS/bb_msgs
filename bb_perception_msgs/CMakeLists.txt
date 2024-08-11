@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(bb_perception_msgs VERSION 0.0.1)
+project(bb_perception_msgs VERSION 0.0.2)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -28,6 +28,9 @@ set(message_files
   msg/DetectedObject3D.msg
   msg/DetectedObject3DArray.msg
   msg/ObjectKinematics.msg
+
+  msg/ClusteredCloud.msg
+  msg/ClusteredClouds.msg
 
   # old version of detected objects msgs for back compability
   msg/DetectedObject.msg
