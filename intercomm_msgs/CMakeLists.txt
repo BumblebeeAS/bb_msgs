@@ -18,6 +18,7 @@ set(message_files
 )
 
 set(service_files
+  srv/TakeoffRequest.srv
 )
 
 set(action_files
