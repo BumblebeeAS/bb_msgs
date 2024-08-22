@@ -1,4 +1,6 @@
+
 # timeout_ms=0 blocks indefinitely
 uint32 timeout_ms
 ---
 bool ok
+geographic_msgs/GeoPointStamped pos

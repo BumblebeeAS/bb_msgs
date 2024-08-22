@@ -10,15 +10,19 @@ find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geographic_msgs REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 set(message_files
+  msg/LandingResponse.msg
 )
 
 set(service_files
   srv/TakeoffRequest.srv
+  srv/LandingRequest.srv
 )
 
 set(action_files
@@ -41,7 +45,12 @@ if(BUILD_TESTING)
     ${service_files}
     ${action_files}
 
-    DEPENDENCIES builtin_interfaces std_msgs # action_msgs geometry_msgs
+    DEPENDENCIES
+    builtin_interfaces
+    std_msgs
+    sensor_msgs
+    geographic_msgs
+
     ADD_LINTER_TESTS
   )
 endif()
