@@ -19,6 +19,7 @@ set(message_files
   msg/Status.msg
   msg/Thrusters.msg
   msg/ControllerStatus.msg
+  msg/AllocatorStatus.msg
   # msg/ModelControllerConfig.msg // Removed this message since it is not in any pub/sub
 )
 
@@ -30,6 +31,8 @@ set(service_files
   srv/Speed.srv
   srv/SplineTraj.srv
   srv/Pause.srv
+  srv/ASV4AllocatorSelector.srv
+  srv/ASV4ControllerSelector.srv
 )
 
 set(action_files
