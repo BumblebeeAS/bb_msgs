@@ -24,6 +24,7 @@ set(message_files
 set(service_files
   srv/ArucoActivation.srv
   srv/LatLonConverter.srv
+  srv/StateTransition.srv
 )
 
 set(action_files
