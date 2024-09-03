@@ -31,6 +31,7 @@ set(message_files
 )
 
 set(service_files
+  srv/LogicChannelToggle.srv
   srv/MHPBChannelToggle.srv
   srv/MHPBChannelTrigger.srv
 )
