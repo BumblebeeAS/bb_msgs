@@ -1,0 +1,21 @@
+uint16 GATE_TASK=2
+uint16 PATH_TASK=3
+uint16 WILDLIFE_TASK=4
+uint16 SCAN_TASK=5
+uint16 DOC_TASK=6
+uint16 SHOOT_TASK=7
+uint16 REPLENISH_TASK=8
+uint16 SEARCH_REPORT_TASK=9
+uint16 task_id
+int16[] data
+# Gate task: [start_gate, end_gate]
+# Path task: [path_id, path_index]
+# Wildlife task: []
+# Scan task: [sequence] # 123 = red green blue
+# Dock task: [color, state] # e.g. [1, 1/2] = 1=red, 1: inprogress, 2: completed
+# Shoot task: [color, state] # e.g. [1, 1/2] = 1=red, 1: scanning, 2: shooting
+# Replenish task: []
+# Search report task: []
+string description
+---
+bool response
