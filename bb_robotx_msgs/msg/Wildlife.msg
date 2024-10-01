@@ -1,3 +1,3 @@
-BasicGPS platypus
-BasicGPS crocodile
-BasicGPS turtle
+BasicGPS python
+BasicGPS manatee
+BasicGPS iguana
