@@ -25,6 +25,7 @@ set(service_files
   srv/RobotxTaskStatus.srv
   srv/SetWildlifeStatus.srv
   srv/SetSearchAndReportStatus.srv
+  srv/SetCardTopic.srv
 )
 
 set(action_files

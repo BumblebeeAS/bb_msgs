@@ -184,7 +184,6 @@ set(service_files
 
   # RobotX specific
   srv/RobotxTaskStatus.srv
-  srv/SetCardTopic.srv
 )
 
 set(action_files
