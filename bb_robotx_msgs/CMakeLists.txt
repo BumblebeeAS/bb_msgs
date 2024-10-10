@@ -19,10 +19,11 @@ set(message_files
   msg/LightSequence.msg
   msg/SearchAndReport.msg
   msg/Wildlife.msg
+  msg/RobotxTaskStatus.msg
 )
 
 set(service_files
-  srv/RobotxTaskStatus.srv
+  srv/RobotxTaskStatusUpdate.srv
   srv/SetWildlifeStatus.srv
   srv/SetSearchAndReportStatus.srv
   srv/SetCardTopic.srv

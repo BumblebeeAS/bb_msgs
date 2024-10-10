@@ -20,8 +20,8 @@ int16[] data
 # Gate enter task: [gate]
 # Gate exit task: [gate]
 # Path task: [path_id, path_index]
-# Wildlife task: [sequence] # 123 = red (python) green (iguana) blue (manatee)
-# Scan task: [sequence] # 123 = red green blue
+# Wildlife task: [sequence] # [1,2,3] = red (python) green (iguana) blue (manatee)
+# Scan task: [sequence] # [1,2,3] = red green blue
 # Dock task: [color, state] # e.g. [1, 1/2/3/4] = 1=red, 1: docking inprogress, 2: docked, 3: aligning, 4: firing
 # Replenish task: []
 # Search report task: []
