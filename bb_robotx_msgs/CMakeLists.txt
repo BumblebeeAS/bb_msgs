@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -27,6 +28,7 @@ set(service_files
   srv/SetWildlifeStatus.srv
   srv/SetSearchAndReportStatus.srv
   srv/SetCardTopic.srv
+  srv/ConfigureGateTask.srv
 )
 
 set(action_files
@@ -49,7 +51,7 @@ if(BUILD_TESTING)
     ${service_files}
     ${action_files}
 
-    DEPENDENCIES builtin_interfaces std_msgs # action_msgs geometry_msgs
+    DEPENDENCIES builtin_interfaces std_msgs geometry_msgs # action_msgs
     ADD_LINTER_TESTS
   )
 endif()
