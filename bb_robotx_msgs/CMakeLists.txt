@@ -29,6 +29,7 @@ set(service_files
   srv/SetSearchAndReportStatus.srv
   srv/SetCardTopic.srv
   srv/ConfigureGateTask.srv
+  srv/ConfigureLightSequenceTask.srv
 )
 
 set(action_files
