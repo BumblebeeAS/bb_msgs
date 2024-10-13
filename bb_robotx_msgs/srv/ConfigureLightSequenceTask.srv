@@ -1,0 +1,8 @@
+bool active
+bool use_tcm  # whether to use time (1/1/1/2 seconds) or just transition matrix
+uint8 tcm_granularity   8 # bins detections into 1/tcm_granularity second intervals
+bool filter_panel_in_tower  # whether to only consider panels with tower bbox around them
+uint8 best_sequence_threshold  # number of sequences to consider
+float32 light_tower_known_height  2.0 # height of the tower in meters
+---
+bool success
