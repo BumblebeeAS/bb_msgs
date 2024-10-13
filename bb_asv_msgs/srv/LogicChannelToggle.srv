@@ -1,0 +1,7 @@
+# bitmask for channel and control found in ASVLogicStatus.msg
+uint8 channel
+bool enable
+---
+bool success
+string message
+uint8 control

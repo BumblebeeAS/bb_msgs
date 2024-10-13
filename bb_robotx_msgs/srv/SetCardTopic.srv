@@ -1,0 +1,7 @@
+# For use in lidar_segmentation/estimator.h
+# To enable the node callback and set the card it should look out for
+bool enable
+string card_type # there 4 possible options, "card", "red", "green", "blue"
+---
+bool success   # response flag
+string message # response message

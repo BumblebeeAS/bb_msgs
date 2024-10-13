@@ -1,0 +1,5 @@
+bool active
+bool use_heading # whether to consider heading in gate estimation
+geometry_msgs/PoseStamped estimated_pose  # Set geofence and heading based on this (map frame)
+---
+bool success

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(bb_asv_msgs)
+project(bb_robotx_msgs)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -10,30 +10,25 @@ find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 set(message_files
-  msg/ASVActuationState.msg
-  msg/ASVControlLink.msg
-  msg/ASVEStopState.msg
-  msg/ASVHeartbeat.msg
-  msg/ASVLogicStatus.msg
-  msg/ASVMainHullStatus.msg
-  msg/ASVMHPBStatus.msg
-  msg/ASVShooterState.msg
-  msg/ASVThrusterAzimuth.msg
-  msg/MHPBControl.msg
-  msg/BatteryHealth.msg
-  msg/CalibrateActuators.msg
-  msg/ESC.msg
+  msg/BasicGPS.msg
+  msg/LightSequence.msg
+  msg/SearchAndReport.msg
+  msg/Wildlife.msg
+  msg/RobotxTaskStatus.msg
 )
 
 set(service_files
-  srv/LogicChannelToggle.srv
-  srv/MHPBChannelToggle.srv
-  srv/MHPBChannelTrigger.srv
+  srv/RobotxTaskStatusUpdate.srv
+  srv/SetWildlifeStatus.srv
+  srv/SetSearchAndReportStatus.srv
+  srv/SetCardTopic.srv
+  srv/ConfigureGateTask.srv
 )
 
 set(action_files
@@ -56,7 +51,7 @@ if(BUILD_TESTING)
     ${service_files}
     ${action_files}
 
-    DEPENDENCIES builtin_interfaces std_msgs # action_msgs geometry_msgs
+    DEPENDENCIES builtin_interfaces std_msgs geometry_msgs # action_msgs
     ADD_LINTER_TESTS
   )
 endif()

@@ -1,0 +1,32 @@
+uint16 GATE_ENTER_TASK=2
+uint16 PATH_TASK=3
+uint16 WILDLIFE_TASK=4
+uint16 SCAN_TASK=5
+uint16 DOCK_SHOOT_TASK=6
+uint16 REPLENISH_TASK=8
+uint16 SEARCH_REPORT_TASK=9
+uint16 LAUNCH_TASK=10
+uint16 RECOVERY_TASK=11
+uint16 GATE_EXIT_TASK=12
+uint16 task_id
+
+uint8 NOT_STARTED=0
+uint8 IN_PROGRESS=1
+uint8 COMPLETED=2
+uint8 FAILED=3
+uint8 task_state
+
+int16[] data
+# Gate enter task: [gate]
+# Gate exit task: [gate]
+# Path task: [path_id, path_index]
+# Wildlife task: [sequence] # [1,2,3] = red (python) green (iguana) blue (manatee)
+# Scan task: [sequence] # [1,2,3] = red green blue
+# Dock task: [color, state] # e.g. [1, 1/2/3/4] = 1=red, 1: docking inprogress, 2: docked, 3: aligning, 4: firing
+# Replenish task: []
+# Search report task: []
+# Launch task: [1] # 1 = request for immediate landing
+# Recovery task: [1] # 1 = request for immediate takeoff again for other tasks
+string description
+---
+bool response
