@@ -1,0 +1,6 @@
+string target_frame
+bool enable
+bool reset_balls
+---
+bool success
+string message
