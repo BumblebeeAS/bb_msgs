@@ -30,6 +30,7 @@ set(service_files
   srv/SetCardTopic.srv
   srv/ConfigureGateTask.srv
   srv/ConfigureLightSequenceTask.srv
+  srv/EnableNode.srv
 )
 
 set(action_files

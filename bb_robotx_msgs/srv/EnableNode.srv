@@ -1,0 +1,7 @@
+
+# For use in lidar_segmentation/placard.h
+# To enable the node callback
+bool enable
+---
+bool success   # response flag
+string message # response message
