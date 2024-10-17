@@ -1,0 +1,4 @@
+geographic_msgs/GeoPointStamped drone_latlon  # the latitude and longitude of the drone
+geometry_msgs/PoseStamped detection_pose      # the pose of the detection wrt the drone
+---
+geographic_msgs/GeoPointStamped detection_latlon  # the computed latitude and longitude of the detection
