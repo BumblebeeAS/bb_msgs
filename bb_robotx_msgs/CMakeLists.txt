@@ -21,6 +21,8 @@ set(message_files
   msg/SearchAndReport.msg
   msg/Wildlife.msg
   msg/RobotxTaskStatus.msg
+  msg/GateInfo.msg
+  msg/GateStatuses.msg
 )
 
 set(service_files
@@ -30,6 +32,7 @@ set(service_files
   srv/SetCardTopic.srv
   srv/ConfigureGateTask.srv
   srv/ConfigureLightSequenceTask.srv
+  srv/ConfigurePathTask.srv
 )
 
 set(action_files
