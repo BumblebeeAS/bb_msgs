@@ -26,6 +26,7 @@ set(service_files
   srv/LatLonConverter.srv
   srv/SearchReportConverter.srv
   srv/StateTransition.srv
+  srv/SetHeightOffset.srv
 )
 
 set(action_files

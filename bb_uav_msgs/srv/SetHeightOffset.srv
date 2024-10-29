@@ -1,0 +1,4 @@
+float32 initial_height
+geometry_msgs/PoseStamped pose
+---
+bool ok
