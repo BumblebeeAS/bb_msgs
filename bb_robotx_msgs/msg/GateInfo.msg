@@ -5,3 +5,4 @@ uint16 track_age
 uint16 track_id
 bool is_in_front_vehicle
 bool passed false
+bool reached false
