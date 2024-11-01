@@ -21,6 +21,9 @@ uint16 bbox_height
 
 # Hue if from cameras, Intensity if from sonar
 uint8 color
+uint8[<=3] top_lab
+uint8[<=3] middle_lab
+uint8[<=3] bottom_lab
 # Angle for OBB, 0 by default, 180 max.
 int8 angle_deg
 

@@ -1,0 +1,7 @@
+float32 y_offset 0 # in bl frame
+float32 z_offset 0 # in bl frame
+bool enable
+bool reset_balls
+---
+bool success
+string message

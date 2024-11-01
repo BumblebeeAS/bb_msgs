@@ -1,0 +1,12 @@
+bool active
+bool reset false
+bool reverse false
+uint16 num_gates 2
+float32 gate_heading  # yaw in enu convention (deg)
+bool specified_heading false
+bool prequali false
+bool scale_heading false  # whether to scale in direction of heading by 2 times before clustering.
+float32 min_gate_width 6.0  # minimum width of gate
+float32 max_gate_width 20.0  # maximum width of gate
+---
+bool success
