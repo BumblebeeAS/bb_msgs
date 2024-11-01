@@ -30,6 +30,7 @@ set(service_files
   srv/SetCardTopic.srv
   srv/ConfigureGateTask.srv
   srv/ConfigureWildlifeTask.srv
+  srv/ComputeCompletion.srv
 )
 
 set(action_files
