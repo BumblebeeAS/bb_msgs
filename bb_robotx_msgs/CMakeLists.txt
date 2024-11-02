@@ -33,6 +33,8 @@ set(service_files
   srv/SetSearchAndReportStatus.srv
   srv/SetCardTopic.srv
   srv/ConfigureGateTask.srv
+  srv/ConfigureWildlifeTask.srv
+  srv/ComputeCompletion.srv
   srv/ConfigureLightSequenceTask.srv
   srv/ConfigurePathTask.srv
 )
