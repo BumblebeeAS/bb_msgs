@@ -20,6 +20,7 @@ set(message_files
   msg/LightSequence.msg
   msg/SearchAndReport.msg
   msg/Wildlife.msg
+  msg/WildlifePoses.msg
   msg/WildlifeSequence.msg
   msg/RobotxTaskStatus.msg
   msg/GateInfo.msg
