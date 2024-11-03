@@ -1,0 +1,4 @@
+bool active
+string wildlife_type #3 possible types: python, manatee, iguana
+---
+bool success

@@ -20,9 +20,11 @@ set(message_files
   msg/LightSequence.msg
   msg/SearchAndReport.msg
   msg/Wildlife.msg
+  msg/WildlifeSequence.msg
   msg/RobotxTaskStatus.msg
   msg/GateInfo.msg
   msg/GateStatuses.msg
+  msg/PathDirection.msg
 )
 
 set(service_files
@@ -31,6 +33,8 @@ set(service_files
   srv/SetSearchAndReportStatus.srv
   srv/SetCardTopic.srv
   srv/ConfigureGateTask.srv
+  srv/ConfigureWildlifeTask.srv
+  srv/ComputeCompletion.srv
   srv/ConfigureLightSequenceTask.srv
   srv/ConfigurePathTask.srv
 )
