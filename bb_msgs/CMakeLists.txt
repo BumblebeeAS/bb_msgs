@@ -23,12 +23,6 @@ set(message_files
   # Acoustics
   msg/Ping.msg
 
-  # Controls
-  msg/Status.msg
-  msg/Thrusters.msg
-  msg/ControllerStatus.msg
-  msg/ModelControllerConfig.msg
-
   # ASV2
   msg/LARS.msg
   msg/LARSStat.msg
@@ -131,17 +125,11 @@ set(service_files
   srv/TareAtmosphericPressure.srv
 
   # Controls
-  srv/Autotuner.srv
-  srv/Controller.srv
   srv/ResetPose.srv
   srv/SetPose.srv
   srv/Destination.srv
   srv/Navigate2d.srv
   srv/SetCovariance.srv
-  srv/EncircleTraj.srv
-  srv/Limits.srv
-  srv/Speed.srv
-  srv/SplineTraj.srv
 
   # ASV2
   srv/LARSControl.srv
