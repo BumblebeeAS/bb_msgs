@@ -1,8 +1,0 @@
-# Speed
-# 0 = Slow
-# 1 = Normal
-# 2 = Fast
-# 3 = Super Fast
-uint8 speed
----
-bool status
