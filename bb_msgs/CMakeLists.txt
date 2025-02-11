@@ -13,17 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
 
-  # Acoustics
-  Ping.msg
-
-  # CAN
-  Battery.msg
-  CPUTemp.msg
-  Environment.msg
-
   # Controls
-  Status.msg # Old controls
-  Thrusters.msg
   ButtonStatus.msg
 
   # ASV2
@@ -55,22 +45,11 @@ add_message_files(
   LightTower.msg
   Shape.msg
 
-  # Sensors
-  Battery.msg
-  CPUTemp.msg
-  SBCTemp.msg
-  Environment.msg
-  WindSpeed.msg
-
   # Lidar
   LidarBoundingBox.msg
   LidarBoundingBoxes.msg
   ClusteredCloud.msg
   ClusteredClouds.msg
-
-  # DVL
-  beam.msg
-  beamMatrixStamped.msg
 
   # IMU
   compass_data.msg

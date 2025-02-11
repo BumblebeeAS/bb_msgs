@@ -1,9 +1,0 @@
-std_msgs/Header header
-float32 forward_setpoint
-float32 sidemove_setpoint
-float32 depth_setpoint
-float32 roll_setpoint
-float32 pitch_setpoint
-float32 yaw_setpoint
-float32 surge_speed_setpoint
-bool engaged
