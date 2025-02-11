@@ -21,7 +21,7 @@ find_package(sensor_msgs REQUIRED)
 set(message_files
 
   # Acoustics
-  msg/Ping.msg
+  # msg/Ping.msg
 
   # ASV2
   msg/LARS.msg
@@ -56,12 +56,12 @@ set(message_files
   msg/Shape.msg
 
   # Sensors
-  msg/Battery.msg
+  # msg/Battery.msg
   msg/BatteryHealth.msg
-  msg/CPUTemp.msg
-  msg/SBCTemp.msg
-  msg/Environment.msg
-  msg/WindSpeed.msg
+  # msg/CPUTemp.msg
+  # msg/SBCTemp.msg
+  # msg/Environment.msg
+  # msg/WindSpeed.msg
 
   msg/ButtonStatus.msg
 
@@ -72,8 +72,8 @@ set(message_files
   msg/ClusteredClouds.msg
 
   # DVL
-  msg/Beam.msg
-  msg/BeamMatrixStamped.msg
+  # msg/Beam.msg
+  # msg/BeamMatrixStamped.msg
 
   # IMU
   msg/CompassData.msg
