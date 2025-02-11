@@ -20,9 +20,6 @@ find_package(sensor_msgs REQUIRED)
 
 set(message_files
 
-  # Acoustics
-  # msg/Ping.msg
-
   # ASV2
   msg/LARS.msg
   msg/LARSStat.msg
@@ -56,12 +53,7 @@ set(message_files
   msg/Shape.msg
 
   # Sensors
-  # msg/Battery.msg
   msg/BatteryHealth.msg
-  # msg/CPUTemp.msg
-  # msg/SBCTemp.msg
-  # msg/Environment.msg
-  # msg/WindSpeed.msg
 
   msg/ButtonStatus.msg
 
@@ -70,10 +62,6 @@ set(message_files
   msg/LidarBoundingBoxes.msg
   msg/ClusteredCloud.msg
   msg/ClusteredClouds.msg
-
-  # DVL
-  # msg/Beam.msg
-  # msg/BeamMatrixStamped.msg
 
   # IMU
   msg/CompassData.msg
@@ -122,7 +110,6 @@ set(service_files
   srv/Actuation.srv
   srv/LED.srv
   srv/PowerControl.srv
-  srv/TareAtmosphericPressure.srv
 
   # Controls
   srv/ResetPose.srv
