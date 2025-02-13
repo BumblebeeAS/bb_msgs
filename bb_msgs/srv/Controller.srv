@@ -1,5 +1,0 @@
-bool enable
-bool pause
-bool disable_altitude
----
-bool status

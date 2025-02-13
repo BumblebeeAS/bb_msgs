@@ -21,7 +21,7 @@ set(message_files
   msg/ElectricalStats.msg
   msg/SBCTemp.msg
   msg/WindSpeed.msg
-
+  msg/Ping.msg
   msg/Beam.msg
   msg/BeamMatrixStamped.msg
 )
