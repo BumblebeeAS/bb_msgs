@@ -21,6 +21,7 @@ set(message_files
 set(service_files
   srv/TareAtmosphericPressure.srv
   srv/SetPose.srv
+  srv/ResetPose.srv
 )
 
 set(action_files
