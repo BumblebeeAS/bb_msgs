@@ -19,6 +19,7 @@ add_service_files(
   FILES
     SetPose.srv
     TareAtmosphericPressure.srv
+    ResetPose.srv
 )
 
 generate_messages(
