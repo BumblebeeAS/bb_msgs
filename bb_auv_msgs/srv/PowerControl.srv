@@ -1,4 +1,14 @@
-uint16 power_status
-uint16 power_cycle
+uint8 bitmask
 ---
 bool done
+
+# Bit Mapping
+# -----------
+# 0     Switch
+# 1     Acoustics
+# 2     Orin
+# 3     Sensors & Telemetry Board
+# 4     Thrusters & Actuation Board
+# 5     DVL
+# 6     Sonar
+# 7     FOG
