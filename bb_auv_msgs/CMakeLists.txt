@@ -19,7 +19,6 @@ set(message_files
 )
 
 set(service_files
-  srv/PowerControl.srv
   srv/ResetPose.srv
   srv/SetPose.srv
   srv/TareAtmosphericPressure.srv
