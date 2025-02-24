@@ -1,0 +1,4 @@
+uint16 power_status
+uint16 power_cycle
+---
+bool done
