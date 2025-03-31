@@ -25,6 +25,7 @@ set(service_files
   srv/GetPlanToPose.srv
   srv/GetPlanThroughPoses.srv
   srv/GetPoseToDestFrame.srv
+  srv/GetPoseToControlsFrame.srv
 )
 
 set(action_files
