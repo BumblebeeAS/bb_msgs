@@ -1,0 +1,5 @@
+geometry_msgs/PoseStamped input_pose # input pose to be transformed
+float32 timeout 0.1 # timeout for tf lookup
+---
+geometry_msgs/PoseStamped output_pose # new pose transformed in the controls frame
+bool tf_success # whether tf is successful
