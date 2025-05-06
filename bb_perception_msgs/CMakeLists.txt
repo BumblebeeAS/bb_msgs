@@ -32,6 +32,8 @@ set(message_files
   msg/ClusteredCloud.msg
   msg/ClusteredClouds.msg
 
+  msg/PointCorrespondencesStamped.msg
+
   # old version of detected objects msgs for back compability
   msg/DetectedObject.msg
   msg/DetectedObjects.msg
