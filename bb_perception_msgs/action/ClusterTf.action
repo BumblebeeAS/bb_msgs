@@ -11,7 +11,7 @@ int32 min_samples 1
 bool use_cache false # if true, use the cache with cache_size; otherwise, just collect as many transforms as possible in the given duration
 ---
 # Result
-geometry_msgs/TransformStamped clustered_transform
+geometry_msgs/msg/TransformStamped clustered_transform
 int32 total_transforms_collected
 int32 transforms_in_cluster
 ---
