@@ -47,6 +47,7 @@ set(service_files
 )
 
 set(action_files
+  action/ClusterTf.action
 )
 
 if(BUILD_TESTING)

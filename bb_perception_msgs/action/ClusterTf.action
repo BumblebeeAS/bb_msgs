@@ -1,7 +1,7 @@
 # Request
 string input_parent_frame_id
 string input_child_frame_id
-string output_parent_frame_id "auv4/world_ned"
+string output_parent_frame_id "world_ned"
 string output_child_frame_id
 int32 clustering_duration 20
 float64 tf_lookup_interval 0.05
@@ -11,7 +11,7 @@ int32 min_samples 1
 bool use_cache false # if true, use the cache with cache_size; otherwise, just collect as many transforms as possible in the given duration
 ---
 # Result
-geometry_msgs/msg/TransformStamped clustered_transform
+geometry_msgs/TransformStamped clustered_transform
 int32 total_transforms_collected
 int32 transforms_in_cluster
 ---
