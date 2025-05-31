@@ -26,8 +26,6 @@ set(message_files
 
   # ASV3
   msg/AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
-  msg/ASVHeartbeat.msg # UInt32.msg + consts for asv heartbeat
-  msg/ASVEStopState.msg # UInt8.msg + consts for asv estop
   msg/ControlLink.msg
   msg/ESC.msg
   msg/POPB.msg # UInt16.msg + consts for asv power status
@@ -36,7 +34,6 @@ set(message_files
   msg/DTLSState.msg # UInt8.msg + consts for dtls
   msg/ASVMainHullStatus.msg # main hull temperature / humidity
   msg/ASVMHPBStatus.msg
-  msg/ASVLogicStatus.msg # UInt16.msg + consts for asv logic control
 
   # AUV3
   msg/AUV3PowerStatus.msg # UInt16.msg + consts for AUV3PowerStatus power status
@@ -50,7 +47,6 @@ set(message_files
   # robotX
   msg/LightSequence.msg
   msg/LightTower.msg
-  msg/Shape.msg
 
   # Sensors
   msg/BatteryHealth.msg
@@ -60,8 +56,6 @@ set(message_files
   # Lidar
   msg/LidarBoundingBox.msg
   msg/LidarBoundingBoxes.msg
-  msg/ClusteredCloud.msg
-  msg/ClusteredClouds.msg
 
   # IMU
   msg/CompassData.msg
@@ -74,27 +68,13 @@ set(message_files
   msg/SonarWorld.msg
 
   # Vision
-  msg/DetectedObject.msg
-  msg/DetectedObjects.msg
-  msg/DetectedObjectsStamped.msg
   msg/PolygonArrayStamped.msg
-
-  # Image Matching
-  msg/Keypoint.msg
-  msg/KeypointsDict.msg
 
   # RobotX
   msg/SearchAndReport.msg
-  msg/Wildlife.msg
-  msg/BasicGPS.msg
 
   # Gazebo
   msg/GazeboModelState.msg
-
-  # ControlsInterface
-  msg/PlannerFeedbackMsg.msg
-  msg/SetPoint.msg
-  msg/SetPoints.msg
 
   # BehaviorTree
   msg/BTNodeStatus.msg
@@ -112,8 +92,6 @@ set(service_files
   srv/PowerControl.srv
 
   # Controls
-  srv/ResetPose.srv
-  srv/SetPose.srv
   srv/Destination.srv
   srv/Navigate2d.srv
   srv/SetCovariance.srv
@@ -144,7 +122,6 @@ set(service_files
   srv/IMPoseEstimatorGetStatus.srv
   srv/IMPoseEstimatorGetTemplates.srv
   srv/IMPoseEstimatorRegisterTemplate.srv
-  srv/IMPoseEstimatorToggleTemplate.srv
   srv/IMPoseEstimatorConfig.srv
   srv/IMPoseEstimatorUpdateKeypointMatches.srv
 
@@ -164,7 +141,6 @@ set(service_files
 set(action_files
 
   # Controls
-  action/Locomotion.action
   action/Path.action
   action/Waypoints.action
 

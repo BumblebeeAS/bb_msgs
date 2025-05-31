@@ -33,11 +33,6 @@ set(message_files
   msg/ClusteredClouds.msg
 
   msg/PointCorrespondencesStamped.msg
-
-  # old version of detected objects msgs for back compability
-  msg/DetectedObject.msg
-  msg/DetectedObjects.msg
-  msg/DetectedObjectsStamped.msg
 )
 
 set(service_files
