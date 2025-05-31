@@ -67,12 +67,6 @@ set(message_files
   msg/SonarInfo.msg
   msg/SonarWorld.msg
 
-  # Vision
-  msg/PolygonArrayStamped.msg
-
-  # RobotX
-  msg/SearchAndReport.msg
-
   # Gazebo
   msg/GazeboModelState.msg
 
@@ -105,31 +99,16 @@ set(service_files
 
   # UAV
   srv/FlightState.srv
-  srv/SetSearchAndReportStatus.srv
   srv/SetUInt8Status.srv
-  srv/SetWildlifeStatus.srv
   srv/SetGPIO.srv
 
   # Vision
-  srv/MLDetector.srv
   srv/ArucoActivation.srv
 
   # Image Matching
   srv/ClearBuffer.srv
-  srv/MatchImages.srv
-  srv/MatchToTemplate.srv
-  srv/RegisterImage.srv
-  srv/IMPoseEstimatorGetStatus.srv
-  srv/IMPoseEstimatorGetTemplates.srv
-  srv/IMPoseEstimatorRegisterTemplate.srv
-  srv/IMPoseEstimatorConfig.srv
-  srv/IMPoseEstimatorUpdateKeypointMatches.srv
 
   srv/RelocalizeToObjectPosition.srv
-
-  srv/ObstacleStorageQuery.srv
-  srv/GetPlanToPose.srv
-  srv/GetPlanThroughPoses.srv
 
   # Gazebo
   srv/GazeboSetModelState.srv
@@ -145,7 +124,6 @@ set(action_files
   action/Waypoints.action
 
   action/ControlsInterface.action
-  action/Planner.action # GoTo with support for dynamic frames
 
   # UAV Controls
   action/MoveToCartesianCoordinates.action

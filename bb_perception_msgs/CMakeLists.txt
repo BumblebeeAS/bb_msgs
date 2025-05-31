@@ -36,6 +36,7 @@ set(message_files
 )
 
 set(service_files
+  srv/IMPoseEstimatorToggleTemplate.srv
   srv/MLGetDetection.srv
   srv/MLGetConfigs.srv
   srv/MLSetConfig.srv

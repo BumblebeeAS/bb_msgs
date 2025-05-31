@@ -1,5 +1,0 @@
-geometry_msgs/PoseStamped start
-geometry_msgs/PoseArray goal
----
-bb_msgs/SetPoints plan
-bool success
