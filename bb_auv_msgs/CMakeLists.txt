@@ -16,6 +16,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 
 set(message_files
+  msg/OrinTemp.msg
 )
 
 set(service_files
