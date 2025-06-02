@@ -1,5 +1,0 @@
-int64 num_keypoints
-
----
-int64 result
-KeypointsDict keypoints_dict

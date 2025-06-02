@@ -1,6 +1,0 @@
-int64 num_keypoints
-string template_name
-
----
-int64 result
-KeypointsDict keypoints_dict
