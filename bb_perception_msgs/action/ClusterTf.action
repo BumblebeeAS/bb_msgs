@@ -9,6 +9,7 @@ int32 cache_size 100
 int32 min_cluster_size 2
 int32 min_samples 1
 bool use_cache false # if true, use the cache with cache_size; otherwise, just collect as many transforms as possible in the given duration
+bool persistent false # if true, then we use the same cache for (in parent, in child, out parent, out child) across multiple goals
 ---
 # Result
 geometry_msgs/TransformStamped clustered_transform
