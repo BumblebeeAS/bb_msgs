@@ -9,7 +9,7 @@ uint8 cameras
 uint8 acoustics
 uint8 modem
 uint8 dvl
-uint8 switch
+uint8 ethernet_switch
 uint8 sbc
 uint8 sbc_can
 uint8 lights_board

@@ -1,13 +1,15 @@
-# torpedo / dropper
-uint8 ERROR = 0
-uint8 HOLD = 1
-uint8 FIRE = 2
+uint8 TORPEDO_ERROR = 0
+uint8 TORPEDO_HOLD = 1
+uint8 TORPEDO_FIRE = 2
 
-# grabber
-uint16 ERROR = 0
-uint16 CALLIBRATE = 1
-uint16 CLOSE = 5
-uint16 OPEN = 65535
+uint8 DROPPER_ERROR = 0
+uint8 DROPPER_HOLD = 1
+uint8 DROPPER_FIRE = 2
+
+uint16 GRABBER_ERROR = 0
+uint16 GRABBER_CALLIBRATE = 1
+uint16 GRABBER_CLOSE = 5
+uint16 GRABBER_OPEN = 65535
 
 uint8 dropper
 uint8 torpedo_top
