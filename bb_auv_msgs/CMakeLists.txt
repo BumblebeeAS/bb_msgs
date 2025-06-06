@@ -30,6 +30,7 @@ set(service_files
 )
 
 set(action_files
+  action/Grabber.action
 )
 
 if(BUILD_TESTING)

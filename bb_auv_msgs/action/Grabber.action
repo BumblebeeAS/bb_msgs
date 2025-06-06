@@ -1,0 +1,16 @@
+uint16 IGNORE = 0
+uint16 CALLIBRATE = 1
+uint16 CLOSE = 5
+uint16 OPEN = 65535
+
+uint16 command
+---
+uint16 ERROR = 0
+uint16 CALLIBRATE = 1
+uint16 CLOSE = 5
+uint16 OPEN = 65535
+
+bool success
+uint16 final_state
+---
+float32 progress
