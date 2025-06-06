@@ -25,6 +25,7 @@ set(message_files
   msg/OrinTemp.msg
   msg/PdbReadings.msg
   msg/Ping.msg
+  msg/PmbHullReadings.msg
   msg/SBCTemp.msg
   msg/WindSpeed.msg
 )
