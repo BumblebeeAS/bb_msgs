@@ -17,8 +17,6 @@ find_package(std_msgs REQUIRED)
 
 set(message_files
   msg/ActuationControl.msg
-  msg/InternalSensorReadings.msg
-  msg/OrinTemp.msg
   msg/Rgb.msg
 )
 

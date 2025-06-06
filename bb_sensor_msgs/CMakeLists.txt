@@ -16,14 +16,16 @@ find_package(std_msgs REQUIRED)
 # find_package(<dependency> REQUIRED)
 set(message_files
   msg/Battery.msg
-  msg/CPUTemp.msg
-  msg/Environment.msg
-  msg/ElectricalStats.msg
-  msg/SBCTemp.msg
-  msg/WindSpeed.msg
-  msg/Ping.msg
   msg/Beam.msg
   msg/BeamMatrixStamped.msg
+  msg/CpuTemp.msg
+  msg/Environment.msg
+  msg/ElectricalStats.msg
+  msg/InternalSensorReadings.msg
+  msg/OrinTemp.msg
+  msg/Ping.msg
+  msg/SBCTemp.msg
+  msg/WindSpeed.msg
 )
 
 set(service_files
