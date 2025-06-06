@@ -23,6 +23,7 @@ set(message_files
   msg/ElectricalStats.msg
   msg/InternalSensorReadings.msg
   msg/OrinTemp.msg
+  msg/PdbReadings.msg
   msg/Ping.msg
   msg/SBCTemp.msg
   msg/WindSpeed.msg
