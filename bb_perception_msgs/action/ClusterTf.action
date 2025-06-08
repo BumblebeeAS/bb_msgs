@@ -1,8 +1,7 @@
 # Request
-string input_parent_frame_id
-string input_child_frame_id
-string output_parent_frame_id "world_ned"
-string output_child_frame_id
+string[] input_child_frame_ids
+string[] output_parent_frame_ids
+string[] output_child_frame_ids
 int32 clustering_duration 20
 float64 tf_lookup_interval 0.05
 int32 cache_size 100
@@ -12,11 +11,11 @@ bool use_cache false # if true, use the cache with cache_size; otherwise, just c
 bool persistent false # if true, then we use the same cache for (in parent, in child, out parent, out child) across multiple goals
 ---
 # Result
-geometry_msgs/TransformStamped clustered_transform
-int32 total_transforms_collected
-int32 transforms_in_cluster
+geometry_msgs/TransformStamped[] clustered_transform
+int32[] total_transforms_collected
+int32[] transforms_in_cluster
 ---
 # Feedback
-float64 collection_progress
-int32 transforms_collected_so_far
+float64[] collection_progress
+int32[] transforms_collected_so_far
 string current_status
