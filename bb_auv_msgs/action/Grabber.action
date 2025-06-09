@@ -4,6 +4,7 @@ uint16 GOAL_CLOSE = 5
 uint16 GOAL_OPEN = 65535
 
 uint16 command
+float32 timeout
 ---
 uint16 RESULT_ERROR = 0
 uint16 RESULT_CALLIBRATE = 1
