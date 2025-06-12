@@ -27,7 +27,7 @@ set(message_files
   msg/PdbReadings.msg
   msg/Ping.msg
   msg/PmbHullReadings.msg
-  msg/SBCTemp.msg
+  # msg/SBCTemp.msg
   msg/WindSpeed.msg
 )
 
