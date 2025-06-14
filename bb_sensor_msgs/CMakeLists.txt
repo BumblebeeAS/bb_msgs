@@ -25,6 +25,7 @@ set(message_files
   msg/Environment.msg
   msg/InternalSensorReadings.msg
   msg/OrinTemp.msg
+  msg/PcbTempWithId.msg
   msg/PdbReadings.msg
   msg/Ping.msg
   msg/PmbHullReadings.msg
