@@ -17,6 +17,7 @@ find_package(std_msgs REQUIRED)
 set(message_files
   msg/Battery.msg
   msg/BatteryRawBytesWithId.msg
+  msg/BatteryWithId.msg
   msg/Beam.msg
   msg/BeamMatrixStamped.msg
   msg/CpuTemp.msg
