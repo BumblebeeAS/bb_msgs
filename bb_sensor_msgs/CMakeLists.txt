@@ -28,6 +28,7 @@ set(message_files
   msg/Ping.msg
   msg/PmbHullReadings.msg
   # msg/SBCTemp.msg
+  msg/TemperatureProbeReadings.msg
   msg/WindSpeed.msg
 )
 
