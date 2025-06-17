@@ -18,9 +18,9 @@ find_package(std_msgs REQUIRED)
 set(message_files
   msg/ActuationControl.msg
   msg/ActuationStatus.msg
+  msg/ColorRgb.msg
   msg/PowerControl.msg
   msg/PowerStatus.msg
-  msg/Rgb.msg
 )
 
 set(service_files
