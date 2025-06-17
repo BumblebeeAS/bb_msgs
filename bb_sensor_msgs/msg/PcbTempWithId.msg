@@ -1,2 +1,2 @@
-uint8 id
+uint8 pcb_id
 float32 temperature
