@@ -1,6 +1,6 @@
-geometry_msgs/PoseStamped input_pose # input pose to be transformed
+geometry_msgs/PoseStamped[] input_poses # input poses to be transformed
 string anchor_frame_name "base_link" # anchor frame that will be sent to goal pose
 float32 timeout 0.1 # timeout for tf lookup
 ---
-geometry_msgs/PoseStamped output_pose # new pose transformed in the controls frame
+geometry_msgs/PoseStamped[] output_poses # new poses transformed in the controls frame
 bool tf_success # whether tf is successful
