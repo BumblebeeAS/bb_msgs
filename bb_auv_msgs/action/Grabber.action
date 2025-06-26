@@ -1,0 +1,19 @@
+uint16 GOAL_IGNORE = 0
+uint16 GOAL_CALLIBRATE = 1
+uint16 GOAL_CLOSE = 5
+uint16 GOAL_OPEN = 65535
+
+uint16 command
+uint16 tolerance
+uint8 timeout_ms
+---
+uint16 RESULT_ERROR = 0
+uint16 RESULT_CALLIBRATE = 1
+uint16 RESULT_CLOSE = 5
+uint16 RESULT_OPEN = 65535
+
+bool success
+uint16 final_state
+---
+float32 progress
+uint16 current_state

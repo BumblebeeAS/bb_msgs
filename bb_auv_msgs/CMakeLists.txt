@@ -16,7 +16,11 @@ find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 
 set(message_files
-  msg/OrinTemp.msg
+  msg/ActuationControl.msg
+  msg/ActuationStatus.msg
+  msg/ColorRgb.msg
+  msg/PowerControl.msg
+  msg/PowerStatus.msg
 )
 
 set(service_files
@@ -26,6 +30,7 @@ set(service_files
 )
 
 set(action_files
+  action/Grabber.action
 )
 
 if(BUILD_TESTING)

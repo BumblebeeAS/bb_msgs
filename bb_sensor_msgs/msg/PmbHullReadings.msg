@@ -1,0 +1,5 @@
+uint8 id
+float32 pressure
+float32 mosfet_temperature
+float32 battery_temperature
+float32 hull_temperature

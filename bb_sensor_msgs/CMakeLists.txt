@@ -16,17 +16,26 @@ find_package(std_msgs REQUIRED)
 # find_package(<dependency> REQUIRED)
 set(message_files
   msg/Battery.msg
-  msg/CPUTemp.msg
-  msg/Environment.msg
-  msg/ElectricalStats.msg
-  msg/SBCTemp.msg
-  msg/WindSpeed.msg
-  msg/Ping.msg
+  msg/BatteryRawBytesWithId.msg
+  msg/BatteryWithId.msg
   msg/Beam.msg
   msg/BeamMatrixStamped.msg
+  msg/CpuTemp.msg
+  msg/ElectricalStats.msg
+  msg/Environment.msg
+  msg/InternalSensorReadings.msg
+  msg/OrinTemp.msg
+  msg/PcbTempWithId.msg
+  msg/PdbReadings.msg
+  msg/Ping.msg
+  msg/PmbHullReadings.msg
+  # msg/SBCTemp.msg
+  msg/TemperatureProbeReadings.msg
+  msg/WindSpeed.msg
 )
 
 set(service_files
+  srv/SetCovariance.srv
 )
 
 set(action_files

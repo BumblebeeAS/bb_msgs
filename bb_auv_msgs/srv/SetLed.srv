@@ -1,0 +1,9 @@
+float32 LED_FOREVER = 0.0
+
+ColorRgb color           # set black to turn off
+float32 duration_sec
+float32 on_duration_sec  # set 0.0 to ignore
+float32 off_duration_sec # set 0.0 to ignore
+---
+bool success
+string message
