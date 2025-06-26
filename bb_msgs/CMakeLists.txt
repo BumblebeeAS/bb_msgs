@@ -88,7 +88,6 @@ set(service_files
   # Controls
   srv/Destination.srv
   srv/Navigate2d.srv
-  srv/SetCovariance.srv
 
   # ASV2
   srv/LARSControl.srv
