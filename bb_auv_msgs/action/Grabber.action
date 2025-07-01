@@ -5,7 +5,7 @@ uint16 GOAL_OPEN = 65535
 
 uint16 command
 uint16 tolerance
-uint8 timeout_ms
+uint16 timeout_ms
 ---
 uint16 RESULT_ERROR = 0
 uint16 RESULT_CALLIBRATE = 1
