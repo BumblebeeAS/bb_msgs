@@ -26,6 +26,7 @@ set(service_files
   srv/GetPlanThroughPoses.srv
   srv/GetPoseToDestFrame.srv
   srv/GetPoseToControlsFrame.srv
+  srv/MapRelocalize.srv
 )
 
 set(action_files

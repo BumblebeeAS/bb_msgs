@@ -1,0 +1,4 @@
+string map_object_frame
+string odom_object_frame
+---
+bool success # whether relocalize is successful
