@@ -12,6 +12,6 @@ uint16 GRABBER_CLOSE = 5
 uint16 GRABBER_OPEN = 65535
 
 uint8 dropper
-uint8 torpedo_top
-uint8 torpedo_bot
+uint8 torpedo_one
+uint8 torpedo_two
 uint16 grabber
