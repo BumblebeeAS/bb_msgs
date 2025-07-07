@@ -1,5 +1,5 @@
 uint16 GOAL_IGNORE = 0
-uint16 GOAL_CALLIBRATE = 1
+uint16 GOAL_CALIBRATE = 1
 uint16 GOAL_CLOSE = 5
 uint16 GOAL_OPEN = 65535
 
@@ -8,7 +8,6 @@ uint16 tolerance
 uint16 timeout_ms
 ---
 uint16 RESULT_ERROR = 0
-uint16 RESULT_CALLIBRATE = 1
 uint16 RESULT_CLOSE = 5
 uint16 RESULT_OPEN = 65535
 
