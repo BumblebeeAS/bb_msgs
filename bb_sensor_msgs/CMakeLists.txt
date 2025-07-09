@@ -15,6 +15,7 @@ find_package(std_msgs REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 set(message_files
+  msg/BatteriesWithId.msg
   msg/Battery.msg
   msg/BatteryRawBytesWithId.msg
   msg/BatteryWithId.msg
