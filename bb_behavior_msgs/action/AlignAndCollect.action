@@ -1,0 +1,9 @@
+#### Request ####
+string object_frame
+string object_frame_clustered
+---
+#### Result ####
+bool success
+---
+#### Feedback ####
+string message
