@@ -1,6 +1,28 @@
+# command
+uint16 CLOSE = 0
+uint16 OPEN = 1
+
 #### Request ####
 string object_frame
 string object_frame_clustered
+uint16 command
+
+# Maximum distance the PID Z setpoint can be from the current Z position
+float64 depth_rate 0.05
+
+# Maximum Euclidean distance to the object in the XY plane where
+# the robot will consider itself aligned to the object.
+float64 xy_distance_threshold 0.05
+
+# If the |actuation_to_object_distance - z_distance| < z_distance_threshold,
+# Then the robot will open / close the grabber.
+float64 z_distance_threshold 0.05
+float64 z_distance 0.15
+
+# If the actuation to object distance is less than this value,
+# the robot will stop trying to align to the object in the XY plane
+# and just dive to open / close the grabber.
+float64 cutoff_z_distance 0.15
 ---
 #### Result ####
 bool success
