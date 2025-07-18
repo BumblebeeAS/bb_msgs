@@ -1,0 +1,12 @@
+bool enabled
+string[] input_child_frame_ids
+string[] output_parent_frame_ids
+string[] output_child_frame_ids
+float64 tf_lookup_interval 0.05
+int32 cache_size 100
+int32 min_cluster_size 2
+int32 min_samples 1
+bool persistent false # if true, then we use the same cache for (in parent, in child, out parent, out child) across multiple goals
+---
+bool is_cluster_success
+string message

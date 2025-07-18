@@ -40,6 +40,7 @@ set(service_files
   srv/MLGetDetection.srv
   srv/MLGetConfigs.srv
   srv/MLSetConfig.srv
+  srv/ClusterTf.srv
 )
 
 set(action_files
