@@ -41,6 +41,7 @@ set(service_files
   srv/MLGetConfigs.srv
   srv/MLSetConfig.srv
   srv/ClusterTf.srv
+  srv/TrashToggleFrame.srv
 )
 
 set(action_files

@@ -1,0 +1,5 @@
+string trash_frame_clustered
+bool enable
+---
+bool success
+string message
