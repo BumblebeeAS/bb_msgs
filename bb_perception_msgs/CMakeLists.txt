@@ -40,12 +40,12 @@ set(service_files
   srv/MLGetDetection.srv
   srv/MLGetConfigs.srv
   srv/MLSetConfig.srv
-  srv/ClusterTf.srv
+  srv/ClusterTfSrv.srv
   srv/TrashToggleFrame.srv
 )
 
 set(action_files
-  action/ClusterTf.action
+  action/ClusterTfAction.action
 )
 
 if(BUILD_TESTING)
