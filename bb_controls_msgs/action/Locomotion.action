@@ -17,6 +17,7 @@ float32 forward_tolerance
 float32 sidemove_tolerance
 float32 heading_tolerance
 float32 depth_tolerance
+int32 max_correction_time 30 # max time (s) for feedback to correct position error before goal returns, after feedforward has completed traj
 ---
 uint8 STATUS_SUCCESS = 0
 uint8 STATUS_FAILURE = 1
