@@ -23,6 +23,7 @@ set(service_files
 
 set(action_files
   action/AlignAndCollect.action
+  action/ControlledAscent.action
   action/Mission.action
 )
 
