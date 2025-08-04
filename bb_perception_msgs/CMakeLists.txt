@@ -36,11 +36,12 @@ set(message_files
 )
 
 set(service_files
-  srv/IMPoseEstimatorToggleTemplate.srv
-  srv/MLGetDetection.srv
-  srv/MLGetConfigs.srv
-  srv/MLSetConfig.srv
+  srv/ArucoToggleActivation.srv
   srv/ClusterTfSrv.srv
+  srv/IMPoseEstimatorToggleTemplate.srv
+  srv/MLGetConfigs.srv
+  srv/MLGetDetection.srv
+  srv/MLSetConfig.srv
   srv/TrashToggleFrame.srv
 )
 

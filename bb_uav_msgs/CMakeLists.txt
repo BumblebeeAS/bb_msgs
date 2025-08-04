@@ -22,7 +22,6 @@ set(message_files
 )
 
 set(service_files
-  srv/ArucoActivation.srv
   srv/LatLonConverter.srv
   srv/SearchReportConverter.srv
   srv/StateTransition.srv

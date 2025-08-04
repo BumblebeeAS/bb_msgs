@@ -1,0 +1,3 @@
+bool enable # If true, aruco detector is activated, otherwise aruco detector is turned off
+---
+bool status # Indicate current status of aruco detector
