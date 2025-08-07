@@ -38,6 +38,7 @@ set(message_files
 set(service_files
   srv/ArucoToggleActivation.srv
   srv/ClusterTfSrv.srv
+  srv/GetObjectCount.srv
   srv/IMPoseEstimatorToggleTemplate.srv
   srv/MLGetConfigs.srv
   srv/MLGetDetection.srv
