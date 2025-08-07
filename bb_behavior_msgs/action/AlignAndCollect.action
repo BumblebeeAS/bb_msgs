@@ -23,6 +23,8 @@ float64 z_distance 0.15
 # the robot will stop trying to align to the object in the XY plane
 # and just dive to open / close the grabber.
 float64 cutoff_z_distance 0.15
+
+float64 timeout_seconds 90.0
 ---
 #### Result ####
 bool success
