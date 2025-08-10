@@ -1,0 +1,7 @@
+bool enable
+---
+bool success
+int32 num_bottles_on_table
+int32 num_ladles_on_table
+int32 num_objects_in_bucket
+int32 num_objects_uncollected
