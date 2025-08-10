@@ -1,0 +1,8 @@
+string[] output_parent_frame_ids
+string[] output_child_frame_ids
+int32 min_cluster_size 2
+
+# Number of layers of the slalom left
+int32 num_layers
+---
+bool success
