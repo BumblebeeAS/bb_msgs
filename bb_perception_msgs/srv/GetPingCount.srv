@@ -1,0 +1,7 @@
+bool enable
+int32 num_pings_required
+float32 partition_angle
+---
+bool success
+bool is_left
+int32 num_pings_received
