@@ -8,3 +8,4 @@ bool persistent false # if true, then we use the same cache for (in parent, in c
 ---
 bool is_enabled
 bool is_cluster_success
+float32 cluster_spread
