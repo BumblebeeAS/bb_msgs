@@ -29,6 +29,7 @@ set(service_files
 )
 
 set(action_files
+  action/GoToPosition.action
 )
 
 if(BUILD_TESTING)
