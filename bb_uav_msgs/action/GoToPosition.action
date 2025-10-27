@@ -2,6 +2,7 @@
 float32 x                   # Target x position (NED frame)
 float32 y                   # Target y position (NED frame)
 float32 z                   # Target z position (NED frame)
+bool relative               # If true, x/y/z are offsets from current position
 float32 x_threshold         # Position threshold in x (meters)
 float32 y_threshold         # Position threshold in y (meters)
 float32 z_threshold         # Position threshold in z (meters)
