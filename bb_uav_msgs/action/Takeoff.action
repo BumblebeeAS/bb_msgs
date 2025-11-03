@@ -1,0 +1,20 @@
+# Goal
+# Target altitude above the current position in meters (positive up)
+float32 altitude
+float32 x_threshold         # Position threshold in x (meters)
+float32 y_threshold         # Position threshold in y (meters)
+float32 z_threshold         # Position threshold in z (meters)
+---
+# Result
+bool success
+float32 final_x             # Final x position
+float32 final_y             # Final y position
+float32 final_z             # Final z position
+float32 time_elapsed
+string message
+---
+# Feedback
+float32 current_x           # Current x position
+float32 current_y           # Current y position
+float32 current_z           # Current z position
+float32 altitude_to_goal    # Altitude to goal

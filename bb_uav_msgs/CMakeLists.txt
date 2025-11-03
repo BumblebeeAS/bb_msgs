@@ -30,6 +30,7 @@ set(service_files
 
 set(action_files
   action/GoToPosition.action
+  action/Takeoff.action
 )
 
 if(BUILD_TESTING)
