@@ -20,6 +20,7 @@ set(message_files
   msg/Thrusters.msg
   msg/ControllerStatus.msg
   msg/AllocatorStatus.msg
+  msg/ThrusterForces.msg
   # msg/ModelControllerConfig.msg // Removed this message since it is not in any pub/sub
 )
 
