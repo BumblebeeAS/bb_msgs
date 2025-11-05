@@ -1,1 +1,0 @@
-LidarBoundingBox[] boxes

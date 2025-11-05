@@ -26,13 +26,10 @@ set(message_files
 
   # ASV3
   msg/AcousticsActuationState.msg # UInt8.msg + consts for acoustics actuation state
-  msg/ControlLink.msg
-  msg/ESC.msg
   msg/POPB.msg # UInt16.msg + consts for asv power status
   msg/POSBStat.msg
   msg/ShooterState.msg # UInt8.msg + consts for ball shooter
   msg/DTLSState.msg # UInt8.msg + consts for dtls
-  msg/ASVMainHullStatus.msg # main hull temperature / humidity
   msg/ASVMHPBStatus.msg
 
   # AUV3
@@ -45,17 +42,12 @@ set(message_files
   msg/AUV4PowerStatus.msg # UInt16.msg + consts for auv4 power status
 
   # robotX
-  msg/LightSequence.msg
   msg/LightTower.msg
 
   # Sensors
   msg/BatteryHealth.msg
 
   msg/ButtonStatus.msg
-
-  # Lidar
-  msg/LidarBoundingBox.msg
-  msg/LidarBoundingBoxes.msg
 
   # IMU
   msg/CompassData.msg
@@ -64,8 +56,6 @@ set(message_files
 
   # Sonar
   msg/SurveyorInfo.msg
-  msg/SonarInfo.msg
-  msg/SonarWorld.msg
 
   # Gazebo
   msg/GazeboModelState.msg
@@ -97,12 +87,8 @@ set(service_files
   srv/Toggle.srv
 
   # UAV
-  srv/FlightState.srv
   srv/SetUInt8Status.srv
   srv/SetGPIO.srv
-
-  # Vision
-  srv/ArucoActivation.srv
 
   # Image Matching
   srv/ClearBuffer.srv
