@@ -13,6 +13,7 @@ set(message_files
   msg/GoToResult.msg
   msg/Jellyfish2Pose.msg
   msg/JellyfishHeartbeat.msg
+  msg/Acceleration.msg
 )
 
 set(service_files
@@ -20,6 +21,7 @@ set(service_files
   srv/SearchReportConverter.srv
   srv/StateTransition.srv
   srv/SetHeightOffset.srv
+  srv/ChangeOffboardControlMode.srv
 )
 
 set(action_files
