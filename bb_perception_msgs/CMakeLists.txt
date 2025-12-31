@@ -48,6 +48,7 @@ set(service_files
 )
 
 set(action_files
+  action/ClusterPosesAction.action
   action/ClusterTfAction.action
 )
 

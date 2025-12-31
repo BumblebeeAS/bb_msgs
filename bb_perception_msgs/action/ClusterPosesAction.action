@@ -1,0 +1,20 @@
+# Request
+string odom_topic
+string pose_stamped_topic
+string clustered_child_frame_id "clustered_object"  # Frame ID for the clustered transform
+float64 collection_duration 5.0  # Duration in seconds to collect synchronized messages
+float64 sync_tolerance 0.1  # Time synchronization tolerance in seconds
+int32 min_poses 10  # Minimum number of synchronized poses required
+int32 min_cluster_size 2
+int32 min_samples 1
+float64 cluster_selection_epsilon 0.05
+---
+# Result
+geometry_msgs/PoseWithCovarianceStamped clustered_pose
+int32 total_poses_collected
+int32 poses_in_cluster
+---
+# Feedback
+float64 collection_progress  # 0.0 to 1.0
+int32 poses_collected_so_far
+string current_status
