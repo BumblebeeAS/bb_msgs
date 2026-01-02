@@ -13,7 +13,6 @@ set(message_files
   msg/GoToResult.msg
   msg/Jellyfish2Pose.msg
   msg/JellyfishHeartbeat.msg
-  msg/Acceleration.msg
 )
 
 set(service_files
