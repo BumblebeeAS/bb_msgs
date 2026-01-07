@@ -10,7 +10,7 @@ int32 min_samples 1
 float64 cluster_selection_epsilon 0.05
 ---
 # Result
-geometry_msgs/PoseWithCovarianceStamped clustered_pose
+geometry_msgs/PoseStamped clustered_pose
 int32 total_poses_collected
 int32 poses_in_cluster
 ---
