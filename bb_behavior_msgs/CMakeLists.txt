@@ -26,6 +26,7 @@ set(action_files
   action/ControlledAscent.action
   action/ControlledSpin.action
   action/Mission.action
+  action/AlignAndCollectTins.action
 )
 
 if(BUILD_TESTING)
