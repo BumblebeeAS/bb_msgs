@@ -1,0 +1,4 @@
+geometry_msgs/Vector3 position # relative FRD frame
+bool enable_control_loop
+---
+bool success

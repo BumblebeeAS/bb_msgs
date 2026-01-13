@@ -19,6 +19,7 @@ set(message_files
 )
 
 set(service_files
+  srv/CalibTins.srv
 )
 
 set(action_files
