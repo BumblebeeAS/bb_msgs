@@ -1,0 +1,8 @@
+#### Request ####
+float32 timeout        # Maximum time to attempt landing (seconds)
+---
+#### Result ####
+bb_uav_msgs/GoToResult result
+---
+#### Feedback ####
+bb_uav_msgs/GoToFeedback feedback
