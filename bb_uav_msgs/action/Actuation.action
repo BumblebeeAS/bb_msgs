@@ -1,0 +1,9 @@
+#### Request ####
+bool enable_actuation    # True to enable actuation, false to disable
+---
+#### Result ####
+bool success
+string message
+---
+#### Feedback ####
+string message

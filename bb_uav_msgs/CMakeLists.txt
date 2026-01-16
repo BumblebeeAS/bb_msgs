@@ -27,6 +27,7 @@ set(action_files
   action/GoToPosition.action
   action/Takeoff.action
   action/Land.action
+  action/Actuation.action
 )
 
 if(BUILD_TESTING)
