@@ -21,6 +21,8 @@ set(message_files
   msg/ColorRgb.msg
   msg/PowerControl.msg
   msg/PowerStatus.msg
+  msg/SonarInfo.msg
+  msg/SurveyorInfo.msg
 )
 
 set(service_files
