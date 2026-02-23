@@ -10,4 +10,4 @@ string planner ""              # Planner to use to transform poses
 ### relativeOrientationGoal mutually exclusive with specifiedHeading, behaviour undefined ###
 
 ---
-int32 trajectory_id              # Returns a non-negative id if successful, otherwise, returns -1
+string trajectory_id             # Returns a uuid if successful, otherwise, returns empty string

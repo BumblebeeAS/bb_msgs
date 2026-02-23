@@ -30,7 +30,7 @@ float32 altitude_final
 float32 forward_final
 float32 sidemove_final
 uint8 status
-int32 trajectory_id # latest trajectory id
+string trajectory_id # latest trajectory id
 ---
 float32 roll_error
 float32 pitch_error
@@ -42,4 +42,4 @@ float32 sidemove_error
 float32 progress                # 0 to n for trajectory progress (n = number of waypoints), -1 for error
 float32 overall_progress         # 0 to 1 for trajectory progress
 uint8   risk_factor     # Risk (Slack) Factor in percentage. On a scale of 0% to 100%, representing norminal to "We are screwed"
-int32   trajectory_id   # current trajectory id
+string  trajectory_id   # current trajectory id
