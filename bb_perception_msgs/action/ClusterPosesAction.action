@@ -19,6 +19,7 @@ float64 spike_window_sec 1.0  # Rolling window used to compute detection rate
 float64 spike_rate_threshold 0.0  # Hz; <=0 disables spike detection
 float64 min_seconds_between_spike_clusters 0.5  # Throttle for mid-collection clustering
 int32 spike_min_poses 5  # Minimum poses required before a spike-triggered cluster runs
+int32 partial_cluster_max_size 100  # max snapshot size <= 0 to set unbounded
 ---
 # Result
 geometry_msgs/PoseStamped clustered_pose
