@@ -39,6 +39,7 @@ set(message_files
 
 set(service_files
   srv/ArucoToggleActivation.srv
+  srv/ClusterPosesSrv.srv
   srv/ClusterTfSrv.srv
   srv/GetObjectCount.srv
   srv/GetPingCount.srv

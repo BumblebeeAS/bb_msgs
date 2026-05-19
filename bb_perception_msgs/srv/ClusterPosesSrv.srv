@@ -1,0 +1,49 @@
+# Service for cluster_poses_service_node.
+#
+# enabled=True  -> start synchronized accumulation using the request fields below.
+# enabled=False -> stop, cluster the accumulated poses, publish + TF-broadcast.
+#                  All non-`enabled` request fields are ignored on stop; the
+#                  configuration baked in at the previous enable=True call is used.
+bool enabled
+
+# --- Output frame IDs (used when enabled=True) ---
+# TF frame ID for the spike-detected (mid-collection) intermediate cluster.
+# Empty falls back to "spike/cluster".
+string spike_cluster_frame_id ""
+# TF frame ID broadcast for the final clustered result on stop.
+# Empty falls back to "unknown/clustered".
+string clustered_child_frame_id ""
+
+# --- Synchronized subscriber configuration (baked at enable; cannot change while running) ---
+string odom_topic
+string pose_stamped_topic
+int32 sync_queue_size 100
+float64 sync_tolerance 0.05
+
+# --- Clustering parameters ---
+int32 min_poses 10
+int32 min_cluster_size 5
+int32 min_samples 5
+float64 cluster_selection_epsilon 0.0
+
+# --- Spike detection parameters ---
+float64 spike_tick_hz 10.0
+float64 spike_window_sec 1.0
+float64 spike_rate_threshold 3.0
+float64 min_seconds_between_spike_clusters 0.5
+int32 spike_min_poses 5
+
+# Confidence metric surfaced as primary_confidence on the spike status topic.
+uint8 CONFIDENCE_MEAN_PROBABILITY=0
+uint8 CONFIDENCE_CLUSTER_PERSISTENCE=1
+uint8 CONFIDENCE_INLIER_RATIO=2
+uint8 CONFIDENCE_POSITION_STD=3
+uint8 primary_confidence_metric 0
+
+# Max snapshot size for partial (mid-collection) clustering; <=0 means unbounded.
+int32 partial_cluster_max_size 100
+---
+bool is_enabled
+bool is_cluster_success
+int32 poses_in_cluster
+int32 total_poses_collected
