@@ -17,6 +17,7 @@ find_package(geometry_msgs REQUIRED)
 # find_package(<dependency> REQUIRED)
 set(message_files
   msg/BasicGPS.msg
+  msg/BeaconState.msg
   msg/LightSequence.msg
   msg/SearchAndReport.msg
   msg/Wildlife.msg
@@ -26,9 +27,12 @@ set(message_files
   msg/GateInfo.msg
   msg/GateStatuses.msg
   msg/PathDirection.msg
+  msg/IncidentZoneStatus.msg
+  msg/IncidentZoneReport.msg
 )
 
 set(service_files
+  srv/ClearIncident.srv
   srv/RobotxTaskStatusUpdate.srv
   srv/SetWildlifeStatus.srv
   srv/SetSearchAndReportStatus.srv
@@ -38,6 +42,7 @@ set(service_files
   srv/ComputeCompletion.srv
   srv/ConfigureLightSequenceTask.srv
   srv/ConfigurePathTask.srv
+  srv/SpawnIncident.srv
 )
 
 set(action_files
