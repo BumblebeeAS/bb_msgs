@@ -1,0 +1,8 @@
+string incident_id
+geometry_msgs/Pose pose
+float64 inflation_radius_m 10.0
+---
+bool success
+string message
+string[] affected_vehicles
+float64[] affected_distances_m
