@@ -9,25 +9,14 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, ros2-humble]
+    runs-on: ubuntu-22.04
     steps:
-      - name: Setup colcon workspace
-        run: source /opt/ros/humble/setup.bash
-
-      - name: Check out repo
-        uses: actions/checkout@v3
+      - name: Setup ROS
+        uses: ros-tooling/setup-ros@v0.7
         with:
-          path: src/bb_msgs
+          required-ros-distributions: humble
 
-      - name: Install dependencies
-        run: source /opt/ros/humble/setup.bash && rosdep update && rosdep install --from-paths src -i -r -y
-
-      - name: Build
-        run: source /opt/ros/humble/setup.bash && colcon build --merge-install
-      
-      - name: Test
-        run: source /opt/ros/humble/setup.bash && colcon test --merge-install
-      
-      - name: Log Tests if failed
-        if: failure()
-        run: colcon test-result --verbose
+      - name: Build and test
+        uses: ros-tooling/action-ros-ci@v0.4
+        with:
+          target-ros2-distro: humble
