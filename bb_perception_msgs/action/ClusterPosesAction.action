@@ -8,18 +8,6 @@ int32 min_poses 10  # Minimum number of synchronized poses required
 int32 min_cluster_size 2
 int32 min_samples 1
 float64 cluster_selection_epsilon 0.05
-
-# Spike detection (advisory; published on a separate topic, does NOT short-circuit the action)
-uint8 CONFIDENCE_MEAN_PROBABILITY=0
-uint8 CONFIDENCE_CLUSTER_PERSISTENCE=1
-uint8 CONFIDENCE_INLIER_RATIO=2
-uint8 CONFIDENCE_POSITION_STD=3
-uint8 primary_confidence_metric 0  # Which metric is surfaced as primary_confidence
-float64 spike_window_sec 1.0  # Rolling window used to compute detection rate
-float64 spike_rate_threshold 0.0  # Hz; <=0 disables spike detection
-float64 min_seconds_between_spike_clusters 0.5  # Throttle for mid-collection clustering
-int32 spike_min_poses 5  # Minimum poses required before a spike-triggered cluster runs
-int32 partial_cluster_max_size 100  # max snapshot size <= 0 to set unbounded
 ---
 # Result
 geometry_msgs/PoseStamped clustered_pose
@@ -27,10 +15,8 @@ int32 total_poses_collected
 int32 poses_in_cluster
 # Confidence breakdown for the final cluster
 float64 mean_probability
-float64 cluster_persistence
 float64 inlier_ratio
 float64 position_std
-float64 primary_confidence  # Value of the metric selected by primary_confidence_metric
 ---
 # Feedback
 float64 collection_progress  # 0.0 to 1.0
