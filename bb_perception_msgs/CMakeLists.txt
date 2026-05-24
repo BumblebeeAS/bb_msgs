@@ -32,8 +32,6 @@ set(message_files
   msg/ClusteredCloud.msg
   msg/ClusteredClouds.msg
 
-  msg/ClusterSpikeStatus.msg
-
   msg/PointCorrespondencesStamped.msg
 )
 
