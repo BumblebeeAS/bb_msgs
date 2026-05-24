@@ -10,26 +10,30 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    container:
+      image: ros:humble-ros-base
+    defaults:
+      run:
+        shell: bash
     steps:
-      - name: Setup ROS
-        uses: ros-tooling/setup-ros@v0.7
-        with:
-          required-ros-distributions: humble
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
           path: src/repo
 
-      - name: Discover packages
-        id: pkgs
+      - name: Install rosdeps
         run: |
-          names=$(colcon list --names-only --base-paths src/repo | tr '\n' ' ')
-          echo "names=$names" >> "$GITHUB_OUTPUT"
-          echo "Found: $names"
+          apt-get update
+          rosdep update
+          rosdep install --from-paths src/repo --ignore-src -y
 
-      - name: Build and test
-        uses: ros-tooling/action-ros-ci@v0.4
-        with:
-          target-ros2-distro: humble
-          package-name: ${{ steps.pkgs.outputs.names }}
+      - name: Build
+        run: |
+          source /opt/ros/humble/setup.bash
+          colcon build --event-handlers console_direct+
+
+      - name: Test
+        run: |
+          source /opt/ros/humble/setup.bash
+          colcon test --event-handlers console_direct+
+          colcon test-result --verbose
