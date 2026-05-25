@@ -10,13 +10,11 @@ bool enabled
 # TF frame ID for the spike-detected (mid-collection) intermediate cluster.
 # Empty falls back to "spike/cluster".
 string spike_cluster_frame_id ""
-# TF frame ID broadcast for the final clustered result on stop.
-# Empty falls back to "unknown/clustered".
-string clustered_child_frame_id ""
+string[] clustered_child_frame_id
 
 # --- Synchronized subscriber configuration (baked at enable; cannot change while running) ---
 string odom_topic
-string pose_stamped_topic
+string[] pose_stamped_topic
 int32 sync_queue_size 100
 float64 sync_tolerance 0.05
 
@@ -24,6 +22,7 @@ float64 sync_tolerance 0.05
 int32 min_poses 10
 int32 min_cluster_size 5
 int32 min_samples 5
+uint8 cluster_num 1
 float64 cluster_selection_epsilon 0.0
 
 # --- Spike detection parameters ---
