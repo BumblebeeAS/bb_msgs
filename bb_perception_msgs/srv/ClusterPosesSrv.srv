@@ -1,34 +1,17 @@
 # Service for cluster_poses_service_node.
 #
-# enabled=True  -> start synchronized accumulation using the request fields below.
+# enabled=True  -> start synchronized accumulation using `params`.
 # enabled=False -> stop, cluster the accumulated poses, publish + TF-broadcast.
-#                  All non-`enabled` request fields are ignored on stop; the
-#                  configuration baked in at the previous enable=True call is used.
+#                  `params` is ignored on stop; the configuration baked in at
+#                  the previous enable=True call is used.
 bool enabled
 
-# --- Output frame IDs (used when enabled=True) ---
-# TF frame ID broadcast for the final clustered result on stop.
-# Empty falls back to "unknown/clustered".
-string clustered_child_frame_id ""
-
-# --- Synchronized subscriber configuration (baked at enable; cannot change while running) ---
-string odom_topic
-string pose_stamped_topic
-int32 sync_queue_size 100
-float64 sync_tolerance 0.05
-
-# --- Clustering parameters ---
-int32 min_poses 10
-int32 min_cluster_size 5
-int32 min_samples 5
-float64 cluster_selection_epsilon 0.0
-
-# --- Periodic clustering ---
+ClusterPosesRequest params
 # When > 0, run clustering on the poses collected so far every
-# `cluster_interval` seconds while enabled and publish a ClusterPoseResult.
+# `cluster_interval` seconds while enabled and publish a ClusterPoseResultArray.
 float64 cluster_interval 0.0
 
 ---
 bool is_enabled
 bool is_cluster_success
-ClusterPoseResult cluster_result
+ClusterPoseResultArray cluster_results

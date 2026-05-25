@@ -31,7 +31,9 @@ set(message_files
 
   msg/ClusteredCloud.msg
   msg/ClusteredClouds.msg
+  msg/ClusterPosesRequest.msg
   msg/ClusterPoseResult.msg
+  msg/ClusterPoseResultArray.msg
 
   msg/PointCorrespondencesStamped.msg
 )
