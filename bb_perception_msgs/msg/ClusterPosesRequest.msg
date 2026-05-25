@@ -19,6 +19,9 @@ int32 min_poses 10
 int32 min_cluster_size 5
 int32 min_samples 5
 float64 cluster_selection_epsilon 0.0
+# Drop earlier detections when latest_detection_time - detection_time
+# is greater than or equal to this value. Set <= 0.0 to disable age filtering.
+float64 max_detection_age_s 0.0
 
 # --- Result selection ---
 # Number of clusters to return (and TFs to broadcast). The output array is
