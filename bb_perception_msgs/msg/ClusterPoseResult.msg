@@ -1,0 +1,5 @@
+geometry_msgs/PoseStamped clustered_pose
+float64 clustered_position_std
+int32 num_cluster_poses
+int32 num_input_poses
+float64 mean_probability

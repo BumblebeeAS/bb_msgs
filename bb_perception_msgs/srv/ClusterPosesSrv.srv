@@ -23,8 +23,12 @@ int32 min_cluster_size 5
 int32 min_samples 5
 float64 cluster_selection_epsilon 0.0
 
+# --- Periodic clustering ---
+# When > 0, run clustering on the poses collected so far every
+# `cluster_interval` seconds while enabled and publish a ClusterPoseResult.
+float64 cluster_interval 0.0
+
 ---
 bool is_enabled
 bool is_cluster_success
-int32 poses_in_cluster
-int32 total_poses_collected
+ClusterPoseResult cluster_result
