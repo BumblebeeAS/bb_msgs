@@ -1,0 +1,17 @@
+# Service for cluster_poses_service_node.
+#
+# enabled=True  -> start synchronized accumulation using `params`.
+# enabled=False -> stop, cluster the accumulated poses, publish + TF-broadcast.
+#                  `params` is ignored on stop; the configuration baked in at
+#                  the previous enable=True call is used.
+bool enabled
+
+ClusterPosesRequest params
+# When > 0, run clustering on the poses collected so far every
+# `cluster_interval` seconds while enabled and publish a ClusterPoseResultArray.
+float64 cluster_interval 0.0
+
+---
+bool is_enabled
+bool is_cluster_success
+ClusterPoseResultArray cluster_results
