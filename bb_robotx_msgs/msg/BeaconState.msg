@@ -15,3 +15,7 @@ uint8 COLOR_BLUE=3
 uint8 state
 uint8 first_color
 uint8 second_color
+
+# Target buoy instance name (matches the world-file <include><name>, e.g.
+# "sp_entry"). Empty string = apply to ALL safe_passage buoys.
+string buoy_id
