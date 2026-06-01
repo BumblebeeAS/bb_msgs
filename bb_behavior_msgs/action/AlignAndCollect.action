@@ -3,8 +3,10 @@ uint16 CLOSE = 0
 uint16 OPEN = 1
 
 #### Request ####
-string object_frame
-string object_frame_clustered
+# Pose topic (geometry_msgs/PoseStamped) of the object/item to align to,
+# e.g. /auv4/trash/nut/from_odom/pose. The server subscribes to this stream
+# and aligns the actuator to the latest pose.
+string object_pose_topic
 uint16 command
 
 # Maximum distance the PID Z setpoint can be from the current Z position
