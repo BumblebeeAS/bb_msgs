@@ -2,17 +2,24 @@
 
 # --- Subscriber configuration ---
 string odom_topic
-# Every listed PoseStamped topic feeds into the same accumulation buffer.
-# Each gets its own ApproximateTimeSynchronizer paired with `odom_topic`.
+# Listed PoseStamped topics. Each gets its own ApproximateTimeSynchronizer
+# paired with `odom_topic`. How these topics map onto clustering streams is
+# decided by `clustered_child_frame_ids` (see below).
 string[] pose_stamped_topics
 int32 sync_queue_size 100
 float64 sync_tolerance 0.05
 
 # --- Output frame IDs ---
-# Base TF frame ID broadcast for each clustered result. Each of the top_k
-# results is broadcast as "<clustered_child_frame_id>_<i>" ordered by 
-# `sort_key`.
-string clustered_child_frame_id "clustered_object"
+# Base TF frame ID(s) broadcast for the clustered results. The number of
+# entries selects how the pose topics are grouped into independent clustering
+# streams:
+#   - empty or 1 entry: every pose topic is merged and clustered as a single
+#     stream (defaults to "clustered_object" when empty).
+#   - one entry per pose topic: each topic is clustered independently under its
+#     own frame.
+# Within a stream, each of its top_k results is broadcast as
+# "<frame_id>_<i>" ordered by `sort_key`.
+string[] clustered_child_frame_ids
 
 # --- Clustering parameters ---
 int32 min_poses 10
