@@ -43,6 +43,7 @@ set(service_files
   srv/ConfigureLightSequenceTask.srv
   srv/ConfigurePathTask.srv
   srv/SpawnIncident.srv
+  srv/DockLedChoice.srv
 )
 
 set(action_files
