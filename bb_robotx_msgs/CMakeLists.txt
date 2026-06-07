@@ -44,6 +44,7 @@ set(service_files
   srv/ConfigurePathTask.srv
   srv/SpawnIncident.srv
   srv/DockLedChoice.srv
+  srv/PipeLedChoice.srv
 )
 
 set(action_files

@@ -1,0 +1,5 @@
+# Request: The mode choice ('rrrrg', 'rrrgr', 'rrgrr', 'rgrrr' , 'grrrr')
+string choice
+---
+# Response: The resulting command or confirmation
+string result
