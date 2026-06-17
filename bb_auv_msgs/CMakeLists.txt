@@ -19,6 +19,7 @@ set(message_files
   msg/ActuationControl.msg
   msg/ActuationStatus.msg
   msg/ColorRgb.msg
+  msg/Lights.msg
   msg/PowerControl.msg
   msg/PowerStatus.msg
 )

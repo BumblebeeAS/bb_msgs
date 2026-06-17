@@ -25,6 +25,7 @@ set(message_files
   msg/ElectricalStats.msg
   msg/Environment.msg
   msg/InternalSensorReadings.msg
+  msg/IvcSend.msg
   msg/OrinTemp.msg
   msg/PcbTempWithId.msg
   msg/PdbReadings.msg
