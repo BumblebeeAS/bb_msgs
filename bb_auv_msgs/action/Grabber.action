@@ -1,18 +1,18 @@
-uint16 GOAL_IGNORE = 0
-uint16 GOAL_CALIBRATE = 1
-uint16 GOAL_CLOSE = 5
-uint16 GOAL_OPEN = 65535
+uint8 GOAL_IGNORE = 0
+uint8 GOAL_CLOSE = 1      # default untuned, close to neutral to be safe dont use this to close
+uint8 GOAL_OPEN = 255     # max 255 but this is tuned
+uint8 GOAL_NEUTRAL = 128  # needs to be tuned neutral just enough to drop cant pick
 
-uint16 command
-uint16 tolerance
+uint8 command
+uint8 tolerance
 uint16 timeout_ms
 ---
-uint16 RESULT_ERROR = 0
-uint16 RESULT_CLOSE = 5
-uint16 RESULT_OPEN = 65535
+uint8 RESULT_ERROR = 0
+uint8 RESULT_CLOSE = 1
+uint8 RESULT_OPEN = 255
 
 bool success
-uint16 final_state
+uint8 final_state
 ---
 float32 progress
-uint16 current_state
+uint8 current_state
