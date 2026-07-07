@@ -1,0 +1,8 @@
+# Transmit a single outgoing IVC message over the acoustic modem.
+# The request wraps the existing IvcSend message so the COLOR_* enum lives in
+# one place (see bb_sensor_msgs/msg/IvcSend.msg).
+IvcSend msg
+---
+# True once the datagram was handed to the socket.
+bool success
+string message
