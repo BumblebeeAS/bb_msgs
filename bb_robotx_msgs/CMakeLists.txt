@@ -45,6 +45,7 @@ set(service_files
   srv/SpawnIncident.srv
   srv/DockLedChoice.srv
   srv/PipeLedChoice.srv
+  srv/WindowChoice.srv
 )
 
 set(action_files
