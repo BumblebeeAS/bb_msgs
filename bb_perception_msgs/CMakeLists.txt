@@ -50,6 +50,7 @@ set(service_files
   srv/MLGetConfigs.srv
   srv/MLGetDetection.srv
   srv/MLSetConfig.srv
+  srv/SlalomToggleTracking.srv
   srv/TrashToggleFrame.srv
 )
 
