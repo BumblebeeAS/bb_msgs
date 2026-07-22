@@ -1,0 +1,12 @@
+# Enable/disable the camera-only slalom structure particle filter.
+# enable=true resets the filter with the given per-run geometry and starts
+# accumulating; enable=false stops accumulating and final-publishes
+# (geometry fields are ignored on disable).
+bool enable
+float32 d1               # m, lateral offset of the layer-1 (middle) gate center
+float32 d2               # m, lateral offset of the layer-2 (far) gate center
+float32 d_uncertainty    # m, 1-sigma confidence in d1/d2 (inflates far-layer kernels)
+bool use_white           # false = red-pole-only scoring (noisy white detector)
+---
+bool success
+string message

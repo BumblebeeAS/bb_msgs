@@ -6,12 +6,11 @@ uint8 DROPPER_IGNORE = 0
 uint8 DROPPER_HOLD = 1
 uint8 DROPPER_FIRE = 2
 
-uint16 GRABBER_IGNORE = 0
-uint16 GRABBER_CALIBRATE = 1
-uint16 GRABBER_CLOSE = 5
-uint16 GRABBER_OPEN = 65535
+uint8 GRABBER_IGNORE = 0
+uint8 GRABBER_CLOSE = 1
+uint8 GRABBER_OPEN = 255
 
 uint8 dropper
 uint8 torpedo_one
 uint8 torpedo_two
-uint16 grabber
+uint8 grabber

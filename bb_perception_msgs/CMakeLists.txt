@@ -31,12 +31,18 @@ set(message_files
 
   msg/ClusteredCloud.msg
   msg/ClusteredClouds.msg
+  msg/ClusterPosesRequest.msg
+  msg/ClusterPoseResult.msg
+  msg/ClusterPoseResultArray.msg
+
+  msg/ClusterSpikeStatus.msg
 
   msg/PointCorrespondencesStamped.msg
 )
 
 set(service_files
   srv/ArucoToggleActivation.srv
+  srv/ClusterPosesSrv.srv
   srv/ClusterTfSrv.srv
   srv/GetObjectCount.srv
   srv/GetPingCount.srv
@@ -44,6 +50,7 @@ set(service_files
   srv/MLGetConfigs.srv
   srv/MLGetDetection.srv
   srv/MLSetConfig.srv
+  srv/SlalomToggleTracking.srv
   srv/TrashToggleFrame.srv
 )
 

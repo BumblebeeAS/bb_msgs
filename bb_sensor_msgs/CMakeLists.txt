@@ -25,6 +25,7 @@ set(message_files
   msg/ElectricalStats.msg
   msg/Environment.msg
   msg/InternalSensorReadings.msg
+  msg/IvcSend.msg
   msg/OrinTemp.msg
   msg/PcbTempWithId.msg
   msg/PdbReadings.msg
@@ -37,6 +38,7 @@ set(message_files
 
 set(service_files
   srv/SetCovariance.srv
+  srv/SendIvc.srv
 )
 
 set(action_files
