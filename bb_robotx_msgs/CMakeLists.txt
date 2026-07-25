@@ -43,12 +43,20 @@ set(service_files
   srv/ConfigureLightSequenceTask.srv
   srv/ConfigurePathTask.srv
   srv/SpawnIncident.srv
+  srv/Dock.srv
   srv/DockLedChoice.srv
   srv/PipeLedChoice.srv
   srv/WindowChoice.srv
 )
 
 set(action_files
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${message_files}
+  ${service_files}
+  ${action_files}
+  DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
 )
 
 if(BUILD_TESTING)
@@ -63,14 +71,6 @@ if(BUILD_TESTING)
   # a copyright and license is added to all source files
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
-  rosidl_generate_interfaces(${PROJECT_NAME}
-    ${message_files}
-    ${service_files}
-    ${action_files}
-
-    DEPENDENCIES builtin_interfaces std_msgs geometry_msgs # action_msgs
-    ADD_LINTER_TESTS
-  )
 endif()
 
 ament_export_dependencies(rosidl_default_runtime)
