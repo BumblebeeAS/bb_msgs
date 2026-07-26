@@ -11,6 +11,7 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -18,6 +19,8 @@ find_package(geometry_msgs REQUIRED)
 set(message_files
   msg/BasicGPS.msg
   msg/BeaconState.msg
+  msg/BuoyDetection.msg
+  msg/BuoyDetectionArray.msg
   msg/LightSequence.msg
   msg/SearchAndReport.msg
   msg/Wildlife.msg
@@ -47,6 +50,10 @@ set(service_files
   srv/DockLedChoice.srv
   srv/PipeLedChoice.srv
   srv/WindowChoice.srv
+  srv/SetGateManagerState.srv
+  srv/ExtractLocalGoal.srv
+  srv/GetEntry.srv
+  srv/GetExit.srv
 )
 
 set(action_files
@@ -56,7 +63,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   ${message_files}
   ${service_files}
   ${action_files}
-  DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
+  DEPENDENCIES builtin_interfaces std_msgs geometry_msgs sensor_msgs
 )
 
 if(BUILD_TESTING)

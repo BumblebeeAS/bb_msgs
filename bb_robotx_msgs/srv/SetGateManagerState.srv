@@ -1,0 +1,7 @@
+# Request
+bool enable
+float64 temporal_window  # <= 0.0 implies infinite temporal window (no pruning)
+---
+# Response
+bool success
+string message

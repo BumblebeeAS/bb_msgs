@@ -1,0 +1,8 @@
+# Request
+bool return_latlon
+---
+# Response
+bool found
+string message
+geometry_msgs/PoseStamped buoy_pose         # Always returned in world_frame_id ("map") stamped with current time
+sensor_msgs/NavSatFix buoy_latlon           # Populated if return_latlon == true and found == true

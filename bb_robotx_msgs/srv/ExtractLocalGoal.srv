@@ -1,0 +1,13 @@
+# Request
+bool input_is_latlon
+geometry_msgs/PoseStamped current_pose      # Used if input_is_latlon == false. Normalized to world_frame_id via TF2.
+sensor_msgs/NavSatFix current_latlon        # Used if input_is_latlon == true. Converted via /fromLL.
+float64 current_heading                     # Vehicle heading in radians (ENU). Override or fallback when input_is_latlon == true.
+bool return_latlon                          # If true, goal_latlon is populated via /toLL.
+---
+# Response
+bool success
+string message
+string goal_type                            # "GATE_PAIR", "SINGULAR_BUOY", "EXIT_BUOY", or "INVALID"
+geometry_msgs/PoseStamped goal_pose         # Always returned in world_frame_id ("map") stamped with current time
+sensor_msgs/NavSatFix goal_latlon           # Populated if return_latlon == true
