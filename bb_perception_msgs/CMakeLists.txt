@@ -31,7 +31,6 @@ set(message_files
   msg/ClusterPosesRequest.msg
   msg/ClusteredCloud.msg
   msg/ClusteredClouds.msg
-  msg/ClusterPosesRequest.msg
   msg/ClusterPoseResult.msg
   msg/ClusterPoseResultArray.msg
 
@@ -53,7 +52,6 @@ set(service_files
   srv/MLSetConfig.srv
   srv/SlalomToggleTracking.srv
   srv/TrashToggleFrame.srv
-  srv/ClusterPosesSrv.srv
 )
 
 set(action_files
