@@ -38,6 +38,7 @@ set(service_files
 
 set(action_files
   action/Locomotion.action
+  action/Encircle.action
 )
 
 if(BUILD_TESTING)

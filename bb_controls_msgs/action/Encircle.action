@@ -1,0 +1,36 @@
+# Encircle action: drive a circular arc and confirm arrival within tolerance.
+# Result and Feedback mirror Locomotion.action so the two actions can share execution logic.
+float32 turn_angle               # The desired angle of turn (degs), +ve cw, -ve ccw
+float32 radius                   # In Metres from the origin
+float32 tangent_offset           # Angle offset for facing direction relative to facing the centre, in degs, +ve cw, -ve ccw
+float32 spiral_proportion        # 0 to 1. 0 = go out to radius first then encircle, 1 = move radially and angularly simultaneously (spiral).
+float32 forward_tolerance
+float32 sidemove_tolerance
+float32 heading_tolerance
+float32 depth_tolerance
+int32 max_correction_time 30 # max time (s) for feedback to correct position error before goal returns, after feedforward has completed traj
+---
+uint8 STATUS_SUCCESS = 0
+uint8 STATUS_FAILURE = 1
+uint8 STATUS_ABORTED = 2
+float32 roll_final
+float32 pitch_final
+float32 heading_final
+float32 depth_final
+float32 altitude_final
+float32 forward_final
+float32 sidemove_final
+uint8 status
+string trajectory_id # latest trajectory id
+---
+float32 roll_error
+float32 pitch_error
+float32 heading_error
+float32 depth_error
+float32 altitude_error
+float32 forward_error
+float32 sidemove_error
+float32 progress                # 0 to n for trajectory progress (n = number of waypoints), -1 for error
+float32 overall_progress         # 0 to 1 for trajectory progress
+uint8   risk_factor     # Risk (Slack) Factor in percentage. On a scale of 0% to 100%, representing norminal to "We are screwed"
+string  trajectory_id   # current trajectory id
