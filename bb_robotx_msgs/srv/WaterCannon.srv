@@ -1,0 +1,12 @@
+bool enabled
+float64 muzzle_velocity
+float64 fire_rate
+float64 droplet_radius
+float64 droplet_lifetime
+float64 spawn_offsetx
+float64 spawn_offsety
+float64 spawn_offsetz
+---
+bool success
+bool enabled
+string message

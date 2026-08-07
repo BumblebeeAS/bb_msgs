@@ -54,6 +54,7 @@ set(service_files
   srv/ExtractLocalGoal.srv
   srv/GetEntry.srv
   srv/GetExit.srv
+  srv/WaterCannon.srv
 )
 
 set(action_files
