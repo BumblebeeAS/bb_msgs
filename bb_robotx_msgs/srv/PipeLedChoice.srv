@@ -1,4 +1,4 @@
-# Request: The mode choice ('rrrrg', 'rrrgr', 'rrgrr', 'rgrrr' , 'grrrr')
+# Request: The mode choice ('ggggr', 'gggrg', 'ggrgg', 'grggg' , 'rgggg')
 string choice
 ---
 # Response: The resulting command or confirmation
