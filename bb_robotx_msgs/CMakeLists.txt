@@ -28,6 +28,7 @@ set(message_files
   msg/WildlifeSequence.msg
   msg/RobotxTaskStatus.msg
   msg/GateInfo.msg
+  msg/Heartbeat.msg
   msg/GateStatuses.msg
   msg/PathDirection.msg
   msg/IncidentZoneStatus.msg
