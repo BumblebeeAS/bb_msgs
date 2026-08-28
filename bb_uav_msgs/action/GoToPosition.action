@@ -3,9 +3,12 @@ float32 x                   # Target x position (NED frame)
 float32 y                   # Target y position (NED frame)
 float32 z                   # Target z position (NED frame)
 bool relative               # If true, x/y/z are offsets from current position
+bool specified_yaw          # If true, command yaw; if false, PX4 handles heading (yaw ignored)
+float32 yaw                 # Target heading (radians, NED); used only when specified_yaw is true
 float32 x_threshold         # Position threshold in x (meters)
 float32 y_threshold         # Position threshold in y (meters)
 float32 z_threshold         # Position threshold in z (meters)
+float32 yaw_threshold       # Heading tolerance (radians); used only when specified_yaw is true
 ---
 #### Result ####
 bb_uav_msgs/GoToResult result
