@@ -11,12 +11,16 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 set(message_files
   msg/BasicGPS.msg
+  msg/BeaconState.msg
+  msg/BuoyDetection.msg
+  msg/BuoyDetectionArray.msg
   msg/LightSequence.msg
   msg/SearchAndReport.msg
   msg/Wildlife.msg
@@ -26,9 +30,12 @@ set(message_files
   msg/GateInfo.msg
   msg/GateStatuses.msg
   msg/PathDirection.msg
+  msg/IncidentZoneStatus.msg
+  msg/IncidentZoneReport.msg
 )
 
 set(service_files
+  srv/ClearIncident.srv
   srv/RobotxTaskStatusUpdate.srv
   srv/SetWildlifeStatus.srv
   srv/SetSearchAndReportStatus.srv
@@ -38,9 +45,26 @@ set(service_files
   srv/ComputeCompletion.srv
   srv/ConfigureLightSequenceTask.srv
   srv/ConfigurePathTask.srv
+  srv/SpawnIncident.srv
+  srv/Dock.srv
+  srv/DockLedChoice.srv
+  srv/PipeLedChoice.srv
+  srv/WindowChoice.srv
+  srv/SetGateManagerState.srv
+  srv/ExtractLocalGoal.srv
+  srv/GetEntry.srv
+  srv/GetExit.srv
+  srv/WaterCannon.srv
 )
 
 set(action_files
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${message_files}
+  ${service_files}
+  ${action_files}
+  DEPENDENCIES builtin_interfaces std_msgs geometry_msgs sensor_msgs
 )
 
 if(BUILD_TESTING)
@@ -55,14 +79,6 @@ if(BUILD_TESTING)
   # a copyright and license is added to all source files
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
-  rosidl_generate_interfaces(${PROJECT_NAME}
-    ${message_files}
-    ${service_files}
-    ${action_files}
-
-    DEPENDENCIES builtin_interfaces std_msgs geometry_msgs # action_msgs
-    ADD_LINTER_TESTS
-  )
 endif()
 
 ament_export_dependencies(rosidl_default_runtime)

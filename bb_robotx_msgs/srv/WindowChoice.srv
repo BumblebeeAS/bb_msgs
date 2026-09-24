@@ -1,0 +1,6 @@
+# Request: The mode choice ('left', 'centre', or 'right')
+string dock
+string window
+---
+# Response: The resulting command or confirmation
+string result

@@ -28,10 +28,9 @@ set(message_files
   msg/DetectedObject3D.msg
   msg/DetectedObject3DArray.msg
   msg/ObjectKinematics.msg
-
+  msg/ClusterPosesRequest.msg
   msg/ClusteredCloud.msg
   msg/ClusteredClouds.msg
-  msg/ClusterPosesRequest.msg
   msg/ClusterPoseResult.msg
   msg/ClusterPoseResultArray.msg
 
@@ -44,6 +43,7 @@ set(service_files
   srv/ArucoToggleActivation.srv
   srv/ClusterPosesSrv.srv
   srv/ClusterTfSrv.srv
+  srv/GetDockPose.srv
   srv/GetObjectCount.srv
   srv/GetPingCount.srv
   srv/IMPoseEstimatorToggleTemplate.srv
