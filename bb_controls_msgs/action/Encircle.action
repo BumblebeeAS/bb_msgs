@@ -1,18 +1,9 @@
-int8 DEPTH_MODE_DEPTH = 0
-int8 DEPTH_MODE_ALTITUDE = 1
-bool move_rel                # If true, forward/sidemove setpoints are offsets in the vehicle's yaw frame at request time (every waypoint, not chained); otherwise world frame
-bool depth_rel               # If true, depth setpoints are offsets from the depth at request time. Resulting depth is clamped to >= 0
-bool heading_rel             # If true, heading setpoints are offsets from the heading at request time. Roll and pitch are always absolute. Ignored when specified_heading is false
-int8 depth_ctrl
-bool specified_heading true  # If false, heading setpoints and heading_rel are ignored: the vehicle turns to face each waypoint before translating to it
-string planner ""              # Planner to use to transform poses
-float32[] roll_setpoints
-float32[] pitch_setpoints
-float32[] heading_setpoints
-float32[] depth_setpoints
-float32[] altitude_setpoints
-float32[] forward_setpoints
-float32[] sidemove_setpoints
+# Encircle action: drive a circular arc and confirm arrival within tolerance.
+# Result and Feedback mirror Locomotion.action so the two actions can share execution logic.
+float32 turn_angle               # The desired angle of turn (degs), +ve cw, -ve ccw
+float32 radius                   # In Metres from the origin
+float32 tangent_offset           # Angle offset for facing direction relative to facing the centre, in degs, +ve cw, -ve ccw
+float32 spiral_proportion        # 0 to 1. 0 = go out to radius first then encircle, 1 = move radially and angularly simultaneously (spiral).
 float32 forward_tolerance
 float32 sidemove_tolerance
 float32 heading_tolerance
