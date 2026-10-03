@@ -7,7 +7,7 @@ bool last_goal_anchor_only false
 int32 max_replans 20  # consecutive planning failures allowed before aborting
 
 # Locomotion Passthrough parameters
-bool specified_heading true
+bool specified_heading false
 bool ignore_depth true
 float32 depth_override_value
 float32 forward_tolerance 0.3
