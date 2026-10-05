@@ -1,20 +1,20 @@
 # Goal
 geometry_msgs/PoseStamped goal_pose
-string anchor_frame_name "base_link"
+string anchor_frame_name ""  # empty uses the tracker's base_link_frame_id
 bool last_goal_anchor_only false
 
 # Retry & Replanning Logic
-int32 max_replans 3
+int32 max_replans 20  # consecutive planning failures allowed before aborting
 
 # Locomotion Passthrough parameters
 bool specified_heading true
-bool ignore_depth false
+bool ignore_depth true
 float32 depth_override_value
-float32 forward_tolerance
-float32 sidemove_tolerance
-float32 heading_tolerance
-float32 depth_tolerance
-int32 stabilize_duration
+float32 forward_tolerance 0.3
+float32 sidemove_tolerance 0.3
+float32 heading_tolerance 5.0  # degrees
+float32 depth_tolerance 1.0
+int32 stabilize_duration 2  # final window only
 ---
 # Result
 uint8 STATUS_SUCCESS = 0

@@ -1,10 +1,10 @@
 int8 DEPTH_MODE_DEPTH = 0
 int8 DEPTH_MODE_ALTITUDE = 1
-bool move_rel
-bool depth_rel
-bool heading_rel
+bool move_rel                # If true, forward/sidemove setpoints are offsets in the vehicle's yaw frame at request time (every waypoint, not chained); otherwise world frame
+bool depth_rel               # If true, depth setpoints are offsets from the depth at request time. Resulting depth is clamped to >= 0
+bool heading_rel             # If true, heading setpoints are offsets from the heading at request time. Roll and pitch are always absolute. Ignored when specified_heading is false
 int8 depth_ctrl
-bool specified_heading true
+bool specified_heading true  # If false, heading setpoints and heading_rel are ignored: the vehicle turns to face each waypoint before translating to it
 string planner ""              # Planner to use to transform poses
 float32[] roll_setpoints
 float32[] pitch_setpoints

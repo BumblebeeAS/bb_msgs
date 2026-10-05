@@ -21,6 +21,7 @@ set(message_files
   msg/BatteryWithId.msg
   msg/Beam.msg
   msg/BeamMatrixStamped.msg
+  msg/BeamStatus.msg
   msg/CpuTemp.msg
   msg/ElectricalStats.msg
   msg/Environment.msg
