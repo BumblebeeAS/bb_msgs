@@ -6,3 +6,4 @@ float32 progress                # 0 to n for trajectory progress (n = number of 
 float32 overall_progress         # 0 to 1 for trajectory progress
 string  trajectory_id            # Current trajectory id (uuid string)
 uint8   risk_factor              # Risk (Slack) Factor in percentage. On a scale of 0% to 100%, representing norminal to "We are screwed"
+geometry_msgs/Wrench integral_force  # Integral term contribution to the commanded body wrench (N / Nm), body frame
