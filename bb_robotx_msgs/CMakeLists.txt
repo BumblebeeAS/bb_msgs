@@ -28,10 +28,17 @@ set(message_files
   msg/WildlifeSequence.msg
   msg/RobotxTaskStatus.msg
   msg/GateInfo.msg
+  msg/Heartbeat.msg
   msg/GateStatuses.msg
   msg/PathDirection.msg
   msg/IncidentZoneStatus.msg
   msg/IncidentZoneReport.msg
+  msg/SafePassageBuoy.msg
+  msg/SafePassageReport.msg
+  msg/PipelineSurveyReport.msg
+  msg/ResourceDeliveryRequest.msg
+  msg/DockingReport.msg
+  msg/FirefightingReport.msg
 )
 
 set(service_files
