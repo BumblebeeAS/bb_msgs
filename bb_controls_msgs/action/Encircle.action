@@ -1,9 +1,12 @@
 # Encircle action: drive a circular arc and confirm arrival within tolerance.
 # Result and Feedback mirror Locomotion.action so the two actions can share execution logic.
-float32 turn_angle               # The desired angle of turn (degs), +ve cw, -ve ccw
-float32 radius                   # In Metres from the origin
-float32 tangent_offset           # Angle offset for facing direction relative to facing the centre, in degs, +ve cw, -ve ccw
-float32 spiral_proportion        # 0 to 1. 0 = go out to radius first then encircle, 1 = move radially and angularly simultaneously (spiral).
+float32 turn_angle               # Angle swept about the centre (degs), +ve cw, -ve ccw seen from above
+float32 radius                   # Circle radius (m)
+float32 centre_x                 # World-frame circle centre, north (m)
+float32 centre_y                 # World-frame circle centre, east (m)
+float32 tangent_offset           # Heading offset from the direction of travel (degs), +ve cw, -ve ccw
+float32 spiral_proportion        # 0 to 1: fraction of turn_angle swept while reaching the circle. 0 = reach the circle first, 1 = spiral the whole way. Ignored when specified_heading is false
+bool specified_heading true      # If false, the vehicle turns to face the circle, drives straight onto it (tangentially from outside, radially from inside) and turns to the tangent offset before sweeping turn_angle
 float32 forward_tolerance
 float32 sidemove_tolerance
 float32 heading_tolerance
@@ -30,7 +33,7 @@ float32 depth_error
 float32 altitude_error
 float32 forward_error
 float32 sidemove_error
-float32 progress                # 0 to n for trajectory progress (n = number of waypoints), -1 for error
+float32 progress                # 0 to n through the trajectory's n profile segments (turns count), -1 when no mission is active
 float32 overall_progress         # 0 to 1 for trajectory progress
 uint8   risk_factor     # Risk (Slack) Factor in percentage. On a scale of 0% to 100%, representing norminal to "We are screwed"
 string  trajectory_id   # current trajectory id

@@ -2,10 +2,10 @@ geometry_msgs/Vector3[] position_poses      # XYZ in metres. Must be the same le
 geometry_msgs/Vector3[] orientation_rpy     # RPY in degrees. Must be the same length as position_poses
 bool relative_xy_position_goal  # If true, XY poses are offsets in the vehicle's yaw frame at request time (every waypoint, not chained); otherwise world frame
 bool relative_z_position_goal   # If true, Z poses are offsets from the depth at request time; otherwise world frame. Resulting depth is clamped to >= 0
-bool relative_orientation_goal  # If true, yaw setpoints are offsets from the heading at request time; otherwise world frame. Roll and pitch are always absolute. Ignored when specified_heading is 0
+bool relative_orientation_goal  # If true, yaw setpoints are offsets from the heading at request time; otherwise world frame. Roll and pitch are always absolute
 bool set_faster_limits          # Faster velocity, acceleration and jerk limits
 bool is_altitude_tracking       # If true, use altitude tracking
-uint8 specified_heading         # If 0, yaw setpoints and relative_orientation_goal are ignored: the vehicle turns to face each waypoint before translating to it
+uint8 specified_heading         # If 0, intermediate yaw setpoints are ignored: the vehicle turns to face each waypoint before translating to it, then turns to the last yaw setpoint
 string planner ""               # Planner to use to transform poses
 
 ---
