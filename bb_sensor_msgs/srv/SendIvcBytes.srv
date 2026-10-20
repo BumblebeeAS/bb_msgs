@@ -1,0 +1,9 @@
+# Transmit raw payload bytes over the acoustic modem (no colour/intensity
+# framing). acoustics_server sends <destination> + chr(31) + data.
+# destination is the modem address-book name, e.g. "AUV4", "AUV5", "ASV5".
+string destination
+uint8[] data
+---
+# True once the datagram was handed to the socket.
+bool success
+string message

@@ -40,6 +40,7 @@ set(message_files
 set(service_files
   srv/SetCovariance.srv
   srv/SendIvc.srv
+  srv/SendIvcBytes.srv
 )
 
 set(action_files
