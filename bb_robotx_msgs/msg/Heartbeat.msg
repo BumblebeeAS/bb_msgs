@@ -11,5 +11,5 @@ float32 roll_deg
 float32 pitch_deg
 float32 altitude_hae_m  # UAV only
 float32 depth_m         # UUV only
-string current_task     # unknown|none|safe-passage|infra-survey-repair|coordinated-logistics|dynamic-incident
+string current_task     # none|safe_passage|infra_survey_repair|coordinated_logistics|dynamic_incident
 string flight_phase     # unknown|grounded|airborne (UAV only)

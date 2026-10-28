@@ -8,7 +8,7 @@
 string vehicle_id
 
 # Which task this delivery belongs to:
-# unknown|none|safe-passage|infra-survey-repair|coordinated-logistics|dynamic-incident
+# none|safe_passage|infra_survey_repair|coordinated_logistics|dynamic_incident
 string task
 
 # Field order matches the flash signal order: resource color flashes first,
