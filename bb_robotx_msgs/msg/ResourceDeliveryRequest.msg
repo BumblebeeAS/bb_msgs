@@ -5,7 +5,6 @@
 # Publish on /robotx/task_report/resource_delivery. Sent by whichever vehicle
 # reads the LED code; the UAV sends the same message again, echoing both
 # colors, when it begins the delivery.
-string vehicle_id
 
 # Which task this delivery belongs to:
 # none|safe_passage|infra_survey_repair|coordinated_logistics|dynamic_incident

@@ -6,7 +6,6 @@
 # (and, at Advanced tier, the repair) completes — a UUV cannot transmit while
 # submerged, so in practice this goes out on surfacing. Segments describe the
 # pipeline as surveyed, not any post-repair state.
-string vehicle_id
 
 # The active (green) buoy — the pinger end that segments are ordered from.
 float64 active_buoy_latitude
