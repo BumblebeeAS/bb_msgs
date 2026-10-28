@@ -2,7 +2,7 @@
 # plus the identified entry and exit points. Relayed by the OCS dashboard to
 # RoboCommand as a robocommand.robotx.v1.SafePassageReport.
 #
-# Publish on /robotx/task_report/safe_passage. Resend whenever your detection
+# Publish on /<vehicle>/report/safe_passage. Resend whenever your detection
 # updates — at Disruptive tier buoy colors change during the run, and RC
 # scores the most recent report.
 

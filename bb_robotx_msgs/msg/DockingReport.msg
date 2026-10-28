@@ -2,7 +2,7 @@
 # (green) bay. Relayed by the OCS dashboard to RoboCommand as a
 # robocommand.robotx.v1.DockingReport.
 #
-# Publish on /robotx/task_report/docking. This also signals readiness for
+# Publish on /<vehicle>/report/docking. This also signals readiness for
 # tasking — RC activates that bay's window light on receipt.
 
 # Bay number the vehicle docked in (1-3).

@@ -2,7 +2,7 @@
 # a resource delivery request read off a flashing light signal. Relayed by the
 # OCS dashboard to RoboCommand as a robocommand.robotx.v1.ResourceDeliveryRequest.
 #
-# Publish on /robotx/task_report/resource_delivery. Sent by whichever vehicle
+# Publish on /<vehicle>/report/resource_delivery. Sent by whichever vehicle
 # reads the LED code; the UAV sends the same message again, echoing both
 # colors, when it begins the delivery.
 

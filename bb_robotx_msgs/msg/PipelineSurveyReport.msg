@@ -2,7 +2,7 @@
 # survey result. Relayed by the OCS dashboard to RoboCommand as a
 # robocommand.robotx.v1.PipelineSurveyReport.
 #
-# Publish on /robotx/task_report/pipeline_survey. Sent once, after the survey
+# Publish on /<vehicle>/report/pipeline_survey. Sent once, after the survey
 # (and, at Advanced tier, the repair) completes — a UUV cannot transmit while
 # submerged, so in practice this goes out on surfacing. Segments describe the
 # pipeline as surveyed, not any post-repair state.
