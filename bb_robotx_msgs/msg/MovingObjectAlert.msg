@@ -1,9 +1,10 @@
 # RobotX 2026 Task 4 (Disruptive): a moving surface object to keep clear of.
 # Relayed by the OCS from a robocommand.robotx.v1.MovingObjectAlert.
 #
-# Received on /<vehicle>/task4/moving_object_alert. A newer alert replaces
-# the previous one; RoboCommand sends no despawn. Project the object from
-# stamp: position + speed_mps * (now - stamp) along heading_deg.
+# Received on /<vehicle>/task4/moving_object_alert (latched, last 10). Each
+# alert is a separate object; RoboCommand sends no despawn, so drop it once it
+# has left play. Project the object from stamp:
+# position + speed_mps * (now - stamp) along heading_deg.
 
 uint32 seq                        # RxCommand seq
 builtin_interfaces/Time stamp     # when the OCS received the alert
