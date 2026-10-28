@@ -8,8 +8,7 @@
 # pipeline as surveyed, not any post-repair state.
 
 # The active (green) buoy — the pinger end that segments are ordered from.
-float64 active_buoy_latitude
-float64 active_buoy_longitude
+LatLng active_buoy_position
 
 # Segment statuses in order from the active buoy end.
 # Each entry: unknown|intact|damaged  (intact = green light, damaged = red)
