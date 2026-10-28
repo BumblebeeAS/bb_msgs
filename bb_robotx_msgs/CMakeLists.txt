@@ -42,6 +42,7 @@ set(message_files
   msg/LatLng.msg
   msg/IncidentAck.msg
   msg/ReadinessReport.msg
+  msg/MovingObjectAlert.msg
 )
 
 set(service_files
