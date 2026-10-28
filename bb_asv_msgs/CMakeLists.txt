@@ -17,7 +17,6 @@ find_package(std_msgs REQUIRED)
 set(message_files
   msg/ASVActuationState.msg
   msg/ASVControlLink.msg
-  msg/ASVEStopState.msg
   msg/ASVHeartbeat.msg
   msg/ASVLogicStatus.msg
   msg/ASVMainHullStatus.msg
