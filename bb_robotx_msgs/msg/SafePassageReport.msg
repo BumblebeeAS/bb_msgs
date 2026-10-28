@@ -5,12 +5,9 @@
 # Publish on /robotx/task_report/safe_passage. Resend whenever your detection
 # updates — at Disruptive tier buoy colors change during the run, and RC
 # scores the most recent report.
-string vehicle_id
 
 # Location of the flashing-blue (entry) and steady-blue (exit) buoys.
-float64 entry_latitude
-float64 entry_longitude
-float64 exit_latitude
-float64 exit_longitude
+LatLng entry_position
+LatLng exit_position
 
 SafePassageBuoy[] buoys

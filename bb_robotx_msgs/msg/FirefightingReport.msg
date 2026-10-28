@@ -3,7 +3,6 @@
 # dashboard to RoboCommand as a robocommand.robotx.v1.FirefightingReport.
 #
 # Publish on /robotx/task_report/firefighting.
-string vehicle_id
 
-# Window number where firefighting was completed.
+# Window where firefighting was completed: 1 = upper, 2 = lower.
 uint32 window_id

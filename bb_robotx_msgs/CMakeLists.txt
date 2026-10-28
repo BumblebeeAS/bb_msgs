@@ -39,6 +39,9 @@ set(message_files
   msg/ResourceDeliveryRequest.msg
   msg/DockingReport.msg
   msg/FirefightingReport.msg
+  msg/LatLng.msg
+  msg/IncidentAck.msg
+  msg/ReadinessReport.msg
 )
 
 set(service_files
