@@ -1,0 +1,9 @@
+# Set the vehicle's Heartbeat.current_task through the OCS (ocs4_gui bridge), on /<vehicle>/set_task.
+# none | safe_passage | infra_survey_repair | coordinated_logistics | dynamic_incident; none ends the attempt.
+# Succeeds once a heartbeat carrying it has gone out to RoboCommand; aborts with error otherwise.
+string task
+---
+uint32 seq      # first heartbeat seq carrying it
+string error    # why it was not confirmed
+---
+string status   # progress, e.g. "sent to OCS"

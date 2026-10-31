@@ -76,6 +76,7 @@ set(action_files
   action/SendFirefightingReport.action
   action/SendIncidentAck.action
   action/SendReadinessReport.action
+  action/SetTask.action
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
