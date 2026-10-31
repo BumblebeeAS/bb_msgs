@@ -69,6 +69,13 @@ set(service_files
 )
 
 set(action_files
+  action/SendSafePassageReport.action
+  action/SendPipelineSurveyReport.action
+  action/SendResourceDeliveryRequest.action
+  action/SendDockingReport.action
+  action/SendFirefightingReport.action
+  action/SendIncidentAck.action
+  action/SendReadinessReport.action
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}

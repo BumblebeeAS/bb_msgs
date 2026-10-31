@@ -1,0 +1,8 @@
+# Send a ResourceDeliveryRequest to RoboCommand through the OCS (ocs4_gui bridge), on /<vehicle>/report/resource_delivery.
+# Succeeds once RoboCommand's broker has it (RoboCommand itself never replies); aborts with error otherwise.
+ResourceDeliveryRequest report
+---
+uint32 seq      # RxReport seq, when sent
+string error    # why it was not sent
+---
+string status   # progress, e.g. "sent to OCS"
