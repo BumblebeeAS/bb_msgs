@@ -1,5 +1,10 @@
 # Goal
-geometry_msgs/PoseStamped goal_pose
+uint8 GOAL_POSE=0
+uint8 GOAL_LL=1
+uint8 goal_type 0
+geometry_msgs/PoseStamped goal_pose  # GOAL_POSE
+geographic_msgs/GeoPoint goal_ll  # GOAL_LL, resolved through fromLL
+float64 goal_heading  # GOAL_LL, rad, ENU yaw in the map frame
 string anchor_frame_name ""  # empty uses the tracker's base_link_frame_id
 bool last_goal_anchor_only false
 
@@ -12,7 +17,7 @@ bool ignore_depth true
 float32 depth_override_value
 float32 forward_tolerance 0.3
 float32 sidemove_tolerance 0.3
-float32 heading_tolerance 5.0  # degrees
+float32 heading_tolerance 0.1745  # rad
 float32 depth_tolerance 1.0
 int32 stabilize_duration 2  # final window only
 ---
