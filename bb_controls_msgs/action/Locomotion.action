@@ -18,6 +18,9 @@ float32 sidemove_tolerance
 float32 heading_tolerance
 float32 depth_tolerance
 int32 max_correction_time 30 # max time (s) for feedback to correct position error before goal returns, after feedforward has completed traj
+float32 max_xy_vel -1.0          # m/s. Capped at the configured limit, negative uses that limit, 0 is rejected
+float32 max_z_vel -1.0           # m/s. Capped at the configured limit, negative uses that limit, 0 is rejected
+float32 max_rpy_vel -1.0         # degs/s, shared by roll, pitch and yaw. Capped at the configured limit, negative uses that limit, 0 is rejected
 ---
 uint8 STATUS_SUCCESS = 0
 uint8 STATUS_FAILURE = 1

@@ -5,6 +5,9 @@ float32 centre_y                 # World-frame circle centre, east (m)
 float32 tangent_offset           # Heading offset from the direction of travel (degs), +ve cw, -ve ccw
 float32 spiral_proportion        # 0 to 1: fraction of turn_angle swept while reaching the circle. 0 = reach the circle first, 1 = spiral the whole way. Ignored when specified_heading is false
 bool specified_heading true      # If false, the vehicle turns to face the circle, drives straight onto it (tangentially from outside, radially from inside) and turns to the tangent offset before sweeping turn_angle
+float32 max_xy_vel -1.0          # m/s. Capped at the configured limit, negative uses that limit, 0 is rejected
+float32 max_z_vel -1.0           # m/s. Capped at the configured limit, negative uses that limit, 0 is rejected
+float32 max_rpy_vel -1.0         # degs/s, shared by roll, pitch and yaw. Capped at the configured limit, negative uses that limit, 0 is rejected
 
 ---
 string trajectory_id             # Returns a uuid if successful, otherwise, returns empty string
