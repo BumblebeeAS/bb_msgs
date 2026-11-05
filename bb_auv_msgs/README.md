@@ -5,6 +5,7 @@ This package contains the messages used by the BBAUV system (Tested up to AUV4.*
 ## Messages
 
 The following messages are defined in this package:
+- `AUVControlLink`: A message used to represent control link status - frsky mode/rssi.
 - `OrinTemp`: A message used to pass orin stats from orin to sbc
 
 ## Services

@@ -18,6 +18,7 @@ find_package(std_msgs REQUIRED)
 set(message_files
   msg/ActuationControl.msg
   msg/ActuationStatus.msg
+  msg/AUVControlLink.msg
   msg/ColorRgb.msg
   msg/Lights.msg
   msg/PowerControl.msg
