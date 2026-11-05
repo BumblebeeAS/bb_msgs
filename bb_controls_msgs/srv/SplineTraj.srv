@@ -7,6 +7,9 @@ bool set_faster_limits          # Faster velocity, acceleration and jerk limits
 bool is_altitude_tracking       # If true, use altitude tracking
 uint8 specified_heading         # If 0, intermediate yaw setpoints are ignored: the vehicle turns to face each waypoint before translating to it, then turns to the last yaw setpoint
 string planner ""               # Planner to use to transform poses
+float32 max_xy_vel -1.0         # m/s. Capped at the configured limit, negative uses that limit, 0 is rejected
+float32 max_z_vel -1.0          # m/s. Capped at the configured limit, negative uses that limit, 0 is rejected
+float32 max_rpy_vel -1.0        # degs/s, shared by roll, pitch and yaw. Capped at the configured limit, negative uses that limit, 0 is rejected
 
 ---
 string trajectory_id             # Returns a uuid if successful, otherwise, returns empty string
