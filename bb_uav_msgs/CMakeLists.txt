@@ -9,6 +9,9 @@ find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
 set(message_files
+  msg/Geofence.msg
+  msg/GeofenceCircle.msg
+  msg/GeofencePolygon.msg
   msg/GoToFeedback.msg
   msg/GoToResult.msg
   msg/Jellyfish2Pose.msg
