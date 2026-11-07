@@ -1,0 +1,8 @@
+# Set this vehicle's heartbeat current_task using the RX26 snake_case task name.
+string task
+---
+# Success acknowledges a heartbeat carrying this task, not task completion.
+uint32 seq
+string error
+---
+string status

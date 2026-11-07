@@ -1,0 +1,7 @@
+# Explicit saved orientation in the estimator's odometry frame.
+# The timestamp identifies the original cluster snapshot, not an expiry deadline.
+geometry_msgs/QuaternionStamped orientation
+bool enable
+---
+bool success
+string message

@@ -52,6 +52,7 @@ set(service_files
   srv/MLSetConfig.srv
   srv/SlalomToggleTracking.srv
   srv/TrashToggleFrame.srv
+  srv/SetOrientationReference.srv
 )
 
 set(action_files
