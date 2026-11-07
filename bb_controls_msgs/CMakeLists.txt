@@ -13,6 +13,7 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(action_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(geographic_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 
 set(message_files
@@ -52,7 +53,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   ${service_files}
   ${action_files}
 
-  DEPENDENCIES builtin_interfaces std_msgs action_msgs geometry_msgs
+  DEPENDENCIES builtin_interfaces std_msgs action_msgs geometry_msgs geographic_msgs
   ADD_LINTER_TESTS
 )
 

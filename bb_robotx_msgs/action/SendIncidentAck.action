@@ -1,0 +1,8 @@
+# Send a IncidentAck to RoboCommand through the OCS (ocs4_gui bridge), on /<vehicle>/report/incident_ack.
+# Succeeds once RoboCommand's broker has it (RoboCommand itself never replies); aborts with error otherwise.
+IncidentAck report
+---
+uint32 seq      # RxReport seq, when sent
+string error    # why it was not sent
+---
+string status   # progress, e.g. "sent to OCS"

@@ -28,10 +28,22 @@ set(message_files
   msg/WildlifeSequence.msg
   msg/RobotxTaskStatus.msg
   msg/GateInfo.msg
+  msg/Heartbeat.msg
   msg/GateStatuses.msg
   msg/PathDirection.msg
   msg/IncidentZoneStatus.msg
   msg/IncidentZoneReport.msg
+  msg/SafePassageBuoy.msg
+  msg/SafePassageReport.msg
+  msg/PipelineSurveyReport.msg
+  msg/PipelineReport.msg
+  msg/ResourceDeliveryRequest.msg
+  msg/DockingReport.msg
+  msg/FirefightingReport.msg
+  msg/LatLng.msg
+  msg/IncidentAck.msg
+  msg/ReadinessReport.msg
+  msg/MovingObjectAlert.msg
 )
 
 set(service_files
@@ -58,6 +70,13 @@ set(service_files
 )
 
 set(action_files
+  action/SendSafePassageReport.action
+  action/SendPipelineSurveyReport.action
+  action/SendResourceDeliveryRequest.action
+  action/SendDockingReport.action
+  action/SendFirefightingReport.action
+  action/SendIncidentAck.action
+  action/SendReadinessReport.action
   action/SetTask.action
 )
 
