@@ -36,6 +36,7 @@ set(message_files
   msg/SafePassageBuoy.msg
   msg/SafePassageReport.msg
   msg/PipelineSurveyReport.msg
+  msg/PipelineReport.msg
   msg/ResourceDeliveryRequest.msg
   msg/DockingReport.msg
   msg/FirefightingReport.msg
