@@ -3,6 +3,9 @@ float64 yaw_amount
 float64 yaw_tolerance 0.05
 float64 yaw_rate 0.05
 float64 timeout_seconds 90.0
+# Depth setpoint (m, positive down) for servers that hold depth (pipeline follow).
+# Negative = hold the depth at goal start. Ignored by the spin/roll servers.
+float64 depth -1.0
 ---
 #### Result ####
 bool success
