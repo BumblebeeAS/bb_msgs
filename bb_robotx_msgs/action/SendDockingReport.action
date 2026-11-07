@@ -1,8 +1,8 @@
 # Send a DockingReport to RoboCommand through the OCS (ocs4_gui bridge), on /<vehicle>/report/docking.
 # Succeeds once RoboCommand's broker has it (RoboCommand itself never replies); aborts with error otherwise.
+# from left to rightl, only 1 bay id
 DockingReport report
 ---
-uint32 seq      # RxReport seq, when sent
-string error    # why it was not sent
+uint32 id      # RxReport seq, when sent
 ---
 string status   # progress, e.g. "sent to OCS"
