@@ -1,0 +1,16 @@
+# Request
+ClusterPosesRequest params
+float64 collection_duration 5.0  # Maximum collection duration in monotonic seconds
+# Positive interval in seconds between cluster snapshots in feedback.
+# One goal owns a fresh, bounded collection until completion or cancellation.
+float64 cluster_interval 2.0
+
+---
+# Result
+ClusterPoseResultArray cluster_results
+---
+# Feedback
+float64 collection_progress  # 0.0 to 1.0
+int32 poses_collected_so_far
+string current_status
+ClusterPoseResultArray cluster_results  # Latest snapshot; empty between evaluations
