@@ -21,8 +21,10 @@ set(message_files
   msg/AUVControlLink.msg
   msg/ColorRgb.msg
   msg/Lights.msg
+  msg/LumenLights.msg
   msg/PowerControl.msg
   msg/PowerStatus.msg
+  msg/RGBLights.msg
 )
 
 set(service_files
