@@ -60,6 +60,7 @@ set(service_files
   srv/SpawnIncident.srv
   srv/Dock.srv
   srv/DockLedChoice.srv
+  srv/DockLedCount.srv
   srv/PipeLedChoice.srv
   srv/WindowChoice.srv
   srv/SetGateManagerState.srv

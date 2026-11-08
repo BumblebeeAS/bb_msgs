@@ -1,0 +1,15 @@
+# Count dock LED patterns for duration_s, then respond with the counts.
+#   HSV:  HSV beacon blobs on the OAK-D RGB image
+#   YOLO: beacon YOLO detections on the OAK-D (needs the beacon YOLO active)
+uint8 HSV=0
+uint8 YOLO=1
+uint8 method
+float32 duration_s
+---
+bool success
+# Frames whose left-to-right pattern matched each valid dock sequence.
+int32 count_red_red_green
+int32 count_red_green_red
+int32 count_green_red_red
+# Most counted pattern, e.g. ["red", "green", "red"]; empty if none counted.
+string[] pattern
