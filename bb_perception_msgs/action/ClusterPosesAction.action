@@ -1,6 +1,11 @@
 # Request
 ClusterPosesRequest params
 float64 collection_duration 5.0  # Duration in seconds to collect synchronized messages
+# Optional search session. Same non-empty ID and params retain observations
+# between evaluations; a new ID or empty ID starts a fresh collection.
+# Cancellation closes the session. Unused sessions expire after 10 s idle.
+string accumulation_id
+
 ---
 # Result
 ClusterPoseResultArray cluster_results
