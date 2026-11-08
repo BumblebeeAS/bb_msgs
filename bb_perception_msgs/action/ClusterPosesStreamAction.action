@@ -1,8 +1,10 @@
 # Request
 ClusterPosesRequest params
 float64 collection_duration 5.0  # Maximum collection duration in monotonic seconds
-# Positive interval in seconds between cluster snapshots in feedback.
-# One goal owns a fresh, bounded collection until completion or cancellation.
+# Seconds between cluster evaluations; must be greater than zero.
+# Each evaluation clusters this goal's accumulated poses and sends the clusters
+# in feedback. Poses keep accumulating until collection_duration expires or
+# the goal is canceled; evaluations do not reset collection.
 float64 cluster_interval 2.0
 
 ---
