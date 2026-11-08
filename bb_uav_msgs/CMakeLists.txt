@@ -27,6 +27,7 @@ set(service_files
 )
 
 set(action_files
+  action/SpiralSearch.action
   action/GoToPosition.action
   action/Takeoff.action
   action/Land.action

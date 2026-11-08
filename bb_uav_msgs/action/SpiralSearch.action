@@ -1,0 +1,10 @@
+# Outward Archimedean spiral in local NED, from current XY; hold altitude.
+float32 radius             # Maximum radius in metres
+float32 turn_spacing       # Radial spacing between successive turns, metres
+float32 speed              # Maximum path speed, m/s; ramps from/to zero
+float32 settle_threshold   # Per-axis endpoint tolerance, metres
+float32 settle_timeout     # Endpoint settling allowance, seconds
+---
+bb_uav_msgs/GoToResult result
+---
+bb_uav_msgs/GoToFeedback feedback
