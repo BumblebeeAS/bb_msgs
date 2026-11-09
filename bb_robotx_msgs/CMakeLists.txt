@@ -79,6 +79,7 @@ set(action_files
   action/SendIncidentAck.action
   action/SendReadinessReport.action
   action/SetTask.action
+  action/SafePassage.action
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}

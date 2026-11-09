@@ -1,0 +1,12 @@
+# Run RobotX 2026 Task 1 (Safe Passage) on an ASV from a drone-published path.
+# Waits for a new geographic_msgs/GeoPath on path_topic, poses[0] = entry buoy, poses[-1] = exit buoy, the rest
+# pass-through points in order. Circles the entry clockwise, drives through every pass-through point, circles the
+# exit counterclockwise. A failed leg is logged and skipped, so the goal only aborts without a path.
+string path_topic   # empty uses the server's path_topic parameter
+---
+bool success        # every leg succeeded
+string message      # the legs that failed, or why no path was run
+---
+string phase        # WAIT_PATH | ENTRY_APPROACH | ENTRY_CIRCLE | WAYPOINT | EXIT_APPROACH | EXIT_CIRCLE
+uint32 index        # pass-through point being driven, 0 based (WAYPOINT only)
+uint32 total        # pass-through point count
