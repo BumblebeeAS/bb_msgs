@@ -44,6 +44,8 @@ set(message_files
   msg/IncidentAck.msg
   msg/ReadinessReport.msg
   msg/MovingObjectAlert.msg
+  msg/KeepOutZone.msg
+  msg/AllClear.msg
 )
 
 set(service_files
