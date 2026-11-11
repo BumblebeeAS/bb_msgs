@@ -10,6 +10,7 @@ bool last_goal_anchor_only false
 
 # Retry & Replanning Logic
 int32 max_replans 20  # consecutive planning failures allowed before aborting
+float32 sample_radius 0.0  # m; > 0 retries a blocked goal at a free point within this radius, same heading
 
 # Locomotion Passthrough parameters
 bool specified_heading false
