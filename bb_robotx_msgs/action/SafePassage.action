@@ -1,21 +1,23 @@
 # Run RobotX 2026 Task 1 (Safe Passage) on an ASV from the drone's classified buoys.
 # Circles the entry buoy (flashing_blue) clockwise if present, then every red (clockwise, kept on starboard) and
 # green (counterclockwise, kept on port), then the exit buoy (steady_blue) counterclockwise if present. Each centre is
-# snapped onto the lidar; black (off) buoys are never circled but help that snapping. A buoy that fails every attempt
-# is logged and skipped, so the goal only aborts when there is nothing to circle.
+# the small costmap blob nearest the buoy once the drone's layout is lined up with the costmap; black (off) buoys are
+# never circled but help that line-up. A buoy that fails every attempt is logged and skipped, so the goal only aborts
+# when there is nothing to circle.
 SafePassageBuoy[] buoys    # from the drone's SafePassageReport; at most one flashing_blue and one steady_blue
-bool pause_on_incident     # true: hold while the Task 4 incident flag is set, then redo the current buoy
+bool respond_to_assistance # true: answer a Task 4 Core AssistanceRequest for this vehicle (ack, go there, report
+                           # ready, wait for the ReadinessConfirm), then redo the buoy that was interrupted
 ---
 bool success               # every buoy circled
 uint32 circled
 uint32 failed
 string message             # per-buoy summary
 ---
-string phase               # TRANSIT | CIRCLE | PAUSED | DONE
+string phase               # ALIGN | TRANSIT | CIRCLE | INCIDENT_TRANSIT | INCIDENT_ON_STATION
 uint32 buoy_index          # 0 based, in circling order
 uint32 buoy_total
 string buoy_state          # SafePassageBuoy.state of the buoy being circled
 uint32 point               # circle point being driven, 0 = the start point reached in TRANSIT
 uint32 point_total
-string estimate_source     # LANDMARK | COSTMAP | PREDICTED: what the circle centre came from
-uint32 shift_inliers       # buoys agreeing on the drone-to-lidar shift, 0 = no shift applied
+string estimate_source     # BLOB | PREDICTED: what the circle centre came from
+uint32 shift_inliers       # drone buoys sitting on a costmap blob at the shift in use
