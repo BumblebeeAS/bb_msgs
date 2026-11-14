@@ -1,0 +1,10 @@
+# Horizontal local-NED circle; hold altitude, leave yaw uncommanded.
+float32 radius              # Metres, positive
+float32 duration            # Seconds for one revolution (excludes entry/return)
+bool start_on_circle       # Current position is +X edge; omit radial entry/return
+float32 return_threshold    # Per-axis endpoint tolerance, metres
+float32 return_timeout      # Seconds allowed to settle after returning to the endpoint
+---
+bb_uav_msgs/GoToResult result
+---
+bb_uav_msgs/GoToFeedback feedback
